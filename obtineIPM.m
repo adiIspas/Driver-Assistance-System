@@ -34,8 +34,8 @@ transformareOmogena = h * ...
 
 % Aplicam matrice de transformare omogena intregii imagini
 
-transformareOmogena
-
-imagineIPM = uint8(imagine);
+tform = affine2d([1 0 0; .5 1 0; 0 0 1]);
+imagineIPM = imwarp(imagine,tform);
+imagineIPM = uint8(imagineIPM);
 end
 

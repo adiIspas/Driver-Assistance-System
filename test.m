@@ -1,7 +1,14 @@
+% Start program
 tic
-imagineTest = imread('road_2.JPG');
+
+imagineTest = imread('ipm_image.JPG');
+
 
 imagineIPM = obtineIPM(imagineTest);
 
-imshow(imagineIPM)
+imagineTest = rgb2gray(imagineTest);
+img = filtrareIPM(imagineTest);
+
+imshowpair(imagineTest,img,'montage')
 toc
+% Sfarsit program
