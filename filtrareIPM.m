@@ -1,30 +1,34 @@
 function [ imagineFiltrata ] = filtrareIPM( imagineIPM )
-%filtrareIPM Filtreaza imaginea IPM cu filtrul gaussian/sobel si aplica un prag
-%   Detaliile despre implementare pot fi gasite in paper-ul 
-% Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
+    %filtrareIPM Filtreaza imaginea IPM cu filtrul gaussian/sobel si aplica un prag
+    %   Detaliile despre implementare pot fi gasite in paper-ul 
+    % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
-% Initializam parametri
-imagineIPM = double(imagineIPM);
+    % Initializam parametri
+    imagineIPM = double(imagineIPM);
+    prag = 35;
 
-% Initializam filtrul
-sobel_x = fspecial('sobel')';
+    % Initializam filtrul
+    filtruGaussianOrizontal = [0 0 0; % Directia X
+                              0 1 -1;
+                              0 0 0];
 
-% Aplicam filtrul
-% zi = ndgauss([3 3],1*sqrt(2)*[1 1],'der',[0 1]);
+    % Aplicam filtrul
+    imagineFiltrata = imfilter(imagineIPM, filtruGaussianOrizontal);
 
-gradient_x = imfilter(imagineIPM, sobel_x);
-imagineFiltrata = uint8(gradient_x);
-
-% Setam un prag dupa care filtram continutul imaginii
-for idx = 1:size(imagineFiltrata,1)
-    for idy = 1:size(imagineFiltrata,2)
-        if imagineFiltrata(idx,idy) < 200
-            imagineFiltrata(idx,idy) = 0;
-        else
-            imagineFiltrata(idx,idy) = 255;
+    % Setam un prag dupa care filtram continutul imaginii
+    for idx = 1:size(imagineFiltrata,1)
+        for idy = 1:size(imagineFiltrata,2)
+            if imagineFiltrata(idx,idy) < prag
+                imagineFiltrata(idx,idy) = 0;
+            end
         end
     end
-end
 
+    % Ultima linie a imaginii ramane mereu neschimbata.
+    % O aducem la 0 deoarece genereaza detectie falsa.
+    imagineFiltrata(:,end) = 0;
+
+    % Convertim la uint8 imaginea
+    imagineFiltrata = uint8(imagineFiltrata);
 end
 
