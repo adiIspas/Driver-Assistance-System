@@ -13,7 +13,9 @@ imagineIPM = imagineTest;
 imagineFiltrata = filtrareIPM(imagineIPM);
 % imshowpair(imagineTest,imagineFiltrata,'montage');
 
-liniiImagine = detectieLinii(imagineFiltrata);
+[liniiImagine, incadrare] = detectieLinii(imagineFiltrata);
+
+RANSAC(imagineFiltrata, liniiImagine, incadrare)
 
 for idx = 1:size(liniiImagine,2)
     imagineFiltrata(:,liniiImagine(idx)) = 255;
