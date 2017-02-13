@@ -1,6 +1,6 @@
 function [ punctePotrivite ] = potrivestePuncte( puncte )
-    %potrivestePuncte Pentru un set de puncte dat incearca sa determine cele
-    %mai bune puncte.
+    % FUNCTIE FINALIZATA
+    % potrivestePuncte Pentru un set de puncte dat incearca sa determine cele mai bune puncte.
 
     % Initializam parametrii
     numarPuncte = size(puncte,1);
@@ -32,7 +32,8 @@ function [ punctePotrivite ] = potrivestePuncte( puncte )
         T = [T; t(idx)^3, t(idx)^2, t(idx), 1];
     end
     
-    punctePotrivite = (T*M)'*puncte;
+    p_invers = pinv(T*M);
+    punctePotrivite = p_invers*puncte;
 end
 
 function distanta = calculeazaDistanta(punct_1, punct_2)

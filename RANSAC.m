@@ -1,19 +1,25 @@
-function [ puncte ] = RANSAC(imagineFiltrata, liniiImagine, incadrare )
-    %RANSAC O varianta adaptata a algoritmului RANSAC pentru detectarea
-    %punctelor de interes in imagine
+function [ puncte ] = RANSAC(imagineFiltrata, incadrare)
+    % RANSAC O varianta adaptata a algoritmului RANSAC pentru detectarea
+    % punctelor de interes in imagine
     %   Detaliile despre implementare pot fi gasite in paper-ul 
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
     
     % Initializam parametrii
-    numarIteratii = 1;
-    numarPuncteFinale = 4;
+    numarIteratii = 40;
     
-    scorBun = -999;
+    scorBun = realmin('double');
     for idx = 1:numarIteratii
-        [puncte, scor] = obtinePuncteRandom(incadrare(1,:), imagineFiltrata);
+        [puncte, ~] = obtinePuncteRandom(incadrare(1,:), imagineFiltrata);
         punctePotrivite = potrivestePuncte(puncte);
         scor = determinaScor(punctePotrivite, imagineFiltrata);
+        
+        if scor < scorBun
+            scorBun = scor;
+            puncteBune = punctePotrivite;
+        end
     end
-
+    
+    puncte = puncteBune;
+%     scorFinal = scorBun;
 end
 

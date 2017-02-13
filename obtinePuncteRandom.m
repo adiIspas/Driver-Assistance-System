@@ -1,28 +1,24 @@
 function [ puncte, scor ] = obtinePuncteRandom( incadrare, imagineFiltrata )
-    %obtinePuncteRandom Genereaza puncte ce se incadreaza in jurul liniei detectate
-    % !!! Trebuie sa generez puncte random din bounding box
+    % FUNCTIE FINALIZATA
+    % obtinePuncteRandom Genereaza puncte ce se incadreaza in jurul liniei detectate
+    
     % Initializam parametrii
     numarPuncte = 10;
     puncte = zeros(0,2);
     scor = zeros(0,1);
-    dimensiuneLatime = size(imagineFiltrata,1);
+    dimensiuneInaltime = size(imagineFiltrata,1);
+    
+    ax = incadrare(1);
+    bx = incadrare(2);
+    
+    ay = 1;
+    by = dimensiuneInaltime;
 
-    for idx = incadrare(1):incadrare(2)
-        for idy = 1:dimensiuneLatime
-            puncte = [puncte; idx, idy];
-            scor = [scor; imagineFiltrata(idx,idy)];
-        end
-    end
-    
-    [scor, index] = sort(scor, 'descend');
-    scor = scor(1:numarPuncte);
-    
-    puncteFinale = zeros(numarPuncte,2);
     for idx = 1:numarPuncte
-       puncteFinale(idx,1) = puncte(index(idx),1);
-       puncteFinale(idx,2) = puncte(index(idx),2);
+        rx = floor((bx-ax).*rand() + ax);
+        ry = floor((by-ay).*rand() + ay);
+        puncte = [puncte; rx, ry];
+        scor = [scor; imagineFiltrata(rx,ry)];
     end
-    
-    puncte = puncteFinale;
 end
 
