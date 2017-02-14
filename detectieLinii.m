@@ -7,7 +7,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata )
 
     % Initializam parametrii
     numarLinii = 3; % Numarul de linii detectate
-    limitaIncadrare = 5;
+    limitaIncadrare = 3;
     filtruGaussian = [-1 1];
     
     sumaColoane = sum(imagineFiltrata,1);

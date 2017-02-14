@@ -3,7 +3,7 @@ function [ puncte, scor ] = obtinePuncteRandom( incadrare, imagineFiltrata )
     % obtinePuncteRandom Genereaza puncte ce se incadreaza in jurul liniei detectate
     
     % Initializam parametrii
-    numarPuncte = 15;
+    numarPuncte = 10;
     puncte = zeros(0,2);
     scor = zeros(0,1);
     dimensiuneInaltime = size(imagineFiltrata,1);
