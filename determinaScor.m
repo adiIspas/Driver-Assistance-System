@@ -31,7 +31,7 @@ function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata )
     s = calculeazaScorLinie(punctePotrivite,imagineFiltrata);
     
     % Determinam scorul pentru linia detectata
-    scor = double(s) * (1 + k_1 * l_final + k_2 * theta_final);
+    scor = double(s) * (1 + k_1 * l_final + k_2 * theta_final)
 end
 
 function distanta = calculeazaDistanta(punct_1, punct_2)

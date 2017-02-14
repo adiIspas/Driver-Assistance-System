@@ -1,5 +1,6 @@
 function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata )
     % FUNCTIE FINALIZATA
+    % Trebuie verificata partea cu incadrareLinie, pare dubioasa acum
     % detectieLinii Foloseste o varianta simplificata a Hough pentru a detecta
     % care dintre coloane este o posibila linie.
     %   Detaliile despre implementare pot fi gasite in paper-ul 
@@ -7,7 +8,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata )
 
     % Initializam parametrii
     numarLinii = 3; % Numarul de linii detectate
-    limitaIncadrare = 3;
+    limitaIncadrare = 2;
     filtruGaussian = [-1 1];
     
     sumaColoane = sum(imagineFiltrata,1);
@@ -19,7 +20,6 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata )
     coloane = locs(index(1:numarLinii));
 
     incadrareLinie = zeros(0,4);
-      
     for idx = 1:size(coloane,2)
         if coloane(idx) > limitaIncadrare && coloane(idx) < size(imagineFiltrata,2) - limitaIncadrare
             incadrareLinie = [incadrareLinie; coloane(idx) - limitaIncadrare, coloane(idx) + limitaIncadrare];

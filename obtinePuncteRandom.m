@@ -13,12 +13,12 @@ function [ puncte, scor ] = obtinePuncteRandom( incadrare, imagineFiltrata )
     
     ay = 1;
     by = dimensiuneInaltime;
-
+    
     for idx = 1:numarPuncte
         rx = floor((bx-ax).*rand() + ax);
         ry = floor((by-ay).*rand() + ay);
         puncte = [puncte; rx, ry];
-        scor = [scor; imagineFiltrata(rx,ry)];
+        scor = [scor; imagineFiltrata(ry,rx)];
     end
 end
 
