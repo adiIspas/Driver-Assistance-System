@@ -25,23 +25,23 @@ function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata )
 
     l_final = (l/v) - 1;
     
-    s = calculeazaScorLinie(punctePotrivite,size(imagineFiltrata,1),imagineFiltrata);
+    s = calculeazaScorLinie(punctePotrivite,imagineFiltrata);
     scor = double(s) * (1 + k_1 * l_final + k_2 * theta_final);
-   
-
 end
 
 function distanta = calculeazaDistanta(punct_1, punct_2)
     distanta = sqrt((punct_1(1) - punct_2(1))^2 + (punct_1(2) - punct_2(2))^2);
 end
 
-function scor = calculeazaScorLinie(puncte,inaltime,imagineFiltrata)
+function scor = calculeazaScorLinie(puncte,imagineFiltrata)
     scor = 0;
-
+    inaltime = size(imagineFiltrata,1);
+    latime = size(imagineFiltrata,2);
+    
     % Prima portiune
     step = round(abs(puncte(1,2) - puncte(2,2))/abs(puncte(1,1) - puncte(2,1)));
-    idx = min(puncte(1,1),puncte(2,1));
-    if puncte(1,2) < inaltime && puncte(2,2) < inaltime ...
+    idx = min(puncte(1,1),puncte(2,1)) - 1;
+    if puncte(1,2) < inaltime - 1 && puncte(2,2) < inaltime - 1 ...
         && puncte(1,2) > 0 && puncte(2,2) > 0
     
         count = 0;
@@ -49,18 +49,19 @@ function scor = calculeazaScorLinie(puncte,inaltime,imagineFiltrata)
             scor = scor + imagineFiltrata(ceil(idy),ceil(idx));
             count = count + 1;
             
-            if count == step
+            if count == step && idx + 1 <= latime
                 idx = idx + 1;
                 count = 0;
             end
         end
-    
+    else
+        scor = realmin('double');
     end
 
     % A doua portiune
     step = round(abs(puncte(2,2) - puncte(3,2))/abs(puncte(2,1) - puncte(3,1)));
-    idx = min(puncte(2,1),puncte(3,1));
-    if puncte(2,2) < inaltime && puncte(3,2) < inaltime ...
+    idx = min(puncte(2,1),puncte(3,1)) - 1;
+    if puncte(2,2) < inaltime - 1 && puncte(3,2) < inaltime - 1 ...
         && puncte(2,2) > 0 && puncte(3,2) > 0
     
         count = 0;
@@ -68,18 +69,19 @@ function scor = calculeazaScorLinie(puncte,inaltime,imagineFiltrata)
             scor = scor + imagineFiltrata(ceil(idy),ceil(idx));
             count = count + 1;
             
-            if count == step
+            if count == step && idx + 1 <= latime
                 idx = idx + 1;
                 count = 0;
             end
         end
-    
+    else
+        scor = realmin('double');
     end
     
     % A treia portiune
     step = round(abs(puncte(3,2) - puncte(4,2))/abs(puncte(3,1) - puncte(4,1)));
-    idx = min(puncte(2,1),puncte(3,1));
-    if puncte(2,2) < inaltime && puncte(3,2) < inaltime ...
+    idx = min(puncte(2,1),puncte(3,1)) - 1;
+    if puncte(2,2) < inaltime - 1 && puncte(3,2) < inaltime - 1 ...
         && puncte(2,2) > 0 && puncte(3,2) > 0
     
         count = 0;
@@ -87,11 +89,13 @@ function scor = calculeazaScorLinie(puncte,inaltime,imagineFiltrata)
             scor = scor + imagineFiltrata(ceil(idy),ceil(idx));
             count = count + 1;
             
-            if count == step
+            if count == step && idx + 1 <= latime
                 idx = idx + 1;
                 count = 0;
             end
         end
+    else
+        scor = realmin('double');
     end
 end
 

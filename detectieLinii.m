@@ -6,8 +6,8 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata )
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
     % Initializam parametrii
-    numarColoane = 3; % Numarul de linii detectate
-    limitaIncadrare = 10;
+    numarLinii = 3; % Numarul de linii detectate
+    limitaIncadrare = 5;
     filtruGaussian = [-1 1];
     
     sumaColoane = sum(imagineFiltrata,1);
@@ -16,7 +16,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata )
     [~, locs] = findpeaks(coloaneFiltrate);
     [~, index] = sort(coloaneFiltrate(locs),'descend');
     
-    coloane = locs(index(1:numarColoane));
+    coloane = locs(index(1:numarLinii));
 
     incadrareLinie = zeros(0,4);
       

@@ -7,19 +7,23 @@ function [ puncte ] = RANSAC(imagineFiltrata, incadrare)
     % Initializam parametrii
     numarIteratii = 40;
     
-    scorBun = realmin('double');
-    for idx = 1:numarIteratii
-        [puncte, ~] = obtinePuncteRandom(incadrare(1,:), imagineFiltrata);
-        punctePotrivite = potrivestePuncte(puncte);
-        scor = determinaScor(punctePotrivite, imagineFiltrata);
-        
-        if scor < scorBun
-            scorBun = scor;
-            puncteBune = punctePotrivite;
+    
+    puncteBuneFinale = zeros(0,4);
+    for idy = 1:size(incadrare,1)
+        scorBun = realmin('double');
+        for idx = 1:numarIteratii
+            [puncte, ~] = obtinePuncteRandom(incadrare(idy,:), imagineFiltrata);
+            punctePotrivite = potrivestePuncte(puncte);
+            scor = determinaScor(punctePotrivite, imagineFiltrata);
+
+            if scor < scorBun
+                scorBun = scor;
+                puncteBune = punctePotrivite;
+            end
         end
+        puncteBuneFinale = [puncteBuneFinale; puncteBune];
     end
     
-    puncte = puncteBune;
-%     scorFinal = scorBun;
+    puncte = puncteBuneFinale;
 end
 
