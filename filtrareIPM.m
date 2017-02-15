@@ -1,6 +1,5 @@
-function [ imagineFiltrata ] = filtrareIPM( imagineIPM )
-    % FUNCTIE FINALIZATA
-    % filtrareIPM Filtreaza imaginea IPM cu filtrul gaussian/sobel si aplica un prag
+function [ imagineFiltrata ] = filtrareIPM( imagineIPM ) % FUNCTIE FINALIZATA
+    % filtrareIPM Filtreaza imaginea IPM cu filtrul gaussian/sobel si aplica un prag.
     %   Detaliile despre implementare pot fi gasite in paper-ul 
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
