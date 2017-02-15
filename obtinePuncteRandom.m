@@ -5,6 +5,7 @@ function [ puncte ] = obtinePuncteRandom(incadrare,dimensiuneInaltime) % FUNCTIE
     numarPuncte = 10;
     puncte = zeros(numarPuncte,2);
     idxPuncte = 1;
+    distantaPuncte = 30;
     
     % Limitele intre care se genereaza puncte
     ax = incadrare(1);
@@ -13,11 +14,25 @@ function [ puncte ] = obtinePuncteRandom(incadrare,dimensiuneInaltime) % FUNCTIE
     by = dimensiuneInaltime;
     
     for idx = 1:numarPuncte
+
+        verifica = 0;
         rx = floor((bx-ax).*rand() + ax);
-        ry = floor((by-ay).*rand() + ay);
-        
+        while verifica == 0
+            ry = floor((by-ay).*rand() + ay);
+            verifica = verificaPuncte(puncte,idxPuncte,ry,distantaPuncte);
+        end
         puncte(idxPuncte,:) = [rx, ry];
         idxPuncte = idxPuncte + 1;
+    end
+end
+
+function verifica = verificaPuncte(puncte, idxPuncte, ry, distantaPuncte)
+    
+    verifica = 1;
+    for idx = 1:idxPuncte
+        if abs(puncte(idx,2) - ry) <= distantaPuncte
+            verifica = 0;
+        end
     end
 end
 

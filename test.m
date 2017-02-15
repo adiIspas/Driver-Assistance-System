@@ -1,7 +1,4 @@
 % Start program
-% de utilizat functia quantile
-
-%!!! Confuzie rx, ry in functii
 clear; clc;
 close all;
 tic

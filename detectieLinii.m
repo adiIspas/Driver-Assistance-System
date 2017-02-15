@@ -44,6 +44,9 @@ function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie, numarLini
     
     coloaneSelectate = [coloaneSelectate, coloaneSortate(1)];
     for idx = 2:size(coloaneSortate,2)
+        
+        % Verificam daca oricare 2 coloane selectate se afla la o distanta
+        % de cel putin numarLinii una de cealalta
         verifica = 1;
         for idy = 1:size(coloaneSelectate,2)
             if abs(coloaneSelectate(idy) - coloaneSortate(idx)) <= limitaIncadrareLinie

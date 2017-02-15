@@ -7,7 +7,7 @@ function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata ) % FUNCTIE 
     P_12 = calculeazaDistanta(punctePotrivite(2,:),punctePotrivite(3,:));
     P_13 = calculeazaDistanta(punctePotrivite(2,:),punctePotrivite(4,:));
     P_23 = calculeazaDistanta(punctePotrivite(3,:),punctePotrivite(4,:));
-
+    
     l = calculeazaDistanta(punctePotrivite(1,:),punctePotrivite(4,:));
     v = size(imagineFiltrata,1);
 
@@ -39,6 +39,7 @@ end
 function scor = calculeazaScorLinie(puncte,imagineFiltrata)
     % Initializam variabile
     scor = 0;
+    distantaPuncte = 30;
     inaltime = size(imagineFiltrata,1);
     latime = size(imagineFiltrata,2);
 
@@ -47,8 +48,9 @@ function scor = calculeazaScorLinie(puncte,imagineFiltrata)
     dim_22 = size(puncte(puncte(:,1)<=latime),1) * 2;
     dim_23 = size(puncte(puncte(:,2)<=inaltime),1) * 2;
     
+    verifica = verificaPuncte(puncte,distantaPuncte);
     % Eliminam punctele de control cu valori negative sau in afara imaginii
-    if dim_11 ~= dim_21 || dim_11 ~= dim_22 || dim_11 ~= dim_23
+    if dim_11 ~= dim_21 || dim_11 ~= dim_22 || dim_11 ~= dim_23 || verifica ~= 1
         scor = realmin('double');
     else
         % Sortam punctele, parcurgere de sus in jos
@@ -178,6 +180,18 @@ function scor = calculeazaScorLinie(puncte,imagineFiltrata)
             if count == step
                 idx = idx + cumul;
                 count = 0;
+            end
+        end
+    end
+end
+
+function verifica = verificaPuncte(puncte, distantaPuncte)
+    
+    verifica = 1;
+    for idx = 1:size(puncte,1)
+        for idy = 1:size(puncte,1)
+            if (abs(puncte(idx,2) - puncte(idy,2)) <= distantaPuncte) && (idx ~= idy)
+                verifica = 0;
             end
         end
     end
