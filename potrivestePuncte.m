@@ -1,5 +1,4 @@
-function [ punctePotrivite ] = potrivestePuncte( puncte )
-    % FUNCTIE FINALIZATA
+function [ punctePotrivite ] = potrivestePuncte(puncte) % FUNCTIE FINALIZATA
     % potrivestePuncte Pentru un set de puncte dat incearca sa determine cele mai bune puncte.
 
     % Initializam parametrii
@@ -25,8 +24,6 @@ function [ punctePotrivite ] = potrivestePuncte( puncte )
         
         t(idx) = t_1/t_2;
     end
-    
-   
     
     for idx = 1:numarPuncte
         T = [T; t(idx)^3, t(idx)^2, t(idx), 1];

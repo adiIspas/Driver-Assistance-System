@@ -7,7 +7,7 @@ close all;
 tic
 
 numarLinii = 3;
-imagineTest = imread('images/ipm_image.JPG');
+imagineTest = imread('images/ipm_image_1.JPG');
 if size(imagineTest,3) > 1
     imagineTest = rgb2gray(imagineTest);
 end
@@ -17,11 +17,10 @@ end
 imagineIPM = imagineTest;
 imagineFiltrata = filtrareIPM(imagineIPM);
 % imshowpair(imagineTest,imagineFiltrata,'montage');
+% imshow(imagineFiltrata);
 
 [liniiImagine, incadrare] = detectieLinii(imagineFiltrata);
 [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
-
-scorLinie
 
 imagineRezultat = uint8(zeros(size(imagineTest,1),size(imagineTest,2),1));
 imagineRezultat(:,:,1) = imagineFiltrata(:,:);

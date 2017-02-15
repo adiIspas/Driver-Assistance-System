@@ -1,7 +1,5 @@
-function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata )
-    % Mai trebuie aruncata o privire spre finalul functiei cand se
-    % calculeaza scorul 
-    % determinaScor Determina scorul pentru punctele potrivite determinate
+function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata ) % FUNCTIE FINALIZATA
+    % determinaScor Determina scorul pentru punctele potrivite determinate.
 
     % Initializam parametri
     P_01 = calculeazaDistanta(punctePotrivite(1,:),punctePotrivite(2,:));
@@ -31,7 +29,7 @@ function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata )
     s = calculeazaScorLinie(punctePotrivite,imagineFiltrata);
     
     % Determinam scorul pentru linia detectata
-    scor = double(s) * (1 + k_1 * l_final + k_2 * theta_final)
+    scor = double(s) * (1 + k_1 * l_final + k_2 * theta_final);
 end
 
 function distanta = calculeazaDistanta(punct_1, punct_2)
@@ -46,15 +44,15 @@ function scor = calculeazaScorLinie(puncte,imagineFiltrata)
 
     dim_11 = size(puncte,1) * 2;
     dim_21 = size(puncte(puncte>0),1);
-    dim_22 = size(puncte(puncte<=latime),1);
-    dim_23 = size(puncte(puncte<=inaltime),1);
+    dim_22 = size(puncte(puncte(:,1)<=latime),1) * 2;
+    dim_23 = size(puncte(puncte(:,2)<=inaltime),1) * 2;
     
     % Eliminam punctele de control cu valori negative sau in afara imaginii
     if dim_11 ~= dim_21 || dim_11 ~= dim_22 || dim_11 ~= dim_23
         scor = realmin('double');
     else
         % Sortam punctele, parcurgere de sus in jos
-        puncte = sortrows(puncte,2);
+        puncte = sortrows(puncte,1);
 
         % Valoare pixeli prima portiune (P1 - P2) 
         
@@ -184,4 +182,3 @@ function scor = calculeazaScorLinie(puncte,imagineFiltrata)
         end
     end
 end
-
