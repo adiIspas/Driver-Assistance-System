@@ -25,8 +25,12 @@ function [ imagineIPM ] = obtineIPM(imagine)
     cu    = centruOpticX;
     cv    = centruOpticY;
     h     = inaltimeCamera;
+    
+    groundPlane = zeros(size(imagine,1) * size(imagine,2), 4);
+    imagePlane = zeros(size(imagine,1) * size(imagine,2), 4);
 
     % Definim matricea pentru transformarea omogena si inversa acesteia
+    
     transformareOmogena = h * ...
         [(-1/fu)*c2, (1/fv)*s1*s2,   (1/fu)*cu*c2 - (1/fv)*cv*s1*s2 - c1*s2,  0;
          (1/fu)*s2,  (1/fv)*s1*c1,   (-1/fu)*cu*s2 - (1/fv)*cv*s1*c2 - c1*c2, 0;                                    
@@ -34,7 +38,8 @@ function [ imagineIPM ] = obtineIPM(imagine)
          0,          (-1/(h*fv))*c1, (1/(h*fv))*cv*c1 - (1/h)*s1,             0
         ];
 
-    inversaTransformareOmogena = [fu*c2 + cu*c1*s2, cu*c1*c2-s2*fu,   -cu*s1,       0;
+    inversaTransformareOmogena = (-1/h) * ...
+                                 [fu*c2 + cu*c1*s2, cu*c1*c2-s2*fu,   -cu*s1,       0;
                                   s2*(cv*c1-fv*s1), c2*(cv*c1-fv*s1), -fv*c1-cv*s1, 0;
                                   c1*s2,            c1*s2,            -s1,          0;
                                   c1*s2,            c1*s2,            -s1,          0;];
@@ -45,15 +50,26 @@ function [ imagineIPM ] = obtineIPM(imagine)
     % size(imagine,2)
     % imshow(imagine)
     % pause
-    x = transformareOmogena * [1; 1; 1; 1]
-    y = inversaTransformareOmogena * [1; 1; -h; 1]
-    % for idx = 1:size(imagine,2)
-    %     for idy = 1:size(imagine,1)
-    %         [idx idy 1 1]'
-    %         transformareOmogena * [idx idy 1 1]'
-    %     end
-    % end
-
+%     x = transformareOmogena * [1; 1; 1; 1]
+%     y = inversaTransformareOmogena * [1; 1; -h; 1]
+    indice = 0;
+    for idy = 1:size(imagine,1)
+        for idx = 1:size(imagine,2)
+            indice = indice + 1;
+            groundPlane(indice,:) = transformareOmogena * [idx idy 1 1]';
+        end
+    end
+    
+%     indice = 0;
+%     for idy = 1:size(imagine,1)
+%         for idx = 1:size(imagine,2)
+%             indice = indice + 1;
+%             imagePlane(indice,:) = inversaTransformareOmogena * groundPlane(indice,:)';
+%         end
+%     end
+    
+      round(groundPlane(:,:))
+%     save('X.mat','groundPlane');
     imagineIPM = uint8(imagineIPM);
 end
 

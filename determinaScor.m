@@ -39,7 +39,7 @@ end
 function scor = calculeazaScorLinie(puncte,imagineFiltrata)
     % Initializam variabile
     scor = 0;
-    distantaPuncte = 30;
+    distantaPuncte = 10;
     inaltime = size(imagineFiltrata,1);
     latime = size(imagineFiltrata,2);
 
