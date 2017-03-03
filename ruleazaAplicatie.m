@@ -4,19 +4,14 @@ close all;
 tic
 
 numarLinii = 3;
-imagineTest = imread('images/ipm_image_3.JPG');
+imagineTest = imread('images/ipm_image_1.JPG');
 if size(imagineTest,3) > 1
     imagineTest = rgb2gray(imagineTest);
 end
 
-% fixedPoints  = [10 10; 20 20];
-% movingPoints = [140 440; 70 81];
-% tform = fitgeotrans(movingPoints,fixedPoints,'NonreflectiveSimilarity');
-% Jregistered = imwarp(imagineTest,tform,'OutputView',imref2d(size(imagineTest)));
-% figure
-% imshow(Jregistered)
-
 % imagineIPM = obtineIPM(imagineTest);
+% imshow(imagineTest),impixelinfo
+% imshow(imagineIPM);
 
 imagineIPM = imagineTest;
 imagineFiltrata = filtrareIPM(imagineIPM);

@@ -1,0 +1,5 @@
+img = imread('images/road.jpg');
+
+mat = 
+
+imshow(img);
