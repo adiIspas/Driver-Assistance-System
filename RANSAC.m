@@ -8,7 +8,7 @@ function [ puncte, scor ] = RANSAC(imagineFiltrata, incadrare) % FUNCTIE FINALIZ
     dimensiuneInaltime = size(imagineFiltrata,1);
     puncteBuneFinale = zeros(0,4);
     scorBunFinal = zeros(0,1);
-    
+    puncteBune = [];
     for idy = 1:size(incadrare,1)
         scorBun = realmin('double');
         for idx = 1:numarIteratii

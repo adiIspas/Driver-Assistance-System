@@ -1,17 +1,58 @@
-tic
-clc
-img = imread('images/road_4.jpg');
+fprintf('Incarcam imaginile din director \n');
 
-% srcPoints = {[0,40],[300,40],[0,400],[300,400]};
-% dstPoints = {[0,0],[300,0],[100,400],[200,400]};
+clear, clc, close all;
 
-srcPoints = {[0,40],[800,40],[0,200],[800,200]};
-dstPoints = {[0,0],[800,0],[300,200],[500,200]};
+numeFolderImagini = 'cordova1';
+% numeFolderImagini = 'washington2';
+numeDirector = [pwd '\' numeFolderImagini '\'];
+tipImagine = 'png';
 
-M = cv.getPerspectiveTransform(srcPoints,dstPoints);
-H = cv.findHomography(srcPoints, dstPoints);
+filelist = dir([numeDirector '*.' tipImagine]);
+numarLinii = 3;
+for idxImg = 1:length(filelist)
+        clc
+        fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
+        imgName = filelist(idxImg).name;
+        image = imread([numeDirector imgName]);
 
-result = cv.warpPerspective(img,M,'DSize',[size(img,2) size(img,1)]);
-      
-imshowpair(img,result,'montage');
-toc
+        imagineTest = rgb2gray(image(190:190+150,60:60+500,:));
+        imagineIPM = obtineIPM(imagineTest);
+
+        imagineFiltrata = filtrareIPM(imagineIPM);
+
+        [liniiImagine, incadrare] = detectieLinii(imagineFiltrata);
+        [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
+
+        imagineRezultat = uint8(zeros(size(imagineTest,1),size(imagineTest,2),1));
+        imagineRezultat(:,:,1) = imagineFiltrata(:,:);
+
+        pos = zeros(0,2);
+        for u = 1:size(puncteInteres,1)/4
+            puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
+            for idx = 1:4
+                i = round(puncte(idx,1));
+                j = round(puncte(idx,2));
+                if j == 0
+                    j = 1;
+                end
+                imagineRezultat(j,i,:) = 255;
+                pos = [pos; i j];
+            end
+        end
+
+        imageMarked = insertMarker(imagineIPM,pos,'o');
+        imshow(imageMarked);
+        for u = 1:size(puncteInteres,1)/4
+            puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
+
+            for idx = 2:4
+                i = round(puncte(idx-1,1));
+                j = round(puncte(idx-1,2));
+                ii = round(puncte(idx,1));
+                jj = round(puncte(idx,2));
+                line([i ii],[j jj]);
+            end
+        end
+        
+        pause(0.001);        
+end

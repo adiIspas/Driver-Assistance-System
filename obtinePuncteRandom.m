@@ -5,7 +5,7 @@ function [ puncte ] = obtinePuncteRandom(incadrare,dimensiuneInaltime) % FUNCTIE
     numarPuncte = 10;
     puncte = zeros(numarPuncte,2);
     idxPuncte = 1;
-    distantaPuncte = 10;
+    distantaPuncte = 5;
     
     % Limitele intre care se genereaza puncte
     ax = incadrare(1);
