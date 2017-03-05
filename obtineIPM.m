@@ -14,8 +14,6 @@ function [ imagineIPM ] = obtineIPM(imagine)
     xMax = size(imagine,2);
     yMax = size(imagine,1);
     yMin = size(imagine,1) * procentYMin/100;
-%     perfectX1 = 215;
-%     perfectX2 = 320;
     perfectX1 = round(size(imagine,2)/2 - pixeliXPotrivire);
     perfectX2 = round(size(imagine,2)/2 + pixeliXPotrivire);
 

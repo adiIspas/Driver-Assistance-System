@@ -4,7 +4,7 @@ function [ puncte, scor ] = RANSAC(imagineFiltrata, incadrare) % FUNCTIE FINALIZ
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
     
     % Initializam parametrii
-    numarIteratii = 50;
+    numarIteratii = 30;
     dimensiuneInaltime = size(imagineFiltrata,1);
     puncteBuneFinale = zeros(0,4);
     scorBunFinal = zeros(0,1);

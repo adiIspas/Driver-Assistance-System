@@ -2,13 +2,12 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-numeFolderImagini = 'cordova1';
-% numeFolderImagini = 'washington2';
+% numeFolderImagini = 'cordova1';
+numeFolderImagini = 'washington1';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
 
 filelist = dir([numeDirector '*.' tipImagine]);
-numarLinii = 3;
 for idxImg = 1:length(filelist)
         clc
         fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
