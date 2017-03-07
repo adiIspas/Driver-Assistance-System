@@ -1,5 +1,6 @@
-img = rgb2gray(imread('images/road_test_2.jpg'));
+image = rgb2gray(imread('images/road.jpg'));
 
-imgIPM = obtineIPM(img);
+imagineTest = (image(412:412+152,215:215+499));
+imagineIPM = obtineIPM(imagineTest);
 
-imshow(imgIPM);
+imshow(imagineIPM);

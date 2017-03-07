@@ -1,4 +1,4 @@
-function [ imagineIPM ] = obtineIPM(imagine)
+function [ imagineIPM, matriceInversa ] = obtineIPM(imagine)
     % IN LUCRU - NU ESTE FINALIZATA
     % obtineIPM Pentru o imagine data se intoarce imaginea IPM asociata
     %   Detaliile despre implementare pot fi gasite in paper-ul 
@@ -22,6 +22,7 @@ function [ imagineIPM ] = obtineIPM(imagine)
     dstPoints = {[0,0],[xMax,0],[perfectX1,yMax],[perfectX2,yMax]};
 
     M = cv.getPerspectiveTransform(srcPoints,dstPoints);
+    matriceInversa = inv(M);
 
     imagineIPM = cv.warpPerspective(imagine,M,'DSize',[size(imagine,2) size(imagine,1)]);
 end

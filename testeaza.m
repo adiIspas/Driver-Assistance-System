@@ -2,8 +2,8 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-% numeFolderImagini = 'cordova1';
-numeFolderImagini = 'washington1';
+numeFolderImagini = 'cordova2';
+% numeFolderImagini = 'washington1';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
 
@@ -15,31 +15,44 @@ for idxImg = 1:length(filelist)
         image = imread([numeDirector imgName]);
 
         imagineTest = rgb2gray(image(190:190+150,60:60+500,:));
-        imagineIPM = obtineIPM(imagineTest);
+        [imagineIPM, matriceInversa] = obtineIPM(imagineTest);
 
         imagineFiltrata = filtrareIPM(imagineIPM);
 
         [liniiImagine, incadrare] = detectieLinii(imagineFiltrata);
         [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
-
+        
+        punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
+        
         imagineRezultat = uint8(zeros(size(imagineTest,1),size(imagineTest,2),1));
         imagineRezultat(:,:,1) = imagineFiltrata(:,:);
-
+       
+        puncteInteres = punctePlan;
+        
         pos = zeros(0,2);
         for u = 1:size(puncteInteres,1)/4
             puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
             for idx = 1:4
                 i = round(puncte(idx,1));
                 j = round(puncte(idx,2));
+                
+                if i < 0 || j < 0
+                    continue;
+                end
+                
                 if j == 0
                     j = 1;
+                end
+                
+                if i == 0
+                    i = 1;
                 end
                 imagineRezultat(j,i,:) = 255;
                 pos = [pos; i j];
             end
         end
 
-        imageMarked = insertMarker(imagineIPM,pos,'o');
+        imageMarked = insertMarker(imagineTest,pos,'o');
         imshow(imageMarked);
         for u = 1:size(puncteInteres,1)/4
             puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
@@ -49,6 +62,11 @@ for idxImg = 1:length(filelist)
                 j = round(puncte(idx-1,2));
                 ii = round(puncte(idx,1));
                 jj = round(puncte(idx,2));
+                
+                 if i < 0 || j < 0 || ii < 0 || jj < 0
+                    continue;
+                end
+                
                 line([i ii],[j jj]);
             end
         end
