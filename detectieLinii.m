@@ -6,7 +6,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTI
     % Initializam parametrii
     numarLinii = 3; % Numarul de linii detectate
     limitaIncadrare = 2; % Dimensiune boundy-box
-    limitaIncadrareLinie = 5; % Diferentia minima dintre oricare 2 coloane
+    limitaIncadrareLinie = 50; % Diferentia minima dintre oricare 2 coloane
     filtruGaussian = [-1 1];
     incadrareLinie = zeros(numarLinii,2);
     idxIncadrare = 1;

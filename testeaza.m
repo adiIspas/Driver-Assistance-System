@@ -2,7 +2,7 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-numeFolderImagini = 'cordova1';
+numeFolderImagini = 'cordova2';
 % numeFolderImagini = 'washington1';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
@@ -16,6 +16,8 @@ for idxImg = 1:length(filelist)
         clc
         fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
         imgName = filelist(idxImg).name;
+        
+        tic
         image = imread([numeDirector imgName]);
 
         imagineTest = rgb2gray(image(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
@@ -29,38 +31,9 @@ for idxImg = 1:length(filelist)
         
         punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
         
-        imagineRezultat = uint8(zeros(size(imagineTest,1),size(imagineTest,2),1));
-        imagineRezultat(:,:,1) = imagineFiltrata(:,:);
-       
-        puncteInteres = punctePlan;
-        
-        pos = zeros(0,2);
-        for u = 1:size(puncteInteres,1)/4
-            puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
-            for idx = 1:4
-                i = round(puncte(idx,1));
-                j = round(puncte(idx,2));
-                
-                if i < 0 || j < 0
-                    continue;
-                end
-                
-                if j == 0
-                    j = 1;
-                end
-                
-                if i == 0
-                    i = 1;
-                end
-                
-                pos = [pos; i+xInceputDecupare j+yInceputDecupare];
-            end
-        end
-
-        imageMarked = insertMarker(image,pos,'o');
-        imshow(imageMarked);
-        for u = 1:size(puncteInteres,1)/4
-            puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
+        imagineTrasata = image;
+        for u = 1:size(punctePlan,1)/4
+            puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
 
             for idx = 2:4
                 i = round(puncte(idx-1,1));
@@ -72,9 +45,12 @@ for idxImg = 1:length(filelist)
                     continue;
                  end
                 
-                line([i+xInceputDecupare ii+xInceputDecupare],[j+yInceputDecupare jj+yInceputDecupare]);
+                imagineTrasata = cv.line(imagineTrasata, ...
+                    [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
+                    'Thickness',5,'Color',[0 255 0]);
+                
             end
         end
-        
-        pause(0.001);        
+        toc
+        imshow(imagineTrasata);
 end
