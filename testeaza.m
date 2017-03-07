@@ -2,10 +2,14 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-numeFolderImagini = 'cordova2';
+numeFolderImagini = 'cordova1';
 % numeFolderImagini = 'washington1';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
+yInceputDecupare = 190;
+xInceputDecupare = 60;
+yLungimeDecupare = 150;
+xLungimeDecupare = 500;
 
 filelist = dir([numeDirector '*.' tipImagine]);
 for idxImg = 1:length(filelist)
@@ -14,7 +18,8 @@ for idxImg = 1:length(filelist)
         imgName = filelist(idxImg).name;
         image = imread([numeDirector imgName]);
 
-        imagineTest = rgb2gray(image(190:190+150,60:60+500,:));
+        imagineTest = rgb2gray(image(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
+            xInceputDecupare:xInceputDecupare+xLungimeDecupare,:));
         [imagineIPM, matriceInversa] = obtineIPM(imagineTest);
 
         imagineFiltrata = filtrareIPM(imagineIPM);
@@ -47,12 +52,12 @@ for idxImg = 1:length(filelist)
                 if i == 0
                     i = 1;
                 end
-                imagineRezultat(j,i,:) = 255;
-                pos = [pos; i j];
+                
+                pos = [pos; i+xInceputDecupare j+yInceputDecupare];
             end
         end
 
-        imageMarked = insertMarker(imagineTest,pos,'o');
+        imageMarked = insertMarker(image,pos,'o');
         imshow(imageMarked);
         for u = 1:size(puncteInteres,1)/4
             puncte = sortrows(puncteInteres(u*4-4+1:u*4,:),2);
@@ -65,9 +70,9 @@ for idxImg = 1:length(filelist)
                 
                  if i < 0 || j < 0 || ii < 0 || jj < 0
                     continue;
-                end
+                 end
                 
-                line([i ii],[j jj]);
+                line([i+xInceputDecupare ii+xInceputDecupare],[j+yInceputDecupare jj+yInceputDecupare]);
             end
         end
         
