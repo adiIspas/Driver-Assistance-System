@@ -2,7 +2,7 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-numeFolderImagini = 'cordova2';
+numeFolderImagini = 'cordova1';
 % numeFolderImagini = 'washington2';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
@@ -11,8 +11,14 @@ xInceputDecupare = 60;
 yLungimeDecupare = 150;
 xLungimeDecupare = 500;
 
+salveazaDetectii = 0;
+
 filelist = dir([numeDirector '*.' tipImagine]);
-fileID = fopen(['Evaluare\',numeFolderImagini,'\list.txt_results.txt'],'w');
+
+if salveazaDetectii == 1
+    fileID = fopen(['Evaluare\',numeFolderImagini,'\list.txt_results.txt'],'w');
+end
+
 for idxImg = 1:length(filelist)
         clc
         fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
@@ -66,8 +72,12 @@ for idxImg = 1:length(filelist)
         toc
         imshow(imagineTrasata);
         
-        fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);
-        fprintf(fileID,textCompus);
+        if salveazaDetectii == 1
+            fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);
+            fprintf(fileID,textCompus);
+        end
 
 end
-fclose(fileID);
+if salveazaDetectii == 1
+    fclose(fileID);
+end

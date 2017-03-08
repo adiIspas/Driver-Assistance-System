@@ -4,7 +4,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTI
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
     % Initializam parametrii
-    numarLinii = 4; % Numarul de linii detectate
+    numarLinii = 3; % Numarul de linii detectate
     limitaIncadrare = 2; % Dimensiune boundy-box
     limitaIncadrareLinie = 30; % Diferentia minima dintre oricare 2 coloane
     filtruGaussian = [-1 1];
