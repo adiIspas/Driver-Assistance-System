@@ -3,7 +3,7 @@ fprintf('Incarcam imaginile din director \n');
 clear, clc, close all;
 
 numeFolderImagini = 'cordova1';
-% numeFolderImagini = 'washington1';
+% numeFolderImagini = 'washington2';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
 yInceputDecupare = 190;
@@ -11,7 +11,8 @@ xInceputDecupare = 60;
 yLungimeDecupare = 150;
 xLungimeDecupare = 500;
 
-salveazaDetectii = 1;
+salveazaDetectii = 0;
+mod2Benzi = 1;
 
 filelist = dir([numeDirector '*.' tipImagine]);
 
@@ -33,7 +34,7 @@ for idxImg = 1:length(filelist)
 
         imagineFiltrata = filtrareIPM(imagineIPM);
 
-        [liniiImagine, incadrare] = detectieLinii(imagineFiltrata);
+        [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
         [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
         toc
         

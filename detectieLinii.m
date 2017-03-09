@@ -1,14 +1,19 @@
-function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTIE FINALIZATA
+function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata, douaBenzi ) % FUNCTIE FINALIZATA
     % detectieLinii Foloseste o varianta simplificata a Hough pentru a detecta care dintre coloane este o posibila linie.
     %   Detaliile despre implementare pot fi gasite in paper-ul 
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
     % Initializam parametrii
     limitaIncadrare = 2; % Dimensiune boundy-box
-    limitaIncadrareLinie = 40; % Diferentia minima dintre oricare 2 coloane
+    limitaIncadrareLinie = 30; % Diferentia minima dintre oricare 2 coloane
     filtruGaussian = [-1 1];
     incadrareLinie = zeros(0,2);
-    valoareMinimaColoana = 250; % Valoarea minima a unei coloane pentru a fi luata in calcul
+    valoareMinimaColoana = 500; % Valoarea minima a unei coloane pentru a fi luata in calcul
+    
+    mod2Benzi = struct('activat',0,'centruImagine',size(imagineFiltrata,2)/2);
+    if douaBenzi == 1
+        mod2Benzi = struct('activat',1,'centruImagine',size(imagineFiltrata,2)/2);
+    end
     
     sumaColoane = sum(imagineFiltrata,1);
     coloaneFiltrate = imfilter(sumaColoane, filtruGaussian);
@@ -19,7 +24,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTI
     coloaneTemporale = locs(index(1:end));
     valoriTemporale = initialValues(index(1:end));
     
-    coloane = obtineColoane(coloaneTemporale,limitaIncadrareLinie);
+    coloane = obtineColoane(coloaneTemporale,limitaIncadrareLinie,mod2Benzi);
     for idx = 1:size(coloane,2)
         % Verificam daca adunam sau scadem limitaIncadrare ramanem in
         % imagine. In caz negativ adaptam la inceputul sau sfarsitul
@@ -37,7 +42,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTI
     end
 end
 
-function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie)
+function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie, mod2Benzi)
     coloaneSelectate = zeros(0,1);
     
     coloaneSelectate = [coloaneSelectate, coloaneSortate(1)];
@@ -57,5 +62,20 @@ function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie)
         end
     end
     
-    coloane = coloaneSelectate(1:end);
+    % Daca este activat modul cu 2 benzi intoarcem doar cele mai apropiate
+    % 2 coloane de centru imaginii
+    if mod2Benzi.activat == 1
+        centruImagine = mod2Benzi.centruImagine;
+        pozitii2Benzi = zeros(1,0);
+        
+        for idx = 1:size(coloaneSelectate,2)
+            pozitii2Benzi = [pozitii2Benzi, abs(centruImagine - coloaneSelectate(idx))];
+        end
+        
+        [~, index] = sort(pozitii2Benzi);
+        coloane = coloaneSelectate(index(1:2));
+    else
+        coloane = coloaneSelectate(1:end);
+    end
+    
 end
