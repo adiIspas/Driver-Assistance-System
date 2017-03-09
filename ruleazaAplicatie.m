@@ -3,7 +3,7 @@ fprintf('Incarcam imaginile din director \n');
 clear, clc, close all;
 
 numeFolderImagini = 'cordova1';
-% numeFolderImagini = 'washington2';
+% numeFolderImagini = 'washington1';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
 yInceputDecupare = 190;
@@ -11,7 +11,7 @@ xInceputDecupare = 60;
 yLungimeDecupare = 150;
 xLungimeDecupare = 500;
 
-salveazaDetectii = 0;
+salveazaDetectii = 1;
 
 filelist = dir([numeDirector '*.' tipImagine]);
 

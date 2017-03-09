@@ -4,42 +4,40 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTI
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
     % Initializam parametrii
-    numarLinii = 3; % Numarul de linii detectate
     limitaIncadrare = 2; % Dimensiune boundy-box
-    limitaIncadrareLinie = 30; % Diferentia minima dintre oricare 2 coloane
+    limitaIncadrareLinie = 40; % Diferentia minima dintre oricare 2 coloane
     filtruGaussian = [-1 1];
-    incadrareLinie = zeros(numarLinii,2);
-    idxIncadrare = 1;
+    incadrareLinie = zeros(0,2);
+    valoareMinimaColoana = 250; % Valoarea minima a unei coloane pentru a fi luata in calcul
     
     sumaColoane = sum(imagineFiltrata,1);
     coloaneFiltrate = imfilter(sumaColoane, filtruGaussian);
     
-    [~, locs] = findpeaks(coloaneFiltrate);
+    [initialValues, locs] = findpeaks(coloaneFiltrate);
     [~, index] = sort(coloaneFiltrate(locs),'descend');
     
     coloaneTemporale = locs(index(1:end));
-    coloane = obtineColoane(coloaneTemporale,limitaIncadrareLinie,numarLinii);
+    valoriTemporale = initialValues(index(1:end));
+    
+    coloane = obtineColoane(coloaneTemporale,limitaIncadrareLinie);
     for idx = 1:size(coloane,2)
         % Verificam daca adunam sau scadem limitaIncadrare ramanem in
         % imagine. In caz negativ adaptam la inceputul sau sfarsitul
         % imaginii.
-        if coloane(idx) > limitaIncadrare && coloane(idx) < size(imagineFiltrata,2) - limitaIncadrare
-            incadrareLinie(idxIncadrare,:) = [coloane(idx) - limitaIncadrare, coloane(idx) + limitaIncadrare];
-            idxIncadrare = idxIncadrare + 1;
-        elseif coloane(idx) > limitaIncadrare
-            incadrareLinie(idxIncadrare,:) = [coloane(idx) - limitaIncadrare, size(imagineFiltrata,2)];
-            idxIncadrare = idxIncadrare + 1;
-        elseif coloane(idx) < size(imagineFiltrata) - limitaIncadrare
-            incadrareLinie(idxIncadrare,:) = [1, coloane(idx) + limitaIncadrare];
-            idxIncadrare = idxIncadrare + 1;
-        else
-            incadrareLinie(idxIncadrare,:) = [1, size(imagineFiltrata,2)];
-            idxIncadrare = idxIncadrare + 1;
+        if coloane(idx) > limitaIncadrare && coloane(idx) < size(imagineFiltrata,2) - limitaIncadrare ...
+                && valoriTemporale(idx) >= valoareMinimaColoana
+            incadrareLinie = [incadrareLinie; coloane(idx) - limitaIncadrare, coloane(idx) + limitaIncadrare];
+        elseif coloane(idx) > limitaIncadrare && valoriTemporale(idx) >= valoareMinimaColoana
+            incadrareLinie = [incadrareLinie; coloane(idx) - limitaIncadrare, size(imagineFiltrata,2)];
+        elseif isequal(coloane(idx) < size(imagineFiltrata) - limitaIncadrare, valoriTemporale(idx) >= valoareMinimaColoana)
+            incadrareLinie = [incadrareLinie; 1, coloane(idx) + limitaIncadrare];
+        elseif valoriTemporale(idx) >= valoareMinimaColoana
+            incadrareLinie = [incadrareLinie; 1, size(imagineFiltrata,2)];
         end
     end
 end
 
-function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie, numarLinii)
+function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie)
     coloaneSelectate = zeros(0,1);
     
     coloaneSelectate = [coloaneSelectate, coloaneSortate(1)];
@@ -59,5 +57,5 @@ function coloane = obtineColoane(coloaneSortate, limitaIncadrareLinie, numarLini
         end
     end
     
-    coloane = coloaneSelectate(1:numarLinii);
+    coloane = coloaneSelectate(1:end);
 end
