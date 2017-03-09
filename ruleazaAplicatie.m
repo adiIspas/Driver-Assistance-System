@@ -55,10 +55,6 @@ for idxImg = 1:length(filelist)
                 ii = round(puncte(idx,1));
                 jj = round(puncte(idx,2));
                 
-%                  if i < 0 || j < 0 || ii < 0 || jj < 0
-%                     continue;
-%                  end
-                
                 imagineTrasata = cv.line(imagineTrasata, ...
                     [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
                     'Thickness',5,'Color',[0 255 0]);
@@ -71,7 +67,7 @@ for idxImg = 1:length(filelist)
         end
         toc
         imshow(imagineTrasata);
-        
+
         if salveazaDetectii == 1
             fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);
             fprintf(fileID,textCompus);

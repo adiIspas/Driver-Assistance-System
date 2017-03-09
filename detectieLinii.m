@@ -26,11 +26,11 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata ) % FUNCTI
         if coloane(idx) > limitaIncadrare && coloane(idx) < size(imagineFiltrata,2) - limitaIncadrare
             incadrareLinie(idxIncadrare,:) = [coloane(idx) - limitaIncadrare, coloane(idx) + limitaIncadrare];
             idxIncadrare = idxIncadrare + 1;
-        elseif coloana(idx) > limitaIncadrare
+        elseif coloane(idx) > limitaIncadrare
             incadrareLinie(idxIncadrare,:) = [coloane(idx) - limitaIncadrare, size(imagineFiltrata,2)];
             idxIncadrare = idxIncadrare + 1;
-        elseif coloana(idx) < size(imagineFiltrata) - limitaIncadrare
-            incadrareLinie(idxIncadrare,:) = [1, coloana(idx) + limitaIncadrare];
+        elseif coloane(idx) < size(imagineFiltrata) - limitaIncadrare
+            incadrareLinie(idxIncadrare,:) = [1, coloane(idx) + limitaIncadrare];
             idxIncadrare = idxIncadrare + 1;
         else
             incadrareLinie(idxIncadrare,:) = [1, size(imagineFiltrata,2)];
