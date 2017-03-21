@@ -1,35 +1,35 @@
 clear, clc, close all;
 
 numeFolderVideo = 'videos';
-numeVideo = 'travel_video_3_cut.mp4';
+numeVideo = 'traffic_video_2.mp4';
 
-yInceputDecupare = 250;
-xInceputDecupare = 1;
-yLungimeDecupare = 100;
-xLungimeDecupare = 620;
+configuratie_video_2;
+
+yInceputDecupare = configuratie.yInceputDecupare;
+xInceputDecupare = configuratie.xInceputDecupare;
+yLungimeDecupare = configuratie.yLungimeDecupare;
+xLungimeDecupare = configuratie.xLungimeDecupare;
 
 mod2Benzi = 1;
 
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
-        clc
+    clc
         tic
-        image = readFrame(video);
-
-        imagineTest = image(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
+        img = readFrame(video);
+        
+        imagineTest = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
             xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
-        [imagineIPM, matriceInversa] = obtineIPM(imagineTest);
+        [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineTest), configuratie);
         
         imagineFiltrata = filtrareIPM(imagineIPM);
 
         [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
         [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
-        toc
-        
-        tic
+
         punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
         
-        imagineTrasata = image;
+        imagineTrasata = img;
         numarSplines = 0;
         textCompus = '';
         for u = 1:size(punctePlan,1)/4
@@ -46,7 +46,7 @@ while hasFrame(video)
                 
                 imagineTrasata = cv.line(imagineTrasata, ...
                     [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-                    'Thickness',5,'Color',[0 255 0]);
+                    'Thickness',7,'Color',[0 255 0]);
 
                 textCompus = strcat(textCompus, ['\t\t', num2str(i+xInceputDecupare),', ',num2str(j+yInceputDecupare),'\n']);
             end
@@ -56,5 +56,6 @@ while hasFrame(video)
         end
         toc
 %         imshow(imagineIPM);
-        imshow(imagineTrasata);
+        image(imagineTrasata);
+        pause(0.0001);
 end

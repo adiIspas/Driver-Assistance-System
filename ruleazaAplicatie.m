@@ -8,10 +8,12 @@ numeFolderImagini = 'cordova1';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
 
-yInceputDecupare = 190;
-xInceputDecupare = 60;
-yLungimeDecupare = 150;
-xLungimeDecupare = 500;
+configuratie_video_paper;
+
+yInceputDecupare = configuratie.yInceputDecupare;
+xInceputDecupare = configuratie.xInceputDecupare;
+yLungimeDecupare = configuratie.yLungimeDecupare;
+xLungimeDecupare = configuratie.xLungimeDecupare;
 
 salveazaDetectii = 1;
 mod2Benzi = 1;
@@ -28,11 +30,11 @@ for idxImg = 1:length(filelist)
         imgName = filelist(idxImg).name;
         
         tic
-        image = imread([numeDirector imgName]);
+        img = imread([numeDirector imgName]);
 
-        imagineTest = image(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
+        imagineTest = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
             xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
-        [imagineIPM, matriceInversa] = obtineIPM(imagineTest);
+        [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineTest),configuratie);
         
         imagineFiltrata = filtrareIPM(imagineIPM);
 
@@ -43,7 +45,7 @@ for idxImg = 1:length(filelist)
         tic
         punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
         
-        imagineTrasata = image;
+        imagineTrasata = img;
         numarSplines = 0;
         textCompus = '';
         for u = 1:size(punctePlan,1)/4
@@ -69,7 +71,8 @@ for idxImg = 1:length(filelist)
             numarSplines = numarSplines + 1;
         end
         toc
-        imshow(imagineTrasata);
+        image(imagineTrasata);
+        pause(0.01);
 
         if salveazaDetectii == 1
             fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);
