@@ -1,34 +1,20 @@
-fprintf('Incarcam imaginile din director \n');
-
 clear, clc, close all;
 
-numeFolderImagini = 'cordova1';
-% numeFolderImagini = 'washington1';
-% numeFolderImagini = 'road';
-numeDirector = [pwd '\' numeFolderImagini '\'];
-tipImagine = 'png';
+numeFolderVideo = 'videos';
+numeVideo = 'travel_video_3_cut.mp4';
 
-yInceputDecupare = 190;
-xInceputDecupare = 60;
-yLungimeDecupare = 150;
-xLungimeDecupare = 500;
+yInceputDecupare = 250;
+xInceputDecupare = 1;
+yLungimeDecupare = 100;
+xLungimeDecupare = 620;
 
-salveazaDetectii = 1;
 mod2Benzi = 1;
 
-filelist = dir([numeDirector '*.' tipImagine]);
-
-if salveazaDetectii == 1
-    fileID = fopen(['Evaluare\',numeFolderImagini,'\list.txt_results.txt'],'w');
-end
-
-for idxImg = 1:length(filelist)
+video = VideoReader([numeFolderVideo '/' numeVideo]);
+while hasFrame(video)
         clc
-%         fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
-        imgName = filelist(idxImg).name;
-        
         tic
-        image = imread([numeDirector imgName]);
+        image = readFrame(video);
 
         imagineTest = image(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
             xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
@@ -69,13 +55,6 @@ for idxImg = 1:length(filelist)
             numarSplines = numarSplines + 1;
         end
         toc
+%         imshow(imagineIPM);
         imshow(imagineTrasata);
-
-        if salveazaDetectii == 1
-            fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);
-            fprintf(fileID,textCompus);
-        end
-end
-if salveazaDetectii == 1
-    fclose(fileID);
 end
