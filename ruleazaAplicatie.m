@@ -3,8 +3,7 @@ fprintf('Incarcam imaginile din director \n');
 clear, clc, close all;
 
 numeFolderImagini = 'cordova1';
-% numeFolderImagini = 'washington1';
-% numeFolderImagini = 'road';
+% numeFolderImagini = 'washington2';
 numeDirector = [pwd '\' numeFolderImagini '\'];
 tipImagine = 'png';
 
@@ -15,18 +14,18 @@ xInceputDecupare = configuratie.xInceputDecupare;
 yLungimeDecupare = configuratie.yLungimeDecupare;
 xLungimeDecupare = configuratie.xLungimeDecupare;
 
-salveazaDetectii = 1;
+salveazaDetectii = 0;
 mod2Benzi = 1;
 
 filelist = dir([numeDirector '*.' tipImagine]);
 
 if salveazaDetectii == 1
-    fileID = fopen(['Evaluare\',numeFolderImagini,'\list.txt_results.txt'],'w');
+    fileID = fopen(['Evaluare_2Benzi\',numeFolderImagini,'\list.txt_results.txt'],'w');
 end
 
 for idxImg = 1:length(filelist)
         clc
-%         fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
+        fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
         imgName = filelist(idxImg).name;
         
         tic
@@ -40,9 +39,7 @@ for idxImg = 1:length(filelist)
 
         [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
         [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
-        toc
-        
-        tic
+
         punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
         
         imagineTrasata = img;
@@ -50,7 +47,7 @@ for idxImg = 1:length(filelist)
         textCompus = '';
         for u = 1:size(punctePlan,1)/4
             puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
-%             puncte = ccvEvalBezSpline(puncte);
+%             puncte = ccvEvalBezSpline(puncte,.01);
             textCompus = strcat(textCompus, ['\tspline#', num2str(u), ' has ', ...
                 num2str(size(puncte,1)), ' points and score ', num2str(10), '\n']);
             
@@ -71,8 +68,8 @@ for idxImg = 1:length(filelist)
             numarSplines = numarSplines + 1;
         end
         toc
-        image(imagineTrasata);
-        pause(0.01);
+%         image(imagineTrasata);
+%         pause(0.001);
 
         if salveazaDetectii == 1
             fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);

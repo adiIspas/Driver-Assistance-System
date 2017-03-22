@@ -3,15 +3,15 @@ function [ imagineIPM, matriceInversa ] = obtineIPM(imagine, configuratie) % FUN
     %   Detaliile despre implementare pot fi gasite in paper-ul 
     % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
 
-    procentYMin = configuratie.procentYMin; %20
-    pixeliXPotrivire = configuratie.pixeliXPotrivire; %65
+    procentYMin = configuratie.procentYMin;
+    pixeliXPotrivire = configuratie.pixeliXPotrivire;
 
     xMax = size(imagine,2);
     yMax = size(imagine,1);
     yMin = size(imagine,1) * procentYMin/100;
     perfectX1 = round(size(imagine,2)/2 - pixeliXPotrivire);
     perfectX2 = round(size(imagine,2)/2 + pixeliXPotrivire);
-
+    
     % Punctele sunt date sub forma [x,y]
     srcPoints = {[0,yMin],[xMax,yMin],[0,yMax],[xMax,yMax]};
     dstPoints = {[0,0],[xMax,0],[perfectX1,yMax],[perfectX2,yMax]};

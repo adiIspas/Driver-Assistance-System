@@ -1,0 +1,7031 @@
+frame#1 has 0 splines
+frame#2 has 7 splines
+	spline#1 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+	spline#2 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+	spline#3 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+	spline#4 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+	spline#5 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+	spline#6 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+	spline#7 has 4 points and score 10
+		219, 227
+		191, 241
+		175, 246
+		111, 286
+frame#3 has 7 splines
+	spline#1 has 4 points and score 10
+		290, 223
+		280, 236
+		270, 266
+		238, 305
+	spline#2 has 4 points and score 10
+		221, 224
+		189, 239
+		154, 256
+		78, 299
+	spline#3 has 4 points and score 10
+		221, 224
+		189, 239
+		154, 256
+		78, 299
+	spline#4 has 4 points and score 10
+		221, 224
+		189, 239
+		154, 256
+		78, 299
+	spline#5 has 4 points and score 10
+		221, 224
+		189, 239
+		154, 256
+		78, 299
+	spline#6 has 4 points and score 10
+		221, 224
+		189, 239
+		154, 256
+		78, 299
+	spline#7 has 4 points and score 10
+		221, 224
+		189, 239
+		154, 256
+		78, 299
+frame#4 has 0 splines
+frame#5 has 7 splines
+	spline#1 has 4 points and score 10
+		281, 233
+		276, 237
+		267, 257
+		272, 266
+	spline#2 has 4 points and score 10
+		205, 229
+		180, 243
+		157, 260
+		33, 320
+	spline#3 has 4 points and score 10
+		205, 229
+		180, 243
+		157, 260
+		33, 320
+	spline#4 has 4 points and score 10
+		205, 229
+		180, 243
+		157, 260
+		33, 320
+	spline#5 has 4 points and score 10
+		205, 229
+		180, 243
+		157, 260
+		33, 320
+	spline#6 has 4 points and score 10
+		205, 229
+		180, 243
+		157, 260
+		33, 320
+	spline#7 has 4 points and score 10
+		205, 229
+		180, 243
+		157, 260
+		33, 320
+frame#6 has 6 splines
+	spline#1 has 4 points and score 10
+		222, 221
+		171, 243
+		149, 255
+		-10, 338
+	spline#2 has 4 points and score 10
+		222, 221
+		171, 243
+		149, 255
+		-10, 338
+	spline#3 has 4 points and score 10
+		222, 221
+		171, 243
+		149, 255
+		-10, 338
+	spline#4 has 4 points and score 10
+		222, 221
+		171, 243
+		149, 255
+		-10, 338
+	spline#5 has 4 points and score 10
+		222, 221
+		171, 243
+		149, 255
+		-10, 338
+	spline#6 has 4 points and score 10
+		222, 221
+		171, 243
+		149, 255
+		-10, 338
+frame#7 has 7 splines
+	spline#1 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+	spline#2 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+	spline#3 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+	spline#4 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+	spline#5 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+	spline#6 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+	spline#7 has 4 points and score 10
+		286, 228
+		274, 235
+		270, 254
+		268, 279
+frame#8 has 5 splines
+	spline#1 has 4 points and score 10
+		360, 226
+		360, 234
+		398, 265
+		418, 281
+	spline#2 has 4 points and score 10
+		360, 226
+		360, 234
+		398, 265
+		418, 281
+	spline#3 has 4 points and score 10
+		360, 226
+		360, 234
+		398, 265
+		418, 281
+	spline#4 has 4 points and score 10
+		360, 226
+		360, 234
+		398, 265
+		418, 281
+	spline#5 has 4 points and score 10
+		360, 226
+		360, 234
+		398, 265
+		418, 281
+frame#9 has 0 splines
+frame#10 has 7 splines
+	spline#1 has 4 points and score 10
+		282, 229
+		277, 241
+		262, 265
+		238, 322
+	spline#2 has 4 points and score 10
+		358, 226
+		381, 250
+		385, 268
+		448, 311
+	spline#3 has 4 points and score 10
+		358, 226
+		381, 250
+		385, 268
+		448, 311
+	spline#4 has 4 points and score 10
+		358, 226
+		381, 250
+		385, 268
+		448, 311
+	spline#5 has 4 points and score 10
+		358, 226
+		381, 250
+		385, 268
+		448, 311
+	spline#6 has 4 points and score 10
+		358, 226
+		381, 250
+		385, 268
+		448, 311
+	spline#7 has 4 points and score 10
+		358, 226
+		381, 250
+		385, 268
+		448, 311
+frame#11 has 5 splines
+	spline#1 has 4 points and score 10
+		356, 225
+		374, 250
+		379, 263
+		438, 311
+	spline#2 has 4 points and score 10
+		356, 225
+		374, 250
+		379, 263
+		438, 311
+	spline#3 has 4 points and score 10
+		356, 225
+		374, 250
+		379, 263
+		438, 311
+	spline#4 has 4 points and score 10
+		356, 225
+		374, 250
+		379, 263
+		438, 311
+	spline#5 has 4 points and score 10
+		356, 225
+		374, 250
+		379, 263
+		438, 311
+frame#12 has 4 splines
+	spline#1 has 4 points and score 10
+		403, 223
+		420, 232
+		457, 249
+		630, 327
+	spline#2 has 4 points and score 10
+		403, 223
+		420, 232
+		457, 249
+		630, 327
+	spline#3 has 4 points and score 10
+		403, 223
+		420, 232
+		457, 249
+		630, 327
+	spline#4 has 4 points and score 10
+		403, 223
+		420, 232
+		457, 249
+		630, 327
+frame#13 has 7 splines
+	spline#1 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+	spline#2 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+	spline#3 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+	spline#4 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+	spline#5 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+	spline#6 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+	spline#7 has 4 points and score 10
+		217, 227
+		194, 239
+		176, 250
+		11, 341
+frame#14 has 6 splines
+	spline#1 has 4 points and score 10
+		286, 222
+		273, 247
+		261, 266
+		249, 300
+	spline#2 has 4 points and score 10
+		286, 222
+		273, 247
+		261, 266
+		249, 300
+	spline#3 has 4 points and score 10
+		286, 222
+		273, 247
+		261, 266
+		249, 300
+	spline#4 has 4 points and score 10
+		286, 222
+		273, 247
+		261, 266
+		249, 300
+	spline#5 has 4 points and score 10
+		286, 222
+		273, 247
+		261, 266
+		249, 300
+	spline#6 has 4 points and score 10
+		286, 222
+		273, 247
+		261, 266
+		249, 300
+frame#15 has 0 splines
+frame#16 has 0 splines
+frame#17 has 7 splines
+	spline#1 has 4 points and score 10
+		223, 224
+		203, 232
+		198, 238
+		31, 326
+	spline#2 has 4 points and score 10
+		280, 231
+		277, 235
+		263, 261
+		254, 292
+	spline#3 has 4 points and score 10
+		280, 231
+		277, 235
+		263, 261
+		254, 292
+	spline#4 has 4 points and score 10
+		280, 231
+		277, 235
+		263, 261
+		254, 292
+	spline#5 has 4 points and score 10
+		280, 231
+		277, 235
+		263, 261
+		254, 292
+	spline#6 has 4 points and score 10
+		280, 231
+		277, 235
+		263, 261
+		254, 292
+	spline#7 has 4 points and score 10
+		280, 231
+		277, 235
+		263, 261
+		254, 292
+frame#18 has 4 splines
+	spline#1 has 4 points and score 10
+		411, 229
+		447, 245
+		572, 306
+		610, 334
+	spline#2 has 4 points and score 10
+		411, 229
+		447, 245
+		572, 306
+		610, 334
+	spline#3 has 4 points and score 10
+		411, 229
+		447, 245
+		572, 306
+		610, 334
+	spline#4 has 4 points and score 10
+		411, 229
+		447, 245
+		572, 306
+		610, 334
+frame#19 has 7 splines
+	spline#1 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+	spline#2 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+	spline#3 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+	spline#4 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+	spline#5 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+	spline#6 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+	spline#7 has 4 points and score 10
+		221, 225
+		192, 239
+		56, 308
+		13, 332
+frame#20 has 0 splines
+frame#21 has 7 splines
+	spline#1 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+	spline#2 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+	spline#3 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+	spline#4 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+	spline#5 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+	spline#6 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+	spline#7 has 4 points and score 10
+		227, 222
+		191, 239
+		105, 286
+		52, 311
+frame#22 has 0 splines
+frame#23 has 7 splines
+	spline#1 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+	spline#2 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+	spline#3 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+	spline#4 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+	spline#5 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+	spline#6 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+	spline#7 has 4 points and score 10
+		221, 226
+		186, 243
+		166, 256
+		123, 275
+frame#24 has 5 splines
+	spline#1 has 4 points and score 10
+		347, 221
+		356, 231
+		377, 260
+		424, 311
+	spline#2 has 4 points and score 10
+		347, 221
+		356, 231
+		377, 260
+		424, 311
+	spline#3 has 4 points and score 10
+		347, 221
+		356, 231
+		377, 260
+		424, 311
+	spline#4 has 4 points and score 10
+		347, 221
+		356, 231
+		377, 260
+		424, 311
+	spline#5 has 4 points and score 10
+		347, 221
+		356, 231
+		377, 260
+		424, 311
+frame#25 has 5 splines
+	spline#1 has 4 points and score 10
+		349, 226
+		355, 240
+		394, 269
+		409, 292
+	spline#2 has 4 points and score 10
+		349, 226
+		355, 240
+		394, 269
+		409, 292
+	spline#3 has 4 points and score 10
+		349, 226
+		355, 240
+		394, 269
+		409, 292
+	spline#4 has 4 points and score 10
+		349, 226
+		355, 240
+		394, 269
+		409, 292
+	spline#5 has 4 points and score 10
+		349, 226
+		355, 240
+		394, 269
+		409, 292
+frame#26 has 0 splines
+frame#27 has 0 splines
+frame#28 has 0 splines
+frame#29 has 6 splines
+	spline#1 has 4 points and score 10
+		285, 223
+		280, 226
+		251, 273
+		244, 295
+	spline#2 has 4 points and score 10
+		346, 221
+		355, 233
+		403, 275
+		404, 290
+	spline#3 has 4 points and score 10
+		346, 221
+		355, 233
+		403, 275
+		404, 290
+	spline#4 has 4 points and score 10
+		346, 221
+		355, 233
+		403, 275
+		404, 290
+	spline#5 has 4 points and score 10
+		346, 221
+		355, 233
+		403, 275
+		404, 290
+	spline#6 has 4 points and score 10
+		346, 221
+		355, 233
+		403, 275
+		404, 290
+frame#30 has 6 splines
+	spline#1 has 4 points and score 10
+		213, 228
+		206, 232
+		189, 242
+		28, 322
+	spline#2 has 4 points and score 10
+		213, 228
+		206, 232
+		189, 242
+		28, 322
+	spline#3 has 4 points and score 10
+		213, 228
+		206, 232
+		189, 242
+		28, 322
+	spline#4 has 4 points and score 10
+		213, 228
+		206, 232
+		189, 242
+		28, 322
+	spline#5 has 4 points and score 10
+		213, 228
+		206, 232
+		189, 242
+		28, 322
+	spline#6 has 4 points and score 10
+		213, 228
+		206, 232
+		189, 242
+		28, 322
+frame#31 has 0 splines
+frame#32 has 7 splines
+	spline#1 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+	spline#2 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+	spline#3 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+	spline#4 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+	spline#5 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+	spline#6 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+	spline#7 has 4 points and score 10
+		225, 222
+		212, 230
+		98, 294
+		45, 314
+frame#33 has 0 splines
+frame#34 has 6 splines
+	spline#1 has 4 points and score 10
+		222, 224
+		200, 235
+		161, 258
+		80, 300
+	spline#2 has 4 points and score 10
+		352, 227
+		359, 233
+		371, 253
+		438, 322
+	spline#3 has 4 points and score 10
+		477, 224
+		486, 227
+		667, 276
+		776, 307
+	spline#4 has 4 points and score 10
+		477, 224
+		486, 227
+		667, 276
+		776, 307
+	spline#5 has 4 points and score 10
+		477, 224
+		486, 227
+		667, 276
+		776, 307
+	spline#6 has 4 points and score 10
+		477, 224
+		486, 227
+		667, 276
+		776, 307
+frame#35 has 6 splines
+	spline#1 has 4 points and score 10
+		285, 223
+		287, 228
+		267, 266
+		261, 285
+	spline#2 has 4 points and score 10
+		285, 223
+		287, 228
+		267, 266
+		261, 285
+	spline#3 has 4 points and score 10
+		422, 232
+		437, 237
+		502, 272
+		565, 296
+	spline#4 has 4 points and score 10
+		422, 232
+		437, 237
+		502, 272
+		565, 296
+	spline#5 has 4 points and score 10
+		422, 232
+		437, 237
+		502, 272
+		565, 296
+	spline#6 has 4 points and score 10
+		422, 232
+		437, 237
+		502, 272
+		565, 296
+frame#36 has 6 splines
+	spline#1 has 4 points and score 10
+		287, 226
+		283, 233
+		257, 272
+		238, 324
+	spline#2 has 4 points and score 10
+		287, 226
+		283, 233
+		257, 272
+		238, 324
+	spline#3 has 4 points and score 10
+		287, 226
+		283, 233
+		257, 272
+		238, 324
+	spline#4 has 4 points and score 10
+		287, 226
+		283, 233
+		257, 272
+		238, 324
+	spline#5 has 4 points and score 10
+		287, 226
+		283, 233
+		257, 272
+		238, 324
+	spline#6 has 4 points and score 10
+		287, 226
+		283, 233
+		257, 272
+		238, 324
+frame#37 has 0 splines
+frame#38 has 0 splines
+frame#39 has 6 splines
+	spline#1 has 4 points and score 10
+		286, 228
+		282, 237
+		272, 271
+		255, 288
+	spline#2 has 4 points and score 10
+		286, 228
+		282, 237
+		272, 271
+		255, 288
+	spline#3 has 4 points and score 10
+		286, 228
+		282, 237
+		272, 271
+		255, 288
+	spline#4 has 4 points and score 10
+		286, 228
+		282, 237
+		272, 271
+		255, 288
+	spline#5 has 4 points and score 10
+		286, 228
+		282, 237
+		272, 271
+		255, 288
+	spline#6 has 4 points and score 10
+		286, 228
+		282, 237
+		272, 271
+		255, 288
+frame#40 has 7 splines
+	spline#1 has 4 points and score 10
+		219, 226
+		209, 232
+		159, 260
+		30, 326
+	spline#2 has 4 points and score 10
+		219, 226
+		209, 232
+		159, 260
+		30, 326
+	spline#3 has 4 points and score 10
+		219, 226
+		209, 232
+		159, 260
+		30, 326
+	spline#4 has 4 points and score 10
+		416, 225
+		451, 242
+		469, 248
+		590, 303
+	spline#5 has 4 points and score 10
+		416, 225
+		451, 242
+		469, 248
+		590, 303
+	spline#6 has 4 points and score 10
+		416, 225
+		451, 242
+		469, 248
+		590, 303
+	spline#7 has 4 points and score 10
+		416, 225
+		451, 242
+		469, 248
+		590, 303
+frame#41 has 0 splines
+frame#42 has 7 splines
+	spline#1 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+	spline#2 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+	spline#3 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+	spline#4 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+	spline#5 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+	spline#6 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+	spline#7 has 4 points and score 10
+		224, 224
+		213, 230
+		206, 236
+		62, 310
+frame#43 has 7 splines
+	spline#1 has 4 points and score 10
+		228, 223
+		212, 230
+		91, 294
+		50, 316
+	spline#2 has 4 points and score 10
+		285, 229
+		278, 243
+		271, 255
+		258, 304
+	spline#3 has 4 points and score 10
+		365, 224
+		378, 235
+		385, 240
+		473, 312
+	spline#4 has 4 points and score 10
+		365, 224
+		378, 235
+		385, 240
+		473, 312
+	spline#5 has 4 points and score 10
+		365, 224
+		378, 235
+		385, 240
+		473, 312
+	spline#6 has 4 points and score 10
+		365, 224
+		378, 235
+		385, 240
+		473, 312
+	spline#7 has 4 points and score 10
+		365, 224
+		378, 235
+		385, 240
+		473, 312
+frame#44 has 0 splines
+frame#45 has 7 splines
+	spline#1 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+	spline#2 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+	spline#3 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+	spline#4 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+	spline#5 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+	spline#6 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+	spline#7 has 4 points and score 10
+		359, 229
+		368, 236
+		392, 261
+		416, 283
+frame#46 has 7 splines
+	spline#1 has 4 points and score 10
+		355, 223
+		368, 237
+		412, 286
+		458, 327
+	spline#2 has 4 points and score 10
+		285, 228
+		282, 234
+		267, 262
+		264, 283
+	spline#3 has 4 points and score 10
+		228, 222
+		211, 231
+		163, 256
+		32, 327
+	spline#4 has 4 points and score 10
+		228, 222
+		211, 231
+		163, 256
+		32, 327
+	spline#5 has 4 points and score 10
+		228, 222
+		211, 231
+		163, 256
+		32, 327
+	spline#6 has 4 points and score 10
+		228, 222
+		211, 231
+		163, 256
+		32, 327
+	spline#7 has 4 points and score 10
+		228, 222
+		211, 231
+		163, 256
+		32, 327
+frame#47 has 6 splines
+	spline#1 has 4 points and score 10
+		280, 236
+		277, 241
+		278, 249
+		256, 296
+	spline#2 has 4 points and score 10
+		280, 236
+		277, 241
+		278, 249
+		256, 296
+	spline#3 has 4 points and score 10
+		280, 236
+		277, 241
+		278, 249
+		256, 296
+	spline#4 has 4 points and score 10
+		280, 236
+		277, 241
+		278, 249
+		256, 296
+	spline#5 has 4 points and score 10
+		280, 236
+		277, 241
+		278, 249
+		256, 296
+	spline#6 has 4 points and score 10
+		280, 236
+		277, 241
+		278, 249
+		256, 296
+frame#48 has 6 splines
+	spline#1 has 4 points and score 10
+		280, 229
+		281, 236
+		271, 254
+		239, 339
+	spline#2 has 4 points and score 10
+		280, 229
+		281, 236
+		271, 254
+		239, 339
+	spline#3 has 4 points and score 10
+		280, 229
+		281, 236
+		271, 254
+		239, 339
+	spline#4 has 4 points and score 10
+		280, 229
+		281, 236
+		271, 254
+		239, 339
+	spline#5 has 4 points and score 10
+		280, 229
+		281, 236
+		271, 254
+		239, 339
+	spline#6 has 4 points and score 10
+		280, 229
+		281, 236
+		271, 254
+		239, 339
+frame#49 has 6 splines
+	spline#1 has 4 points and score 10
+		225, 222
+		215, 226
+		139, 267
+		60, 308
+	spline#2 has 4 points and score 10
+		286, 224
+		278, 244
+		263, 263
+		249, 294
+	spline#3 has 4 points and score 10
+		286, 224
+		278, 244
+		263, 263
+		249, 294
+	spline#4 has 4 points and score 10
+		492, 222
+		500, 225
+		628, 256
+		871, 315
+	spline#5 has 4 points and score 10
+		492, 222
+		500, 225
+		628, 256
+		871, 315
+	spline#6 has 4 points and score 10
+		492, 222
+		500, 225
+		628, 256
+		871, 315
+frame#50 has 6 splines
+	spline#1 has 4 points and score 10
+		287, 220
+		281, 234
+		270, 270
+		247, 299
+	spline#2 has 4 points and score 10
+		287, 220
+		281, 234
+		270, 270
+		247, 299
+	spline#3 has 4 points and score 10
+		287, 220
+		281, 234
+		270, 270
+		247, 299
+	spline#4 has 4 points and score 10
+		287, 220
+		281, 234
+		270, 270
+		247, 299
+	spline#5 has 4 points and score 10
+		287, 220
+		281, 234
+		270, 270
+		247, 299
+	spline#6 has 4 points and score 10
+		287, 220
+		281, 234
+		270, 270
+		247, 299
+frame#51 has 7 splines
+	spline#1 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+	spline#2 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+	spline#3 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+	spline#4 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+	spline#5 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+	spline#6 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+	spline#7 has 4 points and score 10
+		360, 231
+		375, 249
+		391, 275
+		427, 296
+frame#52 has 7 splines
+	spline#1 has 4 points and score 10
+		359, 230
+		366, 245
+		381, 254
+		402, 274
+	spline#2 has 4 points and score 10
+		359, 230
+		366, 245
+		381, 254
+		402, 274
+	spline#3 has 4 points and score 10
+		281, 221
+		275, 243
+		273, 254
+		250, 292
+	spline#4 has 4 points and score 10
+		281, 221
+		275, 243
+		273, 254
+		250, 292
+	spline#5 has 4 points and score 10
+		281, 221
+		275, 243
+		273, 254
+		250, 292
+	spline#6 has 4 points and score 10
+		281, 221
+		275, 243
+		273, 254
+		250, 292
+	spline#7 has 4 points and score 10
+		281, 221
+		275, 243
+		273, 254
+		250, 292
+frame#53 has 7 splines
+	spline#1 has 4 points and score 10
+		352, 222
+		357, 227
+		399, 274
+		437, 313
+	spline#2 has 4 points and score 10
+		281, 235
+		277, 242
+		266, 247
+		249, 298
+	spline#3 has 4 points and score 10
+		221, 224
+		184, 241
+		120, 280
+		65, 298
+	spline#4 has 4 points and score 10
+		221, 224
+		184, 241
+		120, 280
+		65, 298
+	spline#5 has 4 points and score 10
+		221, 224
+		184, 241
+		120, 280
+		65, 298
+	spline#6 has 4 points and score 10
+		221, 224
+		184, 241
+		120, 280
+		65, 298
+	spline#7 has 4 points and score 10
+		221, 224
+		184, 241
+		120, 280
+		65, 298
+frame#54 has 5 splines
+	spline#1 has 4 points and score 10
+		225, 222
+		214, 229
+		133, 275
+		57, 318
+	spline#2 has 4 points and score 10
+		225, 222
+		214, 229
+		133, 275
+		57, 318
+	spline#3 has 4 points and score 10
+		225, 222
+		214, 229
+		133, 275
+		57, 318
+	spline#4 has 4 points and score 10
+		225, 222
+		214, 229
+		133, 275
+		57, 318
+	spline#5 has 4 points and score 10
+		225, 222
+		214, 229
+		133, 275
+		57, 318
+frame#55 has 6 splines
+	spline#1 has 4 points and score 10
+		221, 226
+		197, 242
+		176, 249
+		16, 333
+	spline#2 has 4 points and score 10
+		221, 226
+		197, 242
+		176, 249
+		16, 333
+	spline#3 has 4 points and score 10
+		221, 226
+		197, 242
+		176, 249
+		16, 333
+	spline#4 has 4 points and score 10
+		221, 226
+		197, 242
+		176, 249
+		16, 333
+	spline#5 has 4 points and score 10
+		221, 226
+		197, 242
+		176, 249
+		16, 333
+	spline#6 has 4 points and score 10
+		221, 226
+		197, 242
+		176, 249
+		16, 333
+frame#56 has 0 splines
+frame#57 has 0 splines
+frame#58 has 0 splines
+frame#59 has 0 splines
+frame#60 has 0 splines
+frame#61 has 0 splines
+frame#62 has 0 splines
+frame#63 has 0 splines
+frame#64 has 7 splines
+	spline#1 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+	spline#2 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+	spline#3 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+	spline#4 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+	spline#5 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+	spline#6 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+	spline#7 has 4 points and score 10
+		388, 221
+		419, 242
+		440, 249
+		570, 326
+frame#65 has 0 splines
+frame#66 has 0 splines
+frame#67 has 5 splines
+	spline#1 has 4 points and score 10
+		279, 228
+		272, 235
+		247, 275
+		241, 288
+	spline#2 has 4 points and score 10
+		279, 228
+		272, 235
+		247, 275
+		241, 288
+	spline#3 has 4 points and score 10
+		279, 228
+		272, 235
+		247, 275
+		241, 288
+	spline#4 has 4 points and score 10
+		279, 228
+		272, 235
+		247, 275
+		241, 288
+	spline#5 has 4 points and score 10
+		279, 228
+		272, 235
+		247, 275
+		241, 288
+frame#68 has 7 splines
+	spline#1 has 4 points and score 10
+		395, 222
+		421, 234
+		522, 287
+		566, 309
+	spline#2 has 4 points and score 10
+		395, 222
+		421, 234
+		522, 287
+		566, 309
+	spline#3 has 4 points and score 10
+		278, 229
+		271, 233
+		248, 281
+		243, 305
+	spline#4 has 4 points and score 10
+		278, 229
+		271, 233
+		248, 281
+		243, 305
+	spline#5 has 4 points and score 10
+		278, 229
+		271, 233
+		248, 281
+		243, 305
+	spline#6 has 4 points and score 10
+		278, 229
+		271, 233
+		248, 281
+		243, 305
+	spline#7 has 4 points and score 10
+		278, 229
+		271, 233
+		248, 281
+		243, 305
+frame#69 has 0 splines
+frame#70 has 6 splines
+	spline#1 has 4 points and score 10
+		275, 224
+		275, 227
+		261, 253
+		238, 294
+	spline#2 has 4 points and score 10
+		275, 224
+		275, 227
+		261, 253
+		238, 294
+	spline#3 has 4 points and score 10
+		275, 224
+		275, 227
+		261, 253
+		238, 294
+	spline#4 has 4 points and score 10
+		275, 224
+		275, 227
+		261, 253
+		238, 294
+	spline#5 has 4 points and score 10
+		275, 224
+		275, 227
+		261, 253
+		238, 294
+	spline#6 has 4 points and score 10
+		275, 224
+		275, 227
+		261, 253
+		238, 294
+frame#71 has 7 splines
+	spline#1 has 4 points and score 10
+		396, 224
+		407, 229
+		466, 261
+		585, 326
+	spline#2 has 4 points and score 10
+		396, 224
+		407, 229
+		466, 261
+		585, 326
+	spline#3 has 4 points and score 10
+		396, 224
+		407, 229
+		466, 261
+		585, 326
+	spline#4 has 4 points and score 10
+		206, 228
+		193, 236
+		120, 274
+		103, 286
+	spline#5 has 4 points and score 10
+		206, 228
+		193, 236
+		120, 274
+		103, 286
+	spline#6 has 4 points and score 10
+		206, 228
+		193, 236
+		120, 274
+		103, 286
+	spline#7 has 4 points and score 10
+		206, 228
+		193, 236
+		120, 274
+		103, 286
+frame#72 has 7 splines
+	spline#1 has 4 points and score 10
+		279, 225
+		273, 228
+		264, 250
+		236, 295
+	spline#2 has 4 points and score 10
+		388, 222
+		421, 242
+		454, 256
+		569, 332
+	spline#3 has 4 points and score 10
+		388, 222
+		421, 242
+		454, 256
+		569, 332
+	spline#4 has 4 points and score 10
+		388, 222
+		421, 242
+		454, 256
+		569, 332
+	spline#5 has 4 points and score 10
+		388, 222
+		421, 242
+		454, 256
+		569, 332
+	spline#6 has 4 points and score 10
+		388, 222
+		421, 242
+		454, 256
+		569, 332
+	spline#7 has 4 points and score 10
+		388, 222
+		421, 242
+		454, 256
+		569, 332
+frame#73 has 5 splines
+	spline#1 has 4 points and score 10
+		224, 222
+		221, 225
+		86, 294
+		44, 328
+	spline#2 has 4 points and score 10
+		224, 222
+		221, 225
+		86, 294
+		44, 328
+	spline#3 has 4 points and score 10
+		224, 222
+		221, 225
+		86, 294
+		44, 328
+	spline#4 has 4 points and score 10
+		224, 222
+		221, 225
+		86, 294
+		44, 328
+	spline#5 has 4 points and score 10
+		224, 222
+		221, 225
+		86, 294
+		44, 328
+frame#74 has 0 splines
+frame#75 has 7 splines
+	spline#1 has 4 points and score 10
+		395, 226
+		403, 233
+		445, 261
+		495, 282
+	spline#2 has 4 points and score 10
+		395, 226
+		403, 233
+		445, 261
+		495, 282
+	spline#3 has 4 points and score 10
+		482, 227
+		545, 246
+		739, 306
+		846, 330
+	spline#4 has 4 points and score 10
+		213, 226
+		152, 252
+		138, 265
+		89, 278
+	spline#5 has 4 points and score 10
+		213, 226
+		152, 252
+		138, 265
+		89, 278
+	spline#6 has 4 points and score 10
+		213, 226
+		152, 252
+		138, 265
+		89, 278
+	spline#7 has 4 points and score 10
+		213, 226
+		152, 252
+		138, 265
+		89, 278
+frame#76 has 5 splines
+	spline#1 has 4 points and score 10
+		205, 228
+		180, 238
+		156, 253
+		114, 271
+	spline#2 has 4 points and score 10
+		205, 228
+		180, 238
+		156, 253
+		114, 271
+	spline#3 has 4 points and score 10
+		205, 228
+		180, 238
+		156, 253
+		114, 271
+	spline#4 has 4 points and score 10
+		205, 228
+		180, 238
+		156, 253
+		114, 271
+	spline#5 has 4 points and score 10
+		205, 228
+		180, 238
+		156, 253
+		114, 271
+frame#77 has 5 splines
+	spline#1 has 4 points and score 10
+		473, 223
+		535, 240
+		702, 287
+		805, 313
+	spline#2 has 4 points and score 10
+		473, 223
+		535, 240
+		702, 287
+		805, 313
+	spline#3 has 4 points and score 10
+		473, 223
+		535, 240
+		702, 287
+		805, 313
+	spline#4 has 4 points and score 10
+		473, 223
+		535, 240
+		702, 287
+		805, 313
+	spline#5 has 4 points and score 10
+		473, 223
+		535, 240
+		702, 287
+		805, 313
+frame#78 has 5 splines
+	spline#1 has 4 points and score 10
+		480, 224
+		500, 230
+		650, 271
+		820, 317
+	spline#2 has 4 points and score 10
+		206, 229
+		201, 232
+		171, 244
+		44, 308
+	spline#3 has 4 points and score 10
+		206, 229
+		201, 232
+		171, 244
+		44, 308
+	spline#4 has 4 points and score 10
+		206, 229
+		201, 232
+		171, 244
+		44, 308
+	spline#5 has 4 points and score 10
+		206, 229
+		201, 232
+		171, 244
+		44, 308
+frame#79 has 7 splines
+	spline#1 has 4 points and score 10
+		407, 226
+		419, 230
+		479, 260
+		593, 313
+	spline#2 has 4 points and score 10
+		407, 226
+		419, 230
+		479, 260
+		593, 313
+	spline#3 has 4 points and score 10
+		201, 231
+		194, 236
+		179, 241
+		111, 276
+	spline#4 has 4 points and score 10
+		495, 228
+		517, 233
+		558, 244
+		692, 279
+	spline#5 has 4 points and score 10
+		495, 228
+		517, 233
+		558, 244
+		692, 279
+	spline#6 has 4 points and score 10
+		495, 228
+		517, 233
+		558, 244
+		692, 279
+	spline#7 has 4 points and score 10
+		495, 228
+		517, 233
+		558, 244
+		692, 279
+frame#80 has 7 splines
+	spline#1 has 4 points and score 10
+		404, 224
+		491, 265
+		516, 282
+		560, 297
+	spline#2 has 4 points and score 10
+		276, 229
+		272, 233
+		255, 257
+		241, 280
+	spline#3 has 4 points and score 10
+		216, 223
+		198, 233
+		148, 260
+		7, 328
+	spline#4 has 4 points and score 10
+		216, 223
+		198, 233
+		148, 260
+		7, 328
+	spline#5 has 4 points and score 10
+		216, 223
+		198, 233
+		148, 260
+		7, 328
+	spline#6 has 4 points and score 10
+		216, 223
+		198, 233
+		148, 260
+		7, 328
+	spline#7 has 4 points and score 10
+		216, 223
+		198, 233
+		148, 260
+		7, 328
+frame#81 has 0 splines
+frame#82 has 6 splines
+	spline#1 has 4 points and score 10
+		221, 225
+		177, 244
+		146, 263
+		122, 277
+	spline#2 has 4 points and score 10
+		386, 224
+		412, 237
+		447, 257
+		589, 340
+	spline#3 has 4 points and score 10
+		386, 224
+		412, 237
+		447, 257
+		589, 340
+	spline#4 has 4 points and score 10
+		386, 224
+		412, 237
+		447, 257
+		589, 340
+	spline#5 has 4 points and score 10
+		386, 224
+		412, 237
+		447, 257
+		589, 340
+	spline#6 has 4 points and score 10
+		386, 224
+		412, 237
+		447, 257
+		589, 340
+frame#83 has 5 splines
+	spline#1 has 4 points and score 10
+		406, 227
+		436, 241
+		491, 273
+		537, 293
+	spline#2 has 4 points and score 10
+		406, 227
+		436, 241
+		491, 273
+		537, 293
+	spline#3 has 4 points and score 10
+		406, 227
+		436, 241
+		491, 273
+		537, 293
+	spline#4 has 4 points and score 10
+		406, 227
+		436, 241
+		491, 273
+		537, 293
+	spline#5 has 4 points and score 10
+		406, 227
+		436, 241
+		491, 273
+		537, 293
+frame#84 has 0 splines
+frame#85 has 0 splines
+frame#86 has 0 splines
+frame#87 has 6 splines
+	spline#1 has 4 points and score 10
+		424, 226
+		467, 244
+		481, 253
+		576, 293
+	spline#2 has 4 points and score 10
+		424, 226
+		467, 244
+		481, 253
+		576, 293
+	spline#3 has 4 points and score 10
+		424, 226
+		467, 244
+		481, 253
+		576, 293
+	spline#4 has 4 points and score 10
+		424, 226
+		467, 244
+		481, 253
+		576, 293
+	spline#5 has 4 points and score 10
+		424, 226
+		467, 244
+		481, 253
+		576, 293
+	spline#6 has 4 points and score 10
+		424, 226
+		467, 244
+		481, 253
+		576, 293
+frame#88 has 6 splines
+	spline#1 has 4 points and score 10
+		426, 227
+		436, 233
+		499, 262
+		582, 290
+	spline#2 has 4 points and score 10
+		426, 227
+		436, 233
+		499, 262
+		582, 290
+	spline#3 has 4 points and score 10
+		426, 227
+		436, 233
+		499, 262
+		582, 290
+	spline#4 has 4 points and score 10
+		426, 227
+		436, 233
+		499, 262
+		582, 290
+	spline#5 has 4 points and score 10
+		426, 227
+		436, 233
+		499, 262
+		582, 290
+	spline#6 has 4 points and score 10
+		426, 227
+		436, 233
+		499, 262
+		582, 290
+frame#89 has 5 splines
+	spline#1 has 4 points and score 10
+		416, 224
+		425, 229
+		523, 270
+		584, 299
+	spline#2 has 4 points and score 10
+		416, 224
+		425, 229
+		523, 270
+		584, 299
+	spline#3 has 4 points and score 10
+		416, 224
+		425, 229
+		523, 270
+		584, 299
+	spline#4 has 4 points and score 10
+		416, 224
+		425, 229
+		523, 270
+		584, 299
+	spline#5 has 4 points and score 10
+		416, 224
+		425, 229
+		523, 270
+		584, 299
+frame#90 has 7 splines
+	spline#1 has 4 points and score 10
+		220, 221
+		209, 227
+		129, 266
+		58, 297
+	spline#2 has 4 points and score 10
+		280, 230
+		269, 244
+		264, 253
+		268, 261
+	spline#3 has 4 points and score 10
+		417, 226
+		437, 235
+		463, 247
+		592, 304
+	spline#4 has 4 points and score 10
+		417, 226
+		437, 235
+		463, 247
+		592, 304
+	spline#5 has 4 points and score 10
+		417, 226
+		437, 235
+		463, 247
+		592, 304
+	spline#6 has 4 points and score 10
+		417, 226
+		437, 235
+		463, 247
+		592, 304
+	spline#7 has 4 points and score 10
+		417, 226
+		437, 235
+		463, 247
+		592, 304
+frame#91 has 7 splines
+	spline#1 has 4 points and score 10
+		190, 235
+		163, 246
+		160, 252
+		72, 296
+	spline#2 has 4 points and score 10
+		279, 223
+		282, 228
+		264, 259
+		241, 302
+	spline#3 has 4 points and score 10
+		279, 223
+		282, 228
+		264, 259
+		241, 302
+	spline#4 has 4 points and score 10
+		279, 223
+		282, 228
+		264, 259
+		241, 302
+	spline#5 has 4 points and score 10
+		279, 223
+		282, 228
+		264, 259
+		241, 302
+	spline#6 has 4 points and score 10
+		279, 223
+		282, 228
+		264, 259
+		241, 302
+	spline#7 has 4 points and score 10
+		279, 223
+		282, 228
+		264, 259
+		241, 302
+frame#92 has 0 splines
+frame#93 has 0 splines
+frame#94 has 6 splines
+	spline#1 has 4 points and score 10
+		283, 226
+		276, 241
+		261, 283
+		207, 337
+	spline#2 has 4 points and score 10
+		283, 226
+		276, 241
+		261, 283
+		207, 337
+	spline#3 has 4 points and score 10
+		283, 226
+		276, 241
+		261, 283
+		207, 337
+	spline#4 has 4 points and score 10
+		283, 226
+		276, 241
+		261, 283
+		207, 337
+	spline#5 has 4 points and score 10
+		283, 226
+		276, 241
+		261, 283
+		207, 337
+	spline#6 has 4 points and score 10
+		283, 226
+		276, 241
+		261, 283
+		207, 337
+frame#95 has 7 splines
+	spline#1 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+	spline#2 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+	spline#3 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+	spline#4 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+	spline#5 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+	spline#6 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+	spline#7 has 4 points and score 10
+		397, 223
+		458, 247
+		463, 253
+		610, 323
+frame#96 has 7 splines
+	spline#1 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+	spline#2 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+	spline#3 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+	spline#4 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+	spline#5 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+	spline#6 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+	spline#7 has 4 points and score 10
+		394, 221
+		441, 244
+		450, 250
+		556, 304
+frame#97 has 7 splines
+	spline#1 has 4 points and score 10
+		411, 226
+		435, 238
+		473, 257
+		517, 274
+	spline#2 has 4 points and score 10
+		220, 223
+		209, 229
+		101, 282
+		26, 323
+	spline#3 has 4 points and score 10
+		220, 223
+		209, 229
+		101, 282
+		26, 323
+	spline#4 has 4 points and score 10
+		220, 223
+		209, 229
+		101, 282
+		26, 323
+	spline#5 has 4 points and score 10
+		220, 223
+		209, 229
+		101, 282
+		26, 323
+	spline#6 has 4 points and score 10
+		220, 223
+		209, 229
+		101, 282
+		26, 323
+	spline#7 has 4 points and score 10
+		220, 223
+		209, 229
+		101, 282
+		26, 323
+frame#98 has 7 splines
+	spline#1 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+	spline#2 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+	spline#3 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+	spline#4 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+	spline#5 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+	spline#6 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+	spline#7 has 4 points and score 10
+		410, 229
+		438, 241
+		450, 249
+		555, 299
+frame#99 has 0 splines
+frame#100 has 7 splines
+	spline#1 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+	spline#2 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+	spline#3 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+	spline#4 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+	spline#5 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+	spline#6 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+	spline#7 has 4 points and score 10
+		405, 227
+		413, 234
+		489, 273
+		620, 335
+frame#101 has 0 splines
+frame#102 has 5 splines
+	spline#1 has 4 points and score 10
+		290, 224
+		275, 248
+		261, 276
+		262, 296
+	spline#2 has 4 points and score 10
+		290, 224
+		275, 248
+		261, 276
+		262, 296
+	spline#3 has 4 points and score 10
+		290, 224
+		275, 248
+		261, 276
+		262, 296
+	spline#4 has 4 points and score 10
+		290, 224
+		275, 248
+		261, 276
+		262, 296
+	spline#5 has 4 points and score 10
+		290, 224
+		275, 248
+		261, 276
+		262, 296
+frame#103 has 6 splines
+	spline#1 has 4 points and score 10
+		404, 229
+		421, 239
+		454, 253
+		498, 282
+	spline#2 has 4 points and score 10
+		404, 229
+		421, 239
+		454, 253
+		498, 282
+	spline#3 has 4 points and score 10
+		404, 229
+		421, 239
+		454, 253
+		498, 282
+	spline#4 has 4 points and score 10
+		404, 229
+		421, 239
+		454, 253
+		498, 282
+	spline#5 has 4 points and score 10
+		404, 229
+		421, 239
+		454, 253
+		498, 282
+	spline#6 has 4 points and score 10
+		404, 229
+		421, 239
+		454, 253
+		498, 282
+frame#104 has 0 splines
+frame#105 has 0 splines
+frame#106 has 0 splines
+frame#107 has 6 splines
+	spline#1 has 4 points and score 10
+		386, 221
+		413, 237
+		460, 264
+		521, 298
+	spline#2 has 4 points and score 10
+		228, 224
+		212, 235
+		145, 269
+		90, 307
+	spline#3 has 4 points and score 10
+		228, 224
+		212, 235
+		145, 269
+		90, 307
+	spline#4 has 4 points and score 10
+		228, 224
+		212, 235
+		145, 269
+		90, 307
+	spline#5 has 4 points and score 10
+		228, 224
+		212, 235
+		145, 269
+		90, 307
+	spline#6 has 4 points and score 10
+		228, 224
+		212, 235
+		145, 269
+		90, 307
+frame#108 has 4 splines
+	spline#1 has 4 points and score 10
+		473, 227
+		509, 239
+		586, 263
+		729, 301
+	spline#2 has 4 points and score 10
+		473, 227
+		509, 239
+		586, 263
+		729, 301
+	spline#3 has 4 points and score 10
+		473, 227
+		509, 239
+		586, 263
+		729, 301
+	spline#4 has 4 points and score 10
+		473, 227
+		509, 239
+		586, 263
+		729, 301
+frame#109 has 7 splines
+	spline#1 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+	spline#2 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+	spline#3 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+	spline#4 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+	spline#5 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+	spline#6 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+	spline#7 has 4 points and score 10
+		214, 229
+		200, 235
+		175, 248
+		97, 291
+frame#110 has 6 splines
+	spline#1 has 4 points and score 10
+		389, 224
+		422, 237
+		423, 246
+		529, 307
+	spline#2 has 4 points and score 10
+		389, 224
+		422, 237
+		423, 246
+		529, 307
+	spline#3 has 4 points and score 10
+		193, 237
+		181, 242
+		167, 250
+		37, 318
+	spline#4 has 4 points and score 10
+		193, 237
+		181, 242
+		167, 250
+		37, 318
+	spline#5 has 4 points and score 10
+		193, 237
+		181, 242
+		167, 250
+		37, 318
+	spline#6 has 4 points and score 10
+		193, 237
+		181, 242
+		167, 250
+		37, 318
+frame#111 has 4 splines
+	spline#1 has 4 points and score 10
+		212, 222
+		154, 247
+		89, 276
+		43, 300
+	spline#2 has 4 points and score 10
+		212, 222
+		154, 247
+		89, 276
+		43, 300
+	spline#3 has 4 points and score 10
+		212, 222
+		154, 247
+		89, 276
+		43, 300
+	spline#4 has 4 points and score 10
+		212, 222
+		154, 247
+		89, 276
+		43, 300
+frame#112 has 5 splines
+	spline#1 has 4 points and score 10
+		458, 227
+		467, 230
+		591, 271
+		689, 308
+	spline#2 has 4 points and score 10
+		458, 227
+		467, 230
+		591, 271
+		689, 308
+	spline#3 has 4 points and score 10
+		458, 227
+		467, 230
+		591, 271
+		689, 308
+	spline#4 has 4 points and score 10
+		458, 227
+		467, 230
+		591, 271
+		689, 308
+	spline#5 has 4 points and score 10
+		458, 227
+		467, 230
+		591, 271
+		689, 308
+frame#113 has 6 splines
+	spline#1 has 4 points and score 10
+		443, 223
+		525, 252
+		565, 264
+		601, 278
+	spline#2 has 4 points and score 10
+		443, 223
+		525, 252
+		565, 264
+		601, 278
+	spline#3 has 4 points and score 10
+		443, 223
+		525, 252
+		565, 264
+		601, 278
+	spline#4 has 4 points and score 10
+		443, 223
+		525, 252
+		565, 264
+		601, 278
+	spline#5 has 4 points and score 10
+		443, 223
+		525, 252
+		565, 264
+		601, 278
+	spline#6 has 4 points and score 10
+		443, 223
+		525, 252
+		565, 264
+		601, 278
+frame#114 has 6 splines
+	spline#1 has 4 points and score 10
+		385, 220
+		393, 226
+		511, 290
+		593, 335
+	spline#2 has 4 points and score 10
+		385, 220
+		393, 226
+		511, 290
+		593, 335
+	spline#3 has 4 points and score 10
+		385, 220
+		393, 226
+		511, 290
+		593, 335
+	spline#4 has 4 points and score 10
+		385, 220
+		393, 226
+		511, 290
+		593, 335
+	spline#5 has 4 points and score 10
+		385, 220
+		393, 226
+		511, 290
+		593, 335
+	spline#6 has 4 points and score 10
+		385, 220
+		393, 226
+		511, 290
+		593, 335
+frame#115 has 0 splines
+frame#116 has 0 splines
+frame#117 has 6 splines
+	spline#1 has 4 points and score 10
+		221, 225
+		203, 235
+		138, 270
+		25, 322
+	spline#2 has 4 points and score 10
+		221, 225
+		203, 235
+		138, 270
+		25, 322
+	spline#3 has 4 points and score 10
+		221, 225
+		203, 235
+		138, 270
+		25, 322
+	spline#4 has 4 points and score 10
+		221, 225
+		203, 235
+		138, 270
+		25, 322
+	spline#5 has 4 points and score 10
+		221, 225
+		203, 235
+		138, 270
+		25, 322
+	spline#6 has 4 points and score 10
+		221, 225
+		203, 235
+		138, 270
+		25, 322
+frame#118 has 5 splines
+	spline#1 has 4 points and score 10
+		395, 225
+		399, 228
+		471, 267
+		557, 310
+	spline#2 has 4 points and score 10
+		395, 225
+		399, 228
+		471, 267
+		557, 310
+	spline#3 has 4 points and score 10
+		395, 225
+		399, 228
+		471, 267
+		557, 310
+	spline#4 has 4 points and score 10
+		395, 225
+		399, 228
+		471, 267
+		557, 310
+	spline#5 has 4 points and score 10
+		395, 225
+		399, 228
+		471, 267
+		557, 310
+frame#119 has 0 splines
+frame#120 has 7 splines
+	spline#1 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+	spline#2 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+	spline#3 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+	spline#4 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+	spline#5 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+	spline#6 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+	spline#7 has 4 points and score 10
+		215, 225
+		207, 229
+		129, 270
+		70, 297
+frame#121 has 0 splines
+frame#122 has 6 splines
+	spline#1 has 4 points and score 10
+		198, 232
+		185, 239
+		119, 272
+		53, 304
+	spline#2 has 4 points and score 10
+		198, 232
+		185, 239
+		119, 272
+		53, 304
+	spline#3 has 4 points and score 10
+		198, 232
+		185, 239
+		119, 272
+		53, 304
+	spline#4 has 4 points and score 10
+		198, 232
+		185, 239
+		119, 272
+		53, 304
+	spline#5 has 4 points and score 10
+		198, 232
+		185, 239
+		119, 272
+		53, 304
+	spline#6 has 4 points and score 10
+		198, 232
+		185, 239
+		119, 272
+		53, 304
+frame#123 has 0 splines
+frame#124 has 0 splines
+frame#125 has 7 splines
+	spline#1 has 4 points and score 10
+		276, 221
+		274, 230
+		250, 263
+		209, 320
+	spline#2 has 4 points and score 10
+		209, 225
+		151, 250
+		132, 258
+		91, 281
+	spline#3 has 4 points and score 10
+		209, 225
+		151, 250
+		132, 258
+		91, 281
+	spline#4 has 4 points and score 10
+		209, 225
+		151, 250
+		132, 258
+		91, 281
+	spline#5 has 4 points and score 10
+		209, 225
+		151, 250
+		132, 258
+		91, 281
+	spline#6 has 4 points and score 10
+		209, 225
+		151, 250
+		132, 258
+		91, 281
+	spline#7 has 4 points and score 10
+		209, 225
+		151, 250
+		132, 258
+		91, 281
+frame#126 has 0 splines
+frame#127 has 0 splines
+frame#128 has 7 splines
+	spline#1 has 4 points and score 10
+		270, 231
+		264, 240
+		235, 266
+		214, 305
+	spline#2 has 4 points and score 10
+		225, 225
+		209, 235
+		174, 248
+		43, 327
+	spline#3 has 4 points and score 10
+		225, 225
+		209, 235
+		174, 248
+		43, 327
+	spline#4 has 4 points and score 10
+		225, 225
+		209, 235
+		174, 248
+		43, 327
+	spline#5 has 4 points and score 10
+		225, 225
+		209, 235
+		174, 248
+		43, 327
+	spline#6 has 4 points and score 10
+		225, 225
+		209, 235
+		174, 248
+		43, 327
+	spline#7 has 4 points and score 10
+		225, 225
+		209, 235
+		174, 248
+		43, 327
+frame#129 has 0 splines
+frame#130 has 0 splines
+frame#131 has 0 splines
+frame#132 has 0 splines
+frame#133 has 0 splines
+frame#134 has 0 splines
+frame#135 has 0 splines
+frame#136 has 0 splines
+frame#137 has 0 splines
+frame#138 has 0 splines
+frame#139 has 0 splines
+frame#140 has 0 splines
+frame#141 has 7 splines
+	spline#1 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+	spline#2 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+	spline#3 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+	spline#4 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+	spline#5 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+	spline#6 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+	spline#7 has 4 points and score 10
+		429, 222
+		453, 228
+		565, 266
+		694, 310
+frame#142 has 7 splines
+	spline#1 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+	spline#2 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+	spline#3 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+	spline#4 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+	spline#5 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+	spline#6 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+	spline#7 has 4 points and score 10
+		442, 225
+		498, 245
+		546, 264
+		645, 301
+frame#143 has 0 splines
+frame#144 has 0 splines
+frame#145 has 7 splines
+	spline#1 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+	spline#2 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+	spline#3 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+	spline#4 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+	spline#5 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+	spline#6 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+	spline#7 has 4 points and score 10
+		440, 227
+		495, 248
+		626, 299
+		740, 336
+frame#146 has 7 splines
+	spline#1 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+	spline#2 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+	spline#3 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+	spline#4 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+	spline#5 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+	spline#6 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+	spline#7 has 4 points and score 10
+		438, 229
+		447, 233
+		527, 264
+		566, 281
+frame#147 has 6 splines
+	spline#1 has 4 points and score 10
+		436, 231
+		452, 235
+		562, 278
+		604, 294
+	spline#2 has 4 points and score 10
+		436, 231
+		452, 235
+		562, 278
+		604, 294
+	spline#3 has 4 points and score 10
+		436, 231
+		452, 235
+		562, 278
+		604, 294
+	spline#4 has 4 points and score 10
+		436, 231
+		452, 235
+		562, 278
+		604, 294
+	spline#5 has 4 points and score 10
+		436, 231
+		452, 235
+		562, 278
+		604, 294
+	spline#6 has 4 points and score 10
+		436, 231
+		452, 235
+		562, 278
+		604, 294
+frame#148 has 7 splines
+	spline#1 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+	spline#2 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+	spline#3 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+	spline#4 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+	spline#5 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+	spline#6 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+	spline#7 has 4 points and score 10
+		423, 223
+		488, 248
+		523, 264
+		632, 308
+frame#149 has 0 splines
+frame#150 has 0 splines
+frame#151 has 0 splines
+frame#152 has 0 splines
+frame#153 has 0 splines
+frame#154 has 0 splines
+frame#155 has 0 splines
+frame#156 has 0 splines
+frame#157 has 7 splines
+	spline#1 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+	spline#2 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+	spline#3 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+	spline#4 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+	spline#5 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+	spline#6 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+	spline#7 has 4 points and score 10
+		373, 233
+		376, 241
+		398, 246
+		395, 255
+frame#158 has 7 splines
+	spline#1 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+	spline#2 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+	spline#3 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+	spline#4 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+	spline#5 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+	spline#6 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+	spline#7 has 4 points and score 10
+		367, 229
+		369, 235
+		412, 262
+		435, 295
+frame#159 has 4 splines
+	spline#1 has 4 points and score 10
+		404, 225
+		421, 234
+		467, 264
+		607, 331
+	spline#2 has 4 points and score 10
+		404, 225
+		421, 234
+		467, 264
+		607, 331
+	spline#3 has 4 points and score 10
+		404, 225
+		421, 234
+		467, 264
+		607, 331
+	spline#4 has 4 points and score 10
+		404, 225
+		421, 234
+		467, 264
+		607, 331
+frame#160 has 7 splines
+	spline#1 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+	spline#2 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+	spline#3 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+	spline#4 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+	spline#5 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+	spline#6 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+	spline#7 has 4 points and score 10
+		355, 222
+		362, 225
+		414, 283
+		484, 336
+frame#161 has 0 splines
+frame#162 has 6 splines
+	spline#1 has 4 points and score 10
+		272, 226
+		250, 250
+		236, 279
+		192, 298
+	spline#2 has 4 points and score 10
+		272, 226
+		250, 250
+		236, 279
+		192, 298
+	spline#3 has 4 points and score 10
+		272, 226
+		250, 250
+		236, 279
+		192, 298
+	spline#4 has 4 points and score 10
+		272, 226
+		250, 250
+		236, 279
+		192, 298
+	spline#5 has 4 points and score 10
+		272, 226
+		250, 250
+		236, 279
+		192, 298
+	spline#6 has 4 points and score 10
+		272, 226
+		250, 250
+		236, 279
+		192, 298
+frame#163 has 6 splines
+	spline#1 has 4 points and score 10
+		209, 224
+		196, 231
+		170, 247
+		29, 307
+	spline#2 has 4 points and score 10
+		353, 222
+		361, 227
+		422, 283
+		484, 340
+	spline#3 has 4 points and score 10
+		353, 222
+		361, 227
+		422, 283
+		484, 340
+	spline#4 has 4 points and score 10
+		353, 222
+		361, 227
+		422, 283
+		484, 340
+	spline#5 has 4 points and score 10
+		353, 222
+		361, 227
+		422, 283
+		484, 340
+	spline#6 has 4 points and score 10
+		353, 222
+		361, 227
+		422, 283
+		484, 340
+frame#164 has 5 splines
+	spline#1 has 4 points and score 10
+		362, 229
+		372, 241
+		413, 282
+		466, 326
+	spline#2 has 4 points and score 10
+		362, 229
+		372, 241
+		413, 282
+		466, 326
+	spline#3 has 4 points and score 10
+		362, 229
+		372, 241
+		413, 282
+		466, 326
+	spline#4 has 4 points and score 10
+		362, 229
+		372, 241
+		413, 282
+		466, 326
+	spline#5 has 4 points and score 10
+		362, 229
+		372, 241
+		413, 282
+		466, 326
+frame#165 has 7 splines
+	spline#1 has 4 points and score 10
+		214, 224
+		163, 247
+		124, 269
+		2, 318
+	spline#2 has 4 points and score 10
+		214, 224
+		163, 247
+		124, 269
+		2, 318
+	spline#3 has 4 points and score 10
+		214, 224
+		163, 247
+		124, 269
+		2, 318
+	spline#4 has 4 points and score 10
+		161, 223
+		105, 237
+		34, 260
+		-112, 307
+	spline#5 has 4 points and score 10
+		161, 223
+		105, 237
+		34, 260
+		-112, 307
+	spline#6 has 4 points and score 10
+		161, 223
+		105, 237
+		34, 260
+		-112, 307
+	spline#7 has 4 points and score 10
+		161, 223
+		105, 237
+		34, 260
+		-112, 307
+frame#166 has 7 splines
+	spline#1 has 4 points and score 10
+		215, 225
+		175, 245
+		104, 273
+		33, 321
+	spline#2 has 4 points and score 10
+		274, 228
+		259, 242
+		226, 277
+		239, 292
+	spline#3 has 4 points and score 10
+		274, 228
+		259, 242
+		226, 277
+		239, 292
+	spline#4 has 4 points and score 10
+		274, 228
+		259, 242
+		226, 277
+		239, 292
+	spline#5 has 4 points and score 10
+		274, 228
+		259, 242
+		226, 277
+		239, 292
+	spline#6 has 4 points and score 10
+		274, 228
+		259, 242
+		226, 277
+		239, 292
+	spline#7 has 4 points and score 10
+		274, 228
+		259, 242
+		226, 277
+		239, 292
+frame#167 has 0 splines
+frame#168 has 0 splines
+frame#169 has 5 splines
+	spline#1 has 4 points and score 10
+		364, 221
+		372, 225
+		427, 265
+		469, 303
+	spline#2 has 4 points and score 10
+		364, 221
+		372, 225
+		427, 265
+		469, 303
+	spline#3 has 4 points and score 10
+		364, 221
+		372, 225
+		427, 265
+		469, 303
+	spline#4 has 4 points and score 10
+		364, 221
+		372, 225
+		427, 265
+		469, 303
+	spline#5 has 4 points and score 10
+		364, 221
+		372, 225
+		427, 265
+		469, 303
+frame#170 has 6 splines
+	spline#1 has 4 points and score 10
+		222, 221
+		207, 231
+		181, 244
+		30, 321
+	spline#2 has 4 points and score 10
+		222, 221
+		207, 231
+		181, 244
+		30, 321
+	spline#3 has 4 points and score 10
+		222, 221
+		207, 231
+		181, 244
+		30, 321
+	spline#4 has 4 points and score 10
+		222, 221
+		207, 231
+		181, 244
+		30, 321
+	spline#5 has 4 points and score 10
+		222, 221
+		207, 231
+		181, 244
+		30, 321
+	spline#6 has 4 points and score 10
+		222, 221
+		207, 231
+		181, 244
+		30, 321
+frame#171 has 6 splines
+	spline#1 has 4 points and score 10
+		365, 227
+		381, 241
+		409, 264
+		458, 310
+	spline#2 has 4 points and score 10
+		365, 227
+		381, 241
+		409, 264
+		458, 310
+	spline#3 has 4 points and score 10
+		365, 227
+		381, 241
+		409, 264
+		458, 310
+	spline#4 has 4 points and score 10
+		365, 227
+		381, 241
+		409, 264
+		458, 310
+	spline#5 has 4 points and score 10
+		365, 227
+		381, 241
+		409, 264
+		458, 310
+	spline#6 has 4 points and score 10
+		365, 227
+		381, 241
+		409, 264
+		458, 310
+frame#172 has 0 splines
+frame#173 has 4 splines
+	spline#1 has 4 points and score 10
+		374, 224
+		379, 230
+		448, 280
+		502, 314
+	spline#2 has 4 points and score 10
+		374, 224
+		379, 230
+		448, 280
+		502, 314
+	spline#3 has 4 points and score 10
+		374, 224
+		379, 230
+		448, 280
+		502, 314
+	spline#4 has 4 points and score 10
+		374, 224
+		379, 230
+		448, 280
+		502, 314
+frame#174 has 5 splines
+	spline#1 has 4 points and score 10
+		374, 226
+		377, 230
+		385, 242
+		482, 314
+	spline#2 has 4 points and score 10
+		374, 226
+		377, 230
+		385, 242
+		482, 314
+	spline#3 has 4 points and score 10
+		374, 226
+		377, 230
+		385, 242
+		482, 314
+	spline#4 has 4 points and score 10
+		374, 226
+		377, 230
+		385, 242
+		482, 314
+	spline#5 has 4 points and score 10
+		374, 226
+		377, 230
+		385, 242
+		482, 314
+frame#175 has 7 splines
+	spline#1 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+	spline#2 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+	spline#3 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+	spline#4 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+	spline#5 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+	spline#6 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+	spline#7 has 4 points and score 10
+		212, 226
+		203, 230
+		116, 273
+		29, 323
+frame#176 has 6 splines
+	spline#1 has 4 points and score 10
+		210, 225
+		204, 231
+		141, 262
+		89, 288
+	spline#2 has 4 points and score 10
+		210, 225
+		204, 231
+		141, 262
+		89, 288
+	spline#3 has 4 points and score 10
+		210, 225
+		204, 231
+		141, 262
+		89, 288
+	spline#4 has 4 points and score 10
+		210, 225
+		204, 231
+		141, 262
+		89, 288
+	spline#5 has 4 points and score 10
+		210, 225
+		204, 231
+		141, 262
+		89, 288
+	spline#6 has 4 points and score 10
+		210, 225
+		204, 231
+		141, 262
+		89, 288
+frame#177 has 0 splines
+frame#178 has 7 splines
+	spline#1 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+	spline#2 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+	spline#3 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+	spline#4 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+	spline#5 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+	spline#6 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+	spline#7 has 4 points and score 10
+		206, 229
+		183, 240
+		136, 264
+		98, 279
+frame#179 has 7 splines
+	spline#1 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+	spline#2 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+	spline#3 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+	spline#4 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+	spline#5 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+	spline#6 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+	spline#7 has 4 points and score 10
+		220, 222
+		194, 234
+		100, 284
+		18, 319
+frame#180 has 0 splines
+frame#181 has 0 splines
+frame#182 has 0 splines
+frame#183 has 5 splines
+	spline#1 has 4 points and score 10
+		364, 221
+		382, 229
+		430, 267
+		490, 300
+	spline#2 has 4 points and score 10
+		364, 221
+		382, 229
+		430, 267
+		490, 300
+	spline#3 has 4 points and score 10
+		364, 221
+		382, 229
+		430, 267
+		490, 300
+	spline#4 has 4 points and score 10
+		364, 221
+		382, 229
+		430, 267
+		490, 300
+	spline#5 has 4 points and score 10
+		364, 221
+		382, 229
+		430, 267
+		490, 300
+frame#184 has 0 splines
+frame#185 has 6 splines
+	spline#1 has 4 points and score 10
+		222, 221
+		203, 231
+		143, 259
+		121, 272
+	spline#2 has 4 points and score 10
+		222, 221
+		203, 231
+		143, 259
+		121, 272
+	spline#3 has 4 points and score 10
+		410, 223
+		430, 233
+		461, 248
+		641, 326
+	spline#4 has 4 points and score 10
+		410, 223
+		430, 233
+		461, 248
+		641, 326
+	spline#5 has 4 points and score 10
+		410, 223
+		430, 233
+		461, 248
+		641, 326
+	spline#6 has 4 points and score 10
+		410, 223
+		430, 233
+		461, 248
+		641, 326
+frame#186 has 6 splines
+	spline#1 has 4 points and score 10
+		206, 228
+		166, 251
+		112, 272
+		77, 292
+	spline#2 has 4 points and score 10
+		206, 228
+		166, 251
+		112, 272
+		77, 292
+	spline#3 has 4 points and score 10
+		206, 228
+		166, 251
+		112, 272
+		77, 292
+	spline#4 has 4 points and score 10
+		206, 228
+		166, 251
+		112, 272
+		77, 292
+	spline#5 has 4 points and score 10
+		206, 228
+		166, 251
+		112, 272
+		77, 292
+	spline#6 has 4 points and score 10
+		206, 228
+		166, 251
+		112, 272
+		77, 292
+frame#187 has 7 splines
+	spline#1 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+	spline#2 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+	spline#3 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+	spline#4 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+	spline#5 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+	spline#6 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+	spline#7 has 4 points and score 10
+		191, 237
+		159, 251
+		153, 258
+		72, 293
+frame#188 has 0 splines
+frame#189 has 0 splines
+frame#190 has 0 splines
+frame#191 has 0 splines
+frame#192 has 0 splines
+frame#193 has 0 splines
+frame#194 has 0 splines
+frame#195 has 0 splines
+frame#196 has 7 splines
+	spline#1 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+	spline#2 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+	spline#3 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+	spline#4 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+	spline#5 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+	spline#6 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+	spline#7 has 4 points and score 10
+		226, 223
+		167, 253
+		151, 264
+		15, 340
+frame#197 has 7 splines
+	spline#1 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+	spline#2 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+	spline#3 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+	spline#4 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+	spline#5 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+	spline#6 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+	spline#7 has 4 points and score 10
+		213, 230
+		175, 247
+		169, 255
+		104, 291
+frame#198 has 5 splines
+	spline#1 has 4 points and score 10
+		218, 227
+		200, 240
+		158, 255
+		61, 312
+	spline#2 has 4 points and score 10
+		218, 227
+		200, 240
+		158, 255
+		61, 312
+	spline#3 has 4 points and score 10
+		218, 227
+		200, 240
+		158, 255
+		61, 312
+	spline#4 has 4 points and score 10
+		218, 227
+		200, 240
+		158, 255
+		61, 312
+	spline#5 has 4 points and score 10
+		218, 227
+		200, 240
+		158, 255
+		61, 312
+frame#199 has 6 splines
+	spline#1 has 4 points and score 10
+		290, 228
+		280, 238
+		283, 253
+		267, 274
+	spline#2 has 4 points and score 10
+		290, 228
+		280, 238
+		283, 253
+		267, 274
+	spline#3 has 4 points and score 10
+		290, 228
+		280, 238
+		283, 253
+		267, 274
+	spline#4 has 4 points and score 10
+		290, 228
+		280, 238
+		283, 253
+		267, 274
+	spline#5 has 4 points and score 10
+		290, 228
+		280, 238
+		283, 253
+		267, 274
+	spline#6 has 4 points and score 10
+		290, 228
+		280, 238
+		283, 253
+		267, 274
+frame#200 has 6 splines
+	spline#1 has 4 points and score 10
+		372, 224
+		405, 246
+		421, 266
+		463, 280
+	spline#2 has 4 points and score 10
+		372, 224
+		405, 246
+		421, 266
+		463, 280
+	spline#3 has 4 points and score 10
+		372, 224
+		405, 246
+		421, 266
+		463, 280
+	spline#4 has 4 points and score 10
+		372, 224
+		405, 246
+		421, 266
+		463, 280
+	spline#5 has 4 points and score 10
+		372, 224
+		405, 246
+		421, 266
+		463, 280
+	spline#6 has 4 points and score 10
+		372, 224
+		405, 246
+		421, 266
+		463, 280
+frame#201 has 5 splines
+	spline#1 has 4 points and score 10
+		183, 227
+		148, 239
+		50, 278
+		11, 293
+	spline#2 has 4 points and score 10
+		183, 227
+		148, 239
+		50, 278
+		11, 293
+	spline#3 has 4 points and score 10
+		183, 227
+		148, 239
+		50, 278
+		11, 293
+	spline#4 has 4 points and score 10
+		183, 227
+		148, 239
+		50, 278
+		11, 293
+	spline#5 has 4 points and score 10
+		183, 227
+		148, 239
+		50, 278
+		11, 293
+frame#202 has 6 splines
+	spline#1 has 4 points and score 10
+		372, 226
+		375, 231
+		432, 270
+		480, 306
+	spline#2 has 4 points and score 10
+		372, 226
+		375, 231
+		432, 270
+		480, 306
+	spline#3 has 4 points and score 10
+		372, 226
+		375, 231
+		432, 270
+		480, 306
+	spline#4 has 4 points and score 10
+		372, 226
+		375, 231
+		432, 270
+		480, 306
+	spline#5 has 4 points and score 10
+		372, 226
+		375, 231
+		432, 270
+		480, 306
+	spline#6 has 4 points and score 10
+		372, 226
+		375, 231
+		432, 270
+		480, 306
+frame#203 has 0 splines
+frame#204 has 7 splines
+	spline#1 has 4 points and score 10
+		360, 221
+		374, 230
+		428, 273
+		489, 323
+	spline#2 has 4 points and score 10
+		284, 224
+		291, 228
+		276, 261
+		269, 286
+	spline#3 has 4 points and score 10
+		284, 224
+		291, 228
+		276, 261
+		269, 286
+	spline#4 has 4 points and score 10
+		284, 224
+		291, 228
+		276, 261
+		269, 286
+	spline#5 has 4 points and score 10
+		284, 224
+		291, 228
+		276, 261
+		269, 286
+	spline#6 has 4 points and score 10
+		284, 224
+		291, 228
+		276, 261
+		269, 286
+	spline#7 has 4 points and score 10
+		284, 224
+		291, 228
+		276, 261
+		269, 286
+frame#205 has 0 splines
+frame#206 has 0 splines
+frame#207 has 0 splines
+frame#208 has 4 splines
+	spline#1 has 4 points and score 10
+		361, 222
+		412, 260
+		424, 274
+		445, 297
+	spline#2 has 4 points and score 10
+		361, 222
+		412, 260
+		424, 274
+		445, 297
+	spline#3 has 4 points and score 10
+		361, 222
+		412, 260
+		424, 274
+		445, 297
+	spline#4 has 4 points and score 10
+		361, 222
+		412, 260
+		424, 274
+		445, 297
+frame#209 has 7 splines
+	spline#1 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+	spline#2 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+	spline#3 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+	spline#4 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+	spline#5 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+	spline#6 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+	spline#7 has 4 points and score 10
+		285, 225
+		272, 240
+		266, 246
+		249, 298
+frame#210 has 5 splines
+	spline#1 has 4 points and score 10
+		220, 222
+		177, 241
+		146, 261
+		41, 312
+	spline#2 has 4 points and score 10
+		220, 222
+		177, 241
+		146, 261
+		41, 312
+	spline#3 has 4 points and score 10
+		220, 222
+		177, 241
+		146, 261
+		41, 312
+	spline#4 has 4 points and score 10
+		220, 222
+		177, 241
+		146, 261
+		41, 312
+	spline#5 has 4 points and score 10
+		220, 222
+		177, 241
+		146, 261
+		41, 312
+frame#211 has 7 splines
+	spline#1 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+	spline#2 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+	spline#3 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+	spline#4 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+	spline#5 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+	spline#6 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+	spline#7 has 4 points and score 10
+		282, 225
+		260, 253
+		251, 290
+		195, 322
+frame#212 has 7 splines
+	spline#1 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+	spline#2 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+	spline#3 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+	spline#4 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+	spline#5 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+	spline#6 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+	spline#7 has 4 points and score 10
+		282, 224
+		266, 245
+		248, 282
+		230, 297
+frame#213 has 7 splines
+	spline#1 has 4 points and score 10
+		280, 223
+		279, 231
+		255, 275
+		238, 298
+	spline#2 has 4 points and score 10
+		210, 226
+		190, 235
+		82, 287
+		46, 306
+	spline#3 has 4 points and score 10
+		210, 226
+		190, 235
+		82, 287
+		46, 306
+	spline#4 has 4 points and score 10
+		210, 226
+		190, 235
+		82, 287
+		46, 306
+	spline#5 has 4 points and score 10
+		210, 226
+		190, 235
+		82, 287
+		46, 306
+	spline#6 has 4 points and score 10
+		210, 226
+		190, 235
+		82, 287
+		46, 306
+	spline#7 has 4 points and score 10
+		210, 226
+		190, 235
+		82, 287
+		46, 306
+frame#214 has 7 splines
+	spline#1 has 4 points and score 10
+		272, 236
+		264, 247
+		264, 254
+		237, 302
+	spline#2 has 4 points and score 10
+		211, 224
+		167, 243
+		59, 297
+		-18, 327
+	spline#3 has 4 points and score 10
+		211, 224
+		167, 243
+		59, 297
+		-18, 327
+	spline#4 has 4 points and score 10
+		211, 224
+		167, 243
+		59, 297
+		-18, 327
+	spline#5 has 4 points and score 10
+		211, 224
+		167, 243
+		59, 297
+		-18, 327
+	spline#6 has 4 points and score 10
+		211, 224
+		167, 243
+		59, 297
+		-18, 327
+	spline#7 has 4 points and score 10
+		211, 224
+		167, 243
+		59, 297
+		-18, 327
+frame#215 has 7 splines
+	spline#1 has 4 points and score 10
+		280, 224
+		278, 227
+		247, 287
+		224, 306
+	spline#2 has 4 points and score 10
+		204, 228
+		142, 253
+		133, 263
+		81, 289
+	spline#3 has 4 points and score 10
+		204, 228
+		142, 253
+		133, 263
+		81, 289
+	spline#4 has 4 points and score 10
+		204, 228
+		142, 253
+		133, 263
+		81, 289
+	spline#5 has 4 points and score 10
+		204, 228
+		142, 253
+		133, 263
+		81, 289
+	spline#6 has 4 points and score 10
+		204, 228
+		142, 253
+		133, 263
+		81, 289
+	spline#7 has 4 points and score 10
+		204, 228
+		142, 253
+		133, 263
+		81, 289
+frame#216 has 0 splines
+frame#217 has 7 splines
+	spline#1 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+	spline#2 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+	spline#3 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+	spline#4 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+	spline#5 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+	spline#6 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+	spline#7 has 4 points and score 10
+		280, 225
+		265, 249
+		251, 262
+		241, 297
+frame#218 has 0 splines
+frame#219 has 0 splines
+frame#220 has 5 splines
+	spline#1 has 4 points and score 10
+		213, 224
+		191, 230
+		157, 250
+		62, 295
+	spline#2 has 4 points and score 10
+		213, 224
+		191, 230
+		157, 250
+		62, 295
+	spline#3 has 4 points and score 10
+		213, 224
+		191, 230
+		157, 250
+		62, 295
+	spline#4 has 4 points and score 10
+		213, 224
+		191, 230
+		157, 250
+		62, 295
+	spline#5 has 4 points and score 10
+		213, 224
+		191, 230
+		157, 250
+		62, 295
+frame#221 has 0 splines
+frame#222 has 0 splines
+frame#223 has 7 splines
+	spline#1 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+	spline#2 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+	spline#3 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+	spline#4 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+	spline#5 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+	spline#6 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+	spline#7 has 4 points and score 10
+		269, 221
+		260, 230
+		213, 283
+		182, 306
+frame#224 has 0 splines
+frame#225 has 0 splines
+frame#226 has 0 splines
+frame#227 has 0 splines
+frame#228 has 0 splines
+frame#229 has 0 splines
+frame#230 has 0 splines
+frame#231 has 0 splines
+frame#232 has 0 splines
+frame#233 has 0 splines
+frame#234 has 0 splines
+frame#235 has 0 splines
+frame#236 has 7 splines
+	spline#1 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+	spline#2 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+	spline#3 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+	spline#4 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+	spline#5 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+	spline#6 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+	spline#7 has 4 points and score 10
+		361, 221
+		386, 246
+		409, 262
+		458, 309
+frame#237 has 7 splines
+	spline#1 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+	spline#2 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+	spline#3 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+	spline#4 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+	spline#5 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+	spline#6 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+	spline#7 has 4 points and score 10
+		364, 222
+		369, 227
+		395, 246
+		424, 269
+frame#238 has 0 splines
+frame#239 has 5 splines
+	spline#1 has 4 points and score 10
+		407, 221
+		419, 226
+		485, 258
+		601, 307
+	spline#2 has 4 points and score 10
+		407, 221
+		419, 226
+		485, 258
+		601, 307
+	spline#3 has 4 points and score 10
+		407, 221
+		419, 226
+		485, 258
+		601, 307
+	spline#4 has 4 points and score 10
+		407, 221
+		419, 226
+		485, 258
+		601, 307
+	spline#5 has 4 points and score 10
+		407, 221
+		419, 226
+		485, 258
+		601, 307
+frame#240 has 0 splines
+frame#241 has 6 splines
+	spline#1 has 4 points and score 10
+		362, 226
+		368, 229
+		441, 290
+		503, 336
+	spline#2 has 4 points and score 10
+		362, 226
+		368, 229
+		441, 290
+		503, 336
+	spline#3 has 4 points and score 10
+		362, 226
+		368, 229
+		441, 290
+		503, 336
+	spline#4 has 4 points and score 10
+		362, 226
+		368, 229
+		441, 290
+		503, 336
+	spline#5 has 4 points and score 10
+		362, 226
+		368, 229
+		441, 290
+		503, 336
+	spline#6 has 4 points and score 10
+		362, 226
+		368, 229
+		441, 290
+		503, 336
+frame#242 has 0 splines
+frame#243 has 7 splines
+	spline#1 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+	spline#2 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+	spline#3 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+	spline#4 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+	spline#5 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+	spline#6 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+	spline#7 has 4 points and score 10
+		364, 225
+		387, 250
+		396, 257
+		476, 319
+frame#244 has 6 splines
+	spline#1 has 4 points and score 10
+		377, 233
+		388, 247
+		393, 257
+		465, 301
+	spline#2 has 4 points and score 10
+		377, 233
+		388, 247
+		393, 257
+		465, 301
+	spline#3 has 4 points and score 10
+		377, 233
+		388, 247
+		393, 257
+		465, 301
+	spline#4 has 4 points and score 10
+		377, 233
+		388, 247
+		393, 257
+		465, 301
+	spline#5 has 4 points and score 10
+		377, 233
+		388, 247
+		393, 257
+		465, 301
+	spline#6 has 4 points and score 10
+		377, 233
+		388, 247
+		393, 257
+		465, 301
+frame#245 has 0 splines
+frame#246 has 7 splines
+	spline#1 has 4 points and score 10
+		355, 223
+		365, 231
+		393, 254
+		433, 293
+	spline#2 has 4 points and score 10
+		207, 230
+		183, 239
+		157, 250
+		0, 334
+	spline#3 has 4 points and score 10
+		207, 230
+		183, 239
+		157, 250
+		0, 334
+	spline#4 has 4 points and score 10
+		207, 230
+		183, 239
+		157, 250
+		0, 334
+	spline#5 has 4 points and score 10
+		207, 230
+		183, 239
+		157, 250
+		0, 334
+	spline#6 has 4 points and score 10
+		207, 230
+		183, 239
+		157, 250
+		0, 334
+	spline#7 has 4 points and score 10
+		207, 230
+		183, 239
+		157, 250
+		0, 334
+frame#247 has 0 splines
+frame#248 has 0 splines
+frame#249 has 0 splines
+frame#250 has 7 splines
+	spline#1 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+	spline#2 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+	spline#3 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+	spline#4 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+	spline#5 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+	spline#6 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+	spline#7 has 4 points and score 10
+		246, 229
+		244, 234
+		194, 273
+		182, 288
+frame#251 has 0 splines
+frame#252 has 7 splines
+	spline#1 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+	spline#2 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+	spline#3 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+	spline#4 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+	spline#5 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+	spline#6 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+	spline#7 has 4 points and score 10
+		270, 228
+		264, 238
+		255, 247
+		202, 319
+frame#253 has 0 splines
+frame#254 has 0 splines
+frame#255 has 7 splines
+	spline#1 has 4 points and score 10
+		274, 226
+		254, 243
+		252, 252
+		215, 312
+	spline#2 has 4 points and score 10
+		274, 226
+		254, 243
+		252, 252
+		215, 312
+	spline#3 has 4 points and score 10
+		274, 226
+		254, 243
+		252, 252
+		215, 312
+	spline#4 has 4 points and score 10
+		274, 226
+		254, 243
+		252, 252
+		215, 312
+	spline#5 has 4 points and score 10
+		481, 229
+		495, 234
+		602, 265
+		686, 292
+	spline#6 has 4 points and score 10
+		481, 229
+		495, 234
+		602, 265
+		686, 292
+	spline#7 has 4 points and score 10
+		481, 229
+		495, 234
+		602, 265
+		686, 292
+frame#256 has 0 splines
+frame#257 has 5 splines
+	spline#1 has 4 points and score 10
+		214, 225
+		175, 244
+		166, 252
+		61, 299
+	spline#2 has 4 points and score 10
+		214, 225
+		175, 244
+		166, 252
+		61, 299
+	spline#3 has 4 points and score 10
+		214, 225
+		175, 244
+		166, 252
+		61, 299
+	spline#4 has 4 points and score 10
+		214, 225
+		175, 244
+		166, 252
+		61, 299
+	spline#5 has 4 points and score 10
+		214, 225
+		175, 244
+		166, 252
+		61, 299
+frame#258 has 0 splines
+frame#259 has 7 splines
+	spline#1 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+	spline#2 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+	spline#3 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+	spline#4 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+	spline#5 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+	spline#6 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+	spline#7 has 4 points and score 10
+		282, 221
+		270, 232
+		237, 288
+		207, 318
+frame#260 has 0 splines
+frame#261 has 0 splines
+frame#262 has 0 splines
+frame#263 has 0 splines
+frame#264 has 3 splines
+	spline#1 has 4 points and score 10
+		430, 224
+		436, 229
+		515, 259
+		575, 278
+	spline#2 has 4 points and score 10
+		430, 224
+		436, 229
+		515, 259
+		575, 278
+	spline#3 has 4 points and score 10
+		430, 224
+		436, 229
+		515, 259
+		575, 278
+frame#265 has 0 splines
+frame#266 has 5 splines
+	spline#1 has 4 points and score 10
+		395, 224
+		405, 227
+		459, 252
+		560, 313
+	spline#2 has 4 points and score 10
+		395, 224
+		405, 227
+		459, 252
+		560, 313
+	spline#3 has 4 points and score 10
+		395, 224
+		405, 227
+		459, 252
+		560, 313
+	spline#4 has 4 points and score 10
+		395, 224
+		405, 227
+		459, 252
+		560, 313
+	spline#5 has 4 points and score 10
+		395, 224
+		405, 227
+		459, 252
+		560, 313
+frame#267 has 7 splines
+	spline#1 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+	spline#2 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+	spline#3 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+	spline#4 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+	spline#5 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+	spline#6 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+	spline#7 has 4 points and score 10
+		279, 222
+		279, 230
+		273, 242
+		229, 313
+frame#268 has 0 splines
+frame#269 has 0 splines
+frame#270 has 0 splines
+frame#271 has 6 splines
+	spline#1 has 4 points and score 10
+		421, 229
+		444, 238
+		515, 278
+		640, 319
+	spline#2 has 4 points and score 10
+		421, 229
+		444, 238
+		515, 278
+		640, 319
+	spline#3 has 4 points and score 10
+		421, 229
+		444, 238
+		515, 278
+		640, 319
+	spline#4 has 4 points and score 10
+		421, 229
+		444, 238
+		515, 278
+		640, 319
+	spline#5 has 4 points and score 10
+		421, 229
+		444, 238
+		515, 278
+		640, 319
+	spline#6 has 4 points and score 10
+		421, 229
+		444, 238
+		515, 278
+		640, 319
+frame#272 has 4 splines
+	spline#1 has 4 points and score 10
+		368, 224
+		387, 237
+		397, 253
+		434, 276
+	spline#2 has 4 points and score 10
+		368, 224
+		387, 237
+		397, 253
+		434, 276
+	spline#3 has 4 points and score 10
+		368, 224
+		387, 237
+		397, 253
+		434, 276
+	spline#4 has 4 points and score 10
+		368, 224
+		387, 237
+		397, 253
+		434, 276
+frame#273 has 0 splines
+frame#274 has 0 splines
+frame#275 has 0 splines
+frame#276 has 0 splines
+frame#277 has 0 splines
+frame#278 has 6 splines
+	spline#1 has 4 points and score 10
+		227, 221
+		196, 239
+		129, 272
+		98, 296
+	spline#2 has 4 points and score 10
+		227, 221
+		196, 239
+		129, 272
+		98, 296
+	spline#3 has 4 points and score 10
+		227, 221
+		196, 239
+		129, 272
+		98, 296
+	spline#4 has 4 points and score 10
+		227, 221
+		196, 239
+		129, 272
+		98, 296
+	spline#5 has 4 points and score 10
+		227, 221
+		196, 239
+		129, 272
+		98, 296
+	spline#6 has 4 points and score 10
+		227, 221
+		196, 239
+		129, 272
+		98, 296
+frame#279 has 7 splines
+	spline#1 has 4 points and score 10
+		210, 235
+		190, 240
+		161, 256
+		91, 293
+	spline#2 has 4 points and score 10
+		294, 226
+		285, 241
+		282, 266
+		265, 279
+	spline#3 has 4 points and score 10
+		294, 226
+		285, 241
+		282, 266
+		265, 279
+	spline#4 has 4 points and score 10
+		294, 226
+		285, 241
+		282, 266
+		265, 279
+	spline#5 has 4 points and score 10
+		474, 223
+		527, 237
+		699, 284
+		806, 315
+	spline#6 has 4 points and score 10
+		474, 223
+		527, 237
+		699, 284
+		806, 315
+	spline#7 has 4 points and score 10
+		474, 223
+		527, 237
+		699, 284
+		806, 315
+frame#280 has 7 splines
+	spline#1 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+	spline#2 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+	spline#3 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+	spline#4 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+	spline#5 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+	spline#6 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+	spline#7 has 4 points and score 10
+		288, 222
+		291, 230
+		280, 265
+		271, 284
+frame#281 has 3 splines
+	spline#1 has 4 points and score 10
+		431, 222
+		456, 232
+		549, 266
+		602, 285
+	spline#2 has 4 points and score 10
+		431, 222
+		456, 232
+		549, 266
+		602, 285
+	spline#3 has 4 points and score 10
+		431, 222
+		456, 232
+		549, 266
+		602, 285
+frame#282 has 5 splines
+	spline#1 has 4 points and score 10
+		350, 221
+		369, 238
+		414, 289
+		478, 339
+	spline#2 has 4 points and score 10
+		350, 221
+		369, 238
+		414, 289
+		478, 339
+	spline#3 has 4 points and score 10
+		350, 221
+		369, 238
+		414, 289
+		478, 339
+	spline#4 has 4 points and score 10
+		350, 221
+		369, 238
+		414, 289
+		478, 339
+	spline#5 has 4 points and score 10
+		350, 221
+		369, 238
+		414, 289
+		478, 339
+frame#283 has 0 splines
+frame#284 has 7 splines
+	spline#1 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+	spline#2 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+	spline#3 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+	spline#4 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+	spline#5 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+	spline#6 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+	spline#7 has 4 points and score 10
+		218, 227
+		203, 232
+		175, 249
+		79, 307
+frame#285 has 7 splines
+	spline#1 has 4 points and score 10
+		201, 236
+		184, 245
+		144, 263
+		61, 314
+	spline#2 has 4 points and score 10
+		290, 221
+		287, 224
+		270, 262
+		248, 317
+	spline#3 has 4 points and score 10
+		290, 221
+		287, 224
+		270, 262
+		248, 317
+	spline#4 has 4 points and score 10
+		403, 224
+		434, 244
+		462, 253
+		586, 318
+	spline#5 has 4 points and score 10
+		403, 224
+		434, 244
+		462, 253
+		586, 318
+	spline#6 has 4 points and score 10
+		403, 224
+		434, 244
+		462, 253
+		586, 318
+	spline#7 has 4 points and score 10
+		403, 224
+		434, 244
+		462, 253
+		586, 318
+frame#286 has 7 splines
+	spline#1 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+	spline#2 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+	spline#3 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+	spline#4 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+	spline#5 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+	spline#6 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+	spline#7 has 4 points and score 10
+		208, 232
+		166, 250
+		128, 272
+		124, 285
+frame#287 has 7 splines
+	spline#1 has 4 points and score 10
+		219, 225
+		198, 236
+		97, 286
+		58, 313
+	spline#2 has 4 points and score 10
+		288, 226
+		286, 239
+		268, 259
+		275, 269
+	spline#3 has 4 points and score 10
+		288, 226
+		286, 239
+		268, 259
+		275, 269
+	spline#4 has 4 points and score 10
+		288, 226
+		286, 239
+		268, 259
+		275, 269
+	spline#5 has 4 points and score 10
+		288, 226
+		286, 239
+		268, 259
+		275, 269
+	spline#6 has 4 points and score 10
+		288, 226
+		286, 239
+		268, 259
+		275, 269
+	spline#7 has 4 points and score 10
+		288, 226
+		286, 239
+		268, 259
+		275, 269
+frame#288 has 0 splines
+frame#289 has 0 splines
+frame#290 has 7 splines
+	spline#1 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+	spline#2 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+	spline#3 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+	spline#4 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+	spline#5 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+	spline#6 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+	spline#7 has 4 points and score 10
+		222, 223
+		185, 244
+		156, 252
+		25, 334
+frame#291 has 0 splines
+frame#292 has 0 splines
+frame#293 has 0 splines
+frame#294 has 7 splines
+	spline#1 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+	spline#2 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+	spline#3 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+	spline#4 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+	spline#5 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+	spline#6 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+	spline#7 has 4 points and score 10
+		200, 231
+		198, 236
+		152, 261
+		95, 285
+frame#295 has 6 splines
+	spline#1 has 4 points and score 10
+		284, 225
+		269, 256
+		267, 267
+		255, 294
+	spline#2 has 4 points and score 10
+		284, 225
+		269, 256
+		267, 267
+		255, 294
+	spline#3 has 4 points and score 10
+		284, 225
+		269, 256
+		267, 267
+		255, 294
+	spline#4 has 4 points and score 10
+		284, 225
+		269, 256
+		267, 267
+		255, 294
+	spline#5 has 4 points and score 10
+		284, 225
+		269, 256
+		267, 267
+		255, 294
+	spline#6 has 4 points and score 10
+		284, 225
+		269, 256
+		267, 267
+		255, 294
+frame#296 has 7 splines
+	spline#1 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+	spline#2 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+	spline#3 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+	spline#4 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+	spline#5 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+	spline#6 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+	spline#7 has 4 points and score 10
+		222, 222
+		194, 232
+		160, 255
+		14, 334
+frame#297 has 7 splines
+	spline#1 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+	spline#2 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+	spline#3 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+	spline#4 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+	spline#5 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+	spline#6 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+	spline#7 has 4 points and score 10
+		213, 225
+		207, 230
+		169, 250
+		42, 317
+frame#298 has 0 splines
+frame#299 has 7 splines
+	spline#1 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+	spline#2 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+	spline#3 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+	spline#4 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+	spline#5 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+	spline#6 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+	spline#7 has 4 points and score 10
+		211, 226
+		172, 244
+		133, 259
+		95, 287
+frame#300 has 6 splines
+	spline#1 has 4 points and score 10
+		286, 225
+		272, 243
+		259, 280
+		225, 305
+	spline#2 has 4 points and score 10
+		286, 225
+		272, 243
+		259, 280
+		225, 305
+	spline#3 has 4 points and score 10
+		286, 225
+		272, 243
+		259, 280
+		225, 305
+	spline#4 has 4 points and score 10
+		286, 225
+		272, 243
+		259, 280
+		225, 305
+	spline#5 has 4 points and score 10
+		286, 225
+		272, 243
+		259, 280
+		225, 305
+	spline#6 has 4 points and score 10
+		286, 225
+		272, 243
+		259, 280
+		225, 305
+frame#301 has 6 splines
+	spline#1 has 4 points and score 10
+		279, 226
+		269, 249
+		264, 269
+		232, 296
+	spline#2 has 4 points and score 10
+		279, 226
+		269, 249
+		264, 269
+		232, 296
+	spline#3 has 4 points and score 10
+		458, 223
+		518, 241
+		661, 287
+		825, 331
+	spline#4 has 4 points and score 10
+		458, 223
+		518, 241
+		661, 287
+		825, 331
+	spline#5 has 4 points and score 10
+		458, 223
+		518, 241
+		661, 287
+		825, 331
+	spline#6 has 4 points and score 10
+		458, 223
+		518, 241
+		661, 287
+		825, 331
+frame#302 has 0 splines
+frame#303 has 7 splines
+	spline#1 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+	spline#2 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+	spline#3 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+	spline#4 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+	spline#5 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+	spline#6 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+	spline#7 has 4 points and score 10
+		199, 231
+		189, 238
+		95, 283
+		53, 306
+frame#304 has 7 splines
+	spline#1 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+	spline#2 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+	spline#3 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+	spline#4 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+	spline#5 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+	spline#6 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+	spline#7 has 4 points and score 10
+		284, 223
+		275, 233
+		251, 288
+		214, 316
+frame#305 has 6 splines
+	spline#1 has 4 points and score 10
+		280, 228
+		273, 238
+		258, 276
+		232, 301
+	spline#2 has 4 points and score 10
+		380, 223
+		406, 236
+		431, 250
+		459, 268
+	spline#3 has 4 points and score 10
+		380, 223
+		406, 236
+		431, 250
+		459, 268
+	spline#4 has 4 points and score 10
+		380, 223
+		406, 236
+		431, 250
+		459, 268
+	spline#5 has 4 points and score 10
+		380, 223
+		406, 236
+		431, 250
+		459, 268
+	spline#6 has 4 points and score 10
+		380, 223
+		406, 236
+		431, 250
+		459, 268
+frame#306 has 0 splines
+frame#307 has 7 splines
+	spline#1 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+	spline#2 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+	spline#3 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+	spline#4 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+	spline#5 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+	spline#6 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+	spline#7 has 4 points and score 10
+		215, 228
+		173, 247
+		161, 254
+		134, 273
+frame#308 has 7 splines
+	spline#1 has 4 points and score 10
+		225, 223
+		168, 250
+		148, 261
+		92, 293
+	spline#2 has 4 points and score 10
+		225, 223
+		168, 250
+		148, 261
+		92, 293
+	spline#3 has 4 points and score 10
+		225, 223
+		168, 250
+		148, 261
+		92, 293
+	spline#4 has 4 points and score 10
+		419, 230
+		440, 238
+		491, 264
+		521, 273
+	spline#5 has 4 points and score 10
+		419, 230
+		440, 238
+		491, 264
+		521, 273
+	spline#6 has 4 points and score 10
+		419, 230
+		440, 238
+		491, 264
+		521, 273
+	spline#7 has 4 points and score 10
+		419, 230
+		440, 238
+		491, 264
+		521, 273
+frame#309 has 5 splines
+	spline#1 has 4 points and score 10
+		410, 227
+		419, 233
+		429, 237
+		564, 303
+	spline#2 has 4 points and score 10
+		410, 227
+		419, 233
+		429, 237
+		564, 303
+	spline#3 has 4 points and score 10
+		410, 227
+		419, 233
+		429, 237
+		564, 303
+	spline#4 has 4 points and score 10
+		410, 227
+		419, 233
+		429, 237
+		564, 303
+	spline#5 has 4 points and score 10
+		410, 227
+		419, 233
+		429, 237
+		564, 303
+frame#310 has 0 splines
+frame#311 has 7 splines
+	spline#1 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+	spline#2 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+	spline#3 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+	spline#4 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+	spline#5 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+	spline#6 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+	spline#7 has 4 points and score 10
+		222, 223
+		187, 241
+		147, 264
+		108, 283
+frame#312 has 0 splines
+frame#313 has 7 splines
+	spline#1 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+	spline#2 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+	spline#3 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+	spline#4 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+	spline#5 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+	spline#6 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+	spline#7 has 4 points and score 10
+		223, 225
+		188, 241
+		133, 271
+		71, 313
+frame#314 has 7 splines
+	spline#1 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+	spline#2 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+	spline#3 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+	spline#4 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+	spline#5 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+	spline#6 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+	spline#7 has 4 points and score 10
+		230, 221
+		213, 230
+		185, 243
+		55, 310
+frame#315 has 5 splines
+	spline#1 has 4 points and score 10
+		391, 220
+		411, 233
+		517, 289
+		586, 323
+	spline#2 has 4 points and score 10
+		391, 220
+		411, 233
+		517, 289
+		586, 323
+	spline#3 has 4 points and score 10
+		391, 220
+		411, 233
+		517, 289
+		586, 323
+	spline#4 has 4 points and score 10
+		391, 220
+		411, 233
+		517, 289
+		586, 323
+	spline#5 has 4 points and score 10
+		391, 220
+		411, 233
+		517, 289
+		586, 323
+frame#316 has 0 splines
+frame#317 has 6 splines
+	spline#1 has 4 points and score 10
+		283, 223
+		283, 239
+		277, 261
+		267, 274
+	spline#2 has 4 points and score 10
+		283, 223
+		283, 239
+		277, 261
+		267, 274
+	spline#3 has 4 points and score 10
+		283, 223
+		283, 239
+		277, 261
+		267, 274
+	spline#4 has 4 points and score 10
+		283, 223
+		283, 239
+		277, 261
+		267, 274
+	spline#5 has 4 points and score 10
+		283, 223
+		283, 239
+		277, 261
+		267, 274
+	spline#6 has 4 points and score 10
+		283, 223
+		283, 239
+		277, 261
+		267, 274
+frame#318 has 7 splines
+	spline#1 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+	spline#2 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+	spline#3 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+	spline#4 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+	spline#5 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+	spline#6 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+	spline#7 has 4 points and score 10
+		281, 233
+		281, 238
+		249, 291
+		247, 315
+frame#319 has 0 splines
+frame#320 has 5 splines
+	spline#1 has 4 points and score 10
+		390, 226
+		414, 246
+		436, 254
+		554, 325
+	spline#2 has 4 points and score 10
+		390, 226
+		414, 246
+		436, 254
+		554, 325
+	spline#3 has 4 points and score 10
+		390, 226
+		414, 246
+		436, 254
+		554, 325
+	spline#4 has 4 points and score 10
+		390, 226
+		414, 246
+		436, 254
+		554, 325
+	spline#5 has 4 points and score 10
+		390, 226
+		414, 246
+		436, 254
+		554, 325
+frame#321 has 7 splines
+	spline#1 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+	spline#2 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+	spline#3 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+	spline#4 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+	spline#5 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+	spline#6 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+	spline#7 has 4 points and score 10
+		218, 227
+		193, 239
+		155, 258
+		141, 269
+frame#322 has 7 splines
+	spline#1 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+	spline#2 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+	spline#3 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+	spline#4 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+	spline#5 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+	spline#6 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+	spline#7 has 4 points and score 10
+		211, 229
+		196, 235
+		149, 260
+		51, 314
+frame#323 has 7 splines
+	spline#1 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+	spline#2 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+	spline#3 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+	spline#4 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+	spline#5 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+	spline#6 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+	spline#7 has 4 points and score 10
+		205, 231
+		176, 247
+		98, 284
+		71, 302
+frame#324 has 0 splines
+frame#325 has 7 splines
+	spline#1 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+	spline#2 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+	spline#3 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+	spline#4 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+	spline#5 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+	spline#6 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+	spline#7 has 4 points and score 10
+		218, 224
+		212, 227
+		132, 267
+		14, 331
+frame#326 has 7 splines
+	spline#1 has 4 points and score 10
+		281, 228
+		268, 237
+		270, 246
+		253, 285
+	spline#2 has 4 points and score 10
+		211, 227
+		201, 233
+		165, 251
+		74, 293
+	spline#3 has 4 points and score 10
+		211, 227
+		201, 233
+		165, 251
+		74, 293
+	spline#4 has 4 points and score 10
+		466, 226
+		499, 236
+		551, 252
+		753, 317
+	spline#5 has 4 points and score 10
+		466, 226
+		499, 236
+		551, 252
+		753, 317
+	spline#6 has 4 points and score 10
+		466, 226
+		499, 236
+		551, 252
+		753, 317
+	spline#7 has 4 points and score 10
+		466, 226
+		499, 236
+		551, 252
+		753, 317
+frame#327 has 6 splines
+	spline#1 has 4 points and score 10
+		211, 229
+		205, 232
+		147, 257
+		40, 317
+	spline#2 has 4 points and score 10
+		463, 226
+		514, 246
+		549, 253
+		595, 271
+	spline#3 has 4 points and score 10
+		463, 226
+		514, 246
+		549, 253
+		595, 271
+	spline#4 has 4 points and score 10
+		463, 226
+		514, 246
+		549, 253
+		595, 271
+	spline#5 has 4 points and score 10
+		463, 226
+		514, 246
+		549, 253
+		595, 271
+	spline#6 has 4 points and score 10
+		463, 226
+		514, 246
+		549, 253
+		595, 271
+frame#328 has 7 splines
+	spline#1 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+	spline#2 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+	spline#3 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+	spline#4 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+	spline#5 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+	spline#6 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+	spline#7 has 4 points and score 10
+		280, 228
+		273, 232
+		270, 248
+		252, 264
+frame#329 has 0 splines
+frame#330 has 0 splines
+frame#331 has 0 splines
+frame#332 has 7 splines
+	spline#1 has 4 points and score 10
+		276, 227
+		276, 231
+		257, 260
+		222, 305
+	spline#2 has 4 points and score 10
+		276, 227
+		276, 231
+		257, 260
+		222, 305
+	spline#3 has 4 points and score 10
+		206, 227
+		161, 251
+		110, 268
+		91, 283
+	spline#4 has 4 points and score 10
+		206, 227
+		161, 251
+		110, 268
+		91, 283
+	spline#5 has 4 points and score 10
+		206, 227
+		161, 251
+		110, 268
+		91, 283
+	spline#6 has 4 points and score 10
+		206, 227
+		161, 251
+		110, 268
+		91, 283
+	spline#7 has 4 points and score 10
+		206, 227
+		161, 251
+		110, 268
+		91, 283
+frame#333 has 0 splines
+frame#334 has 0 splines
+frame#335 has 0 splines
+frame#336 has 7 splines
+	spline#1 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+	spline#2 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+	spline#3 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+	spline#4 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+	spline#5 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+	spline#6 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+	spline#7 has 4 points and score 10
+		281, 226
+		272, 234
+		271, 242
+		249, 287
+frame#337 has 0 splines
+frame#338 has 7 splines
+	spline#1 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+	spline#2 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+	spline#3 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+	spline#4 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+	spline#5 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+	spline#6 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+	spline#7 has 4 points and score 10
+		287, 223
+		276, 243
+		266, 254
+		232, 318
+frame#339 has 6 splines
+	spline#1 has 4 points and score 10
+		365, 225
+		397, 256
+		432, 278
+		436, 302
+	spline#2 has 4 points and score 10
+		365, 225
+		397, 256
+		432, 278
+		436, 302
+	spline#3 has 4 points and score 10
+		365, 225
+		397, 256
+		432, 278
+		436, 302
+	spline#4 has 4 points and score 10
+		365, 225
+		397, 256
+		432, 278
+		436, 302
+	spline#5 has 4 points and score 10
+		365, 225
+		397, 256
+		432, 278
+		436, 302
+	spline#6 has 4 points and score 10
+		365, 225
+		397, 256
+		432, 278
+		436, 302
+frame#340 has 7 splines
+	spline#1 has 4 points and score 10
+		284, 230
+		275, 242
+		253, 278
+		250, 307
+	spline#2 has 4 points and score 10
+		284, 230
+		275, 242
+		253, 278
+		250, 307
+	spline#3 has 4 points and score 10
+		218, 226
+		207, 233
+		174, 247
+		65, 308
+	spline#4 has 4 points and score 10
+		218, 226
+		207, 233
+		174, 247
+		65, 308
+	spline#5 has 4 points and score 10
+		218, 226
+		207, 233
+		174, 247
+		65, 308
+	spline#6 has 4 points and score 10
+		218, 226
+		207, 233
+		174, 247
+		65, 308
+	spline#7 has 4 points and score 10
+		218, 226
+		207, 233
+		174, 247
+		65, 308
+frame#341 has 0 splines
+frame#342 has 6 splines
+	spline#1 has 4 points and score 10
+		218, 227
+		191, 241
+		162, 257
+		56, 312
+	spline#2 has 4 points and score 10
+		218, 227
+		191, 241
+		162, 257
+		56, 312
+	spline#3 has 4 points and score 10
+		218, 227
+		191, 241
+		162, 257
+		56, 312
+	spline#4 has 4 points and score 10
+		218, 227
+		191, 241
+		162, 257
+		56, 312
+	spline#5 has 4 points and score 10
+		218, 227
+		191, 241
+		162, 257
+		56, 312
+	spline#6 has 4 points and score 10
+		218, 227
+		191, 241
+		162, 257
+		56, 312
+frame#343 has 5 splines
+	spline#1 has 4 points and score 10
+		224, 224
+		176, 247
+		168, 254
+		74, 306
+	spline#2 has 4 points and score 10
+		224, 224
+		176, 247
+		168, 254
+		74, 306
+	spline#3 has 4 points and score 10
+		224, 224
+		176, 247
+		168, 254
+		74, 306
+	spline#4 has 4 points and score 10
+		224, 224
+		176, 247
+		168, 254
+		74, 306
+	spline#5 has 4 points and score 10
+		224, 224
+		176, 247
+		168, 254
+		74, 306
+frame#344 has 5 splines
+	spline#1 has 4 points and score 10
+		220, 225
+		182, 244
+		127, 274
+		39, 320
+	spline#2 has 4 points and score 10
+		220, 225
+		182, 244
+		127, 274
+		39, 320
+	spline#3 has 4 points and score 10
+		220, 225
+		182, 244
+		127, 274
+		39, 320
+	spline#4 has 4 points and score 10
+		220, 225
+		182, 244
+		127, 274
+		39, 320
+	spline#5 has 4 points and score 10
+		220, 225
+		182, 244
+		127, 274
+		39, 320
+frame#345 has 0 splines
+frame#346 has 0 splines
+frame#347 has 0 splines
+frame#348 has 5 splines
+	spline#1 has 4 points and score 10
+		382, 229
+		388, 238
+		439, 272
+		509, 313
+	spline#2 has 4 points and score 10
+		382, 229
+		388, 238
+		439, 272
+		509, 313
+	spline#3 has 4 points and score 10
+		382, 229
+		388, 238
+		439, 272
+		509, 313
+	spline#4 has 4 points and score 10
+		382, 229
+		388, 238
+		439, 272
+		509, 313
+	spline#5 has 4 points and score 10
+		382, 229
+		388, 238
+		439, 272
+		509, 313
+frame#349 has 0 splines
+frame#350 has 0 splines
+frame#351 has 6 splines
+	spline#1 has 4 points and score 10
+		323, 223
+		330, 233
+		333, 255
+		347, 273
+	spline#2 has 4 points and score 10
+		197, 221
+		138, 242
+		86, 259
+		43, 281
+	spline#3 has 4 points and score 10
+		197, 221
+		138, 242
+		86, 259
+		43, 281
+	spline#4 has 4 points and score 10
+		197, 221
+		138, 242
+		86, 259
+		43, 281
+	spline#5 has 4 points and score 10
+		197, 221
+		138, 242
+		86, 259
+		43, 281
+	spline#6 has 4 points and score 10
+		197, 221
+		138, 242
+		86, 259
+		43, 281
+frame#352 has 6 splines
+	spline#1 has 4 points and score 10
+		332, 226
+		330, 230
+		362, 291
+		361, 313
+	spline#2 has 4 points and score 10
+		217, 226
+		204, 233
+		102, 280
+		33, 324
+	spline#3 has 4 points and score 10
+		217, 226
+		204, 233
+		102, 280
+		33, 324
+	spline#4 has 4 points and score 10
+		217, 226
+		204, 233
+		102, 280
+		33, 324
+	spline#5 has 4 points and score 10
+		217, 226
+		204, 233
+		102, 280
+		33, 324
+	spline#6 has 4 points and score 10
+		217, 226
+		204, 233
+		102, 280
+		33, 324
+frame#353 has 0 splines
+frame#354 has 0 splines
+frame#355 has 0 splines
+frame#356 has 0 splines
+frame#357 has 0 splines
+frame#358 has 0 splines
+frame#359 has 0 splines
+frame#360 has 0 splines
+frame#361 has 7 splines
+	spline#1 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+	spline#2 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+	spline#3 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+	spline#4 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+	spline#5 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+	spline#6 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+	spline#7 has 4 points and score 10
+		403, 231
+		418, 243
+		463, 268
+		491, 279
+frame#362 has 7 splines
+	spline#1 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+	spline#2 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+	spline#3 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+	spline#4 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+	spline#5 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+	spline#6 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+	spline#7 has 4 points and score 10
+		384, 223
+		406, 235
+		424, 248
+		575, 334
+frame#363 has 0 splines
+frame#364 has 7 splines
+	spline#1 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+	spline#2 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+	spline#3 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+	spline#4 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+	spline#5 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+	spline#6 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+	spline#7 has 4 points and score 10
+		384, 224
+		395, 233
+		465, 274
+		520, 307
+frame#365 has 0 splines
+frame#366 has 0 splines
+frame#367 has 7 splines
+	spline#1 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+	spline#2 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+	spline#3 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+	spline#4 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+	spline#5 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+	spline#6 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+	spline#7 has 4 points and score 10
+		380, 225
+		389, 234
+		420, 252
+		519, 312
+frame#368 has 7 splines
+	spline#1 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+	spline#2 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+	spline#3 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+	spline#4 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+	spline#5 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+	spline#6 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+	spline#7 has 4 points and score 10
+		388, 232
+		400, 238
+		415, 248
+		531, 323
+frame#369 has 0 splines
+frame#370 has 0 splines
+frame#371 has 6 splines
+	spline#1 has 4 points and score 10
+		213, 224
+		186, 236
+		155, 252
+		49, 296
+	spline#2 has 4 points and score 10
+		213, 224
+		186, 236
+		155, 252
+		49, 296
+	spline#3 has 4 points and score 10
+		213, 224
+		186, 236
+		155, 252
+		49, 296
+	spline#4 has 4 points and score 10
+		213, 224
+		186, 236
+		155, 252
+		49, 296
+	spline#5 has 4 points and score 10
+		213, 224
+		186, 236
+		155, 252
+		49, 296
+	spline#6 has 4 points and score 10
+		213, 224
+		186, 236
+		155, 252
+		49, 296
+frame#372 has 0 splines
+frame#373 has 0 splines
+frame#374 has 0 splines
+frame#375 has 7 splines
+	spline#1 has 4 points and score 10
+		275, 225
+		267, 234
+		248, 267
+		232, 278
+	spline#2 has 4 points and score 10
+		208, 224
+		177, 238
+		127, 261
+		-17, 323
+	spline#3 has 4 points and score 10
+		208, 224
+		177, 238
+		127, 261
+		-17, 323
+	spline#4 has 4 points and score 10
+		208, 224
+		177, 238
+		127, 261
+		-17, 323
+	spline#5 has 4 points and score 10
+		208, 224
+		177, 238
+		127, 261
+		-17, 323
+	spline#6 has 4 points and score 10
+		208, 224
+		177, 238
+		127, 261
+		-17, 323
+	spline#7 has 4 points and score 10
+		208, 224
+		177, 238
+		127, 261
+		-17, 323
+frame#376 has 7 splines
+	spline#1 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+	spline#2 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+	spline#3 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+	spline#4 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+	spline#5 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+	spline#6 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+	spline#7 has 4 points and score 10
+		269, 227
+		265, 238
+		240, 273
+		193, 339
+frame#377 has 6 splines
+	spline#1 has 4 points and score 10
+		197, 230
+		169, 240
+		155, 251
+		57, 293
+	spline#2 has 4 points and score 10
+		197, 230
+		169, 240
+		155, 251
+		57, 293
+	spline#3 has 4 points and score 10
+		197, 230
+		169, 240
+		155, 251
+		57, 293
+	spline#4 has 4 points and score 10
+		197, 230
+		169, 240
+		155, 251
+		57, 293
+	spline#5 has 4 points and score 10
+		197, 230
+		169, 240
+		155, 251
+		57, 293
+	spline#6 has 4 points and score 10
+		197, 230
+		169, 240
+		155, 251
+		57, 293
+frame#378 has 0 splines
+frame#379 has 7 splines
+	spline#1 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+	spline#2 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+	spline#3 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+	spline#4 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+	spline#5 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+	spline#6 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+	spline#7 has 4 points and score 10
+		278, 224
+		261, 245
+		248, 253
+		207, 336
+frame#380 has 0 splines
+frame#381 has 5 splines
+	spline#1 has 4 points and score 10
+		211, 228
+		202, 232
+		193, 238
+		6, 328
+	spline#2 has 4 points and score 10
+		211, 228
+		202, 232
+		193, 238
+		6, 328
+	spline#3 has 4 points and score 10
+		211, 228
+		202, 232
+		193, 238
+		6, 328
+	spline#4 has 4 points and score 10
+		211, 228
+		202, 232
+		193, 238
+		6, 328
+	spline#5 has 4 points and score 10
+		211, 228
+		202, 232
+		193, 238
+		6, 328
+frame#382 has 7 splines
+	spline#1 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+	spline#2 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+	spline#3 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+	spline#4 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+	spline#5 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+	spline#6 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+	spline#7 has 4 points and score 10
+		279, 226
+		270, 242
+		253, 257
+		231, 312
+frame#383 has 0 splines
+frame#384 has 3 splines
+	spline#1 has 4 points and score 10
+		174, 224
+		149, 231
+		52, 267
+		-92, 313
+	spline#2 has 4 points and score 10
+		174, 224
+		149, 231
+		52, 267
+		-92, 313
+	spline#3 has 4 points and score 10
+		174, 224
+		149, 231
+		52, 267
+		-92, 313
+frame#385 has 0 splines
+frame#386 has 0 splines
+frame#387 has 0 splines
+frame#388 has 0 splines
+frame#389 has 6 splines
+	spline#1 has 4 points and score 10
+		284, 221
+		269, 244
+		263, 263
+		241, 289
+	spline#2 has 4 points and score 10
+		284, 221
+		269, 244
+		263, 263
+		241, 289
+	spline#3 has 4 points and score 10
+		284, 221
+		269, 244
+		263, 263
+		241, 289
+	spline#4 has 4 points and score 10
+		284, 221
+		269, 244
+		263, 263
+		241, 289
+	spline#5 has 4 points and score 10
+		284, 221
+		269, 244
+		263, 263
+		241, 289
+	spline#6 has 4 points and score 10
+		284, 221
+		269, 244
+		263, 263
+		241, 289
+frame#390 has 6 splines
+	spline#1 has 4 points and score 10
+		217, 227
+		195, 234
+		157, 256
+		53, 310
+	spline#2 has 4 points and score 10
+		217, 227
+		195, 234
+		157, 256
+		53, 310
+	spline#3 has 4 points and score 10
+		217, 227
+		195, 234
+		157, 256
+		53, 310
+	spline#4 has 4 points and score 10
+		217, 227
+		195, 234
+		157, 256
+		53, 310
+	spline#5 has 4 points and score 10
+		217, 227
+		195, 234
+		157, 256
+		53, 310
+	spline#6 has 4 points and score 10
+		217, 227
+		195, 234
+		157, 256
+		53, 310
+frame#391 has 0 splines
+frame#392 has 0 splines
+frame#393 has 0 splines
+frame#394 has 0 splines
+frame#395 has 6 splines
+	spline#1 has 4 points and score 10
+		361, 224
+		374, 230
+		417, 269
+		465, 304
+	spline#2 has 4 points and score 10
+		361, 224
+		374, 230
+		417, 269
+		465, 304
+	spline#3 has 4 points and score 10
+		361, 224
+		374, 230
+		417, 269
+		465, 304
+	spline#4 has 4 points and score 10
+		361, 224
+		374, 230
+		417, 269
+		465, 304
+	spline#5 has 4 points and score 10
+		361, 224
+		374, 230
+		417, 269
+		465, 304
+	spline#6 has 4 points and score 10
+		361, 224
+		374, 230
+		417, 269
+		465, 304
+frame#396 has 7 splines
+	spline#1 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+	spline#2 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+	spline#3 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+	spline#4 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+	spline#5 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+	spline#6 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+	spline#7 has 4 points and score 10
+		282, 228
+		274, 241
+		249, 266
+		252, 289
+frame#397 has 7 splines
+	spline#1 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+	spline#2 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+	spline#3 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+	spline#4 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+	spline#5 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+	spline#6 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+	spline#7 has 4 points and score 10
+		280, 226
+		273, 236
+		242, 271
+		241, 306
+frame#398 has 0 splines
+frame#399 has 0 splines
+frame#400 has 0 splines
+frame#401 has 0 splines
+frame#402 has 7 splines
+	spline#1 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+	spline#2 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+	spline#3 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+	spline#4 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+	spline#5 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+	spline#6 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+	spline#7 has 4 points and score 10
+		286, 225
+		279, 247
+		263, 256
+		251, 323
+frame#403 has 0 splines
+frame#404 has 0 splines
+frame#405 has 0 splines
+frame#406 has 0 splines

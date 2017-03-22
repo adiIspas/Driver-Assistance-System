@@ -1,0 +1,2 @@
+numarIteratii = 45;
+scorBun = 435;
