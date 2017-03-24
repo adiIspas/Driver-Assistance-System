@@ -17,7 +17,7 @@ while hasFrame(video)
     clc
     tic
     img = readFrame(video);
-
+    
     imagineTest = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineTest), configuratie);
@@ -38,11 +38,12 @@ while hasFrame(video)
     p(:,1) = p(:,1) + x;
     p(:,2) = p(:,2) + y;
     
-    p = sortrows(p,2);
+    p = sortrows(p,1);
     if size(p,1) >= 8
     shape = [p(1,1) p(1,2) p(2,1) p(2,2) p(3,1) p(3,2) p(4,1) p(4,2) ...
              p(5,1) p(5,2) p(6,1) p(6,2) p(7,1) p(7,2) p(8,1) p(8,2) p(1,1) p(1,2)];
     end
+ 
     for u = 1:size(punctePlan,1)/4
         puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
 %             puncte = ccvEvalBezSpline(puncte);
@@ -58,7 +59,7 @@ while hasFrame(video)
             
             imagineTrasata = cv.line(imagineTrasata, ...
                 [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-                'Thickness',7,'Color',[0 255 0]);
+                'Thickness',5,'Color',[0 255 0]);
         
             textCompus = strcat(textCompus, ['\t\t', num2str(i+xInceputDecupare),', ',num2str(j+yInceputDecupare),'\n']);
         end
@@ -67,9 +68,12 @@ while hasFrame(video)
         numarSplines = numarSplines + 1;
     end
     toc
-    
+  
 %     imshow(imagineIPM);
-    imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shape},'Color', {'green'},'Opacity',0.7);
+    if size(p,1) >= 8
+        imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shape},'Color', {'green'},'Opacity',0.5);
+    end
+    
     image(imagineTrasata);
-    pause(0.000001);
+    pause(0.0001);
 end
