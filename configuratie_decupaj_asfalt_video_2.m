@@ -1,0 +1,7 @@
+pozitie_start_x = 235;
+lungime_x = 111;
+pozitie_sfarsit_x = pozitie_start_x + lungime_x;
+
+pozitie_start_y = 115;
+lungime_y = 30;
+pozitie_sfarsit_y = pozitie_start_y + lungime_y;

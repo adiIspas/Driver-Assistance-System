@@ -4,11 +4,17 @@ numeFolderVideo = 'videos';
 numeVideo = 'traffic_video_2.mp4';
 
 configuratie_video_2;
+configuratie_decupaj_asfalt_video_2;
 
 yInceputDecupare = configuratie.yInceputDecupare;
 xInceputDecupare = configuratie.xInceputDecupare;
 yLungimeDecupare = configuratie.yLungimeDecupare;
 xLungimeDecupare = configuratie.xLungimeDecupare;
+
+start_x = pozitie_start_x;
+end_x = pozitie_sfarsit_x;
+start_y = pozitie_start_y;
+end_y = pozitie_sfarsit_y;
 
 mod2Benzi = 1;
 
@@ -17,11 +23,15 @@ while hasFrame(video)
     clc
     tic
     img = readFrame(video);
-    
+
     imagineTest = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineTest), configuratie);
-        
+    
+    regiune_interes = obtineZonaInteres(imagineTest,start_x,end_x,start_y,end_y);
+
+%     imshow(regiune_interes)
+    
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
     
@@ -47,7 +57,6 @@ while hasFrame(video)
     for u = 1:size(punctePlan,1)/4
         puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
 %             puncte = ccvEvalBezSpline(puncte);
-    
         textCompus = strcat(textCompus, ['\tspline#', num2str(u), ' has ', ...
             num2str(size(puncte,1)), ' points and score ', num2str(10), '\n']);
         
@@ -69,11 +78,10 @@ while hasFrame(video)
     end
     toc
   
-%     imshow(imagineIPM);
     if size(p,1) >= 8
         imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shape},'Color', {'green'},'Opacity',0.5);
     end
     
     image(imagineTrasata);
-    pause(0.0001);
+    pause(0.01);
 end
