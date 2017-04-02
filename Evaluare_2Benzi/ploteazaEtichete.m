@@ -2,7 +2,7 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-numeFolderImagini = '../cordova1';
+numeFolderImagini = '../videos_paper/cordova1';
 % numeFolderImagini = '../washington2';
 % numeFolderImagini = 'road';
 numeDirector = [pwd '\' numeFolderImagini '\'];

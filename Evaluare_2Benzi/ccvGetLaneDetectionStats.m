@@ -14,8 +14,11 @@ function ccvGetLaneDetectionStats(detectionFiles, truthFiles)
 %
 
 % Thresholds for merging i.e. matching splines
-meanDistThreshold = 15;
-medianDistThreshold = 20;
+% meanDistThreshold = 15;
+% medianDistThreshold = 20;
+
+meanDistThreshold = 300;
+medianDistThreshold = 350;
 
 % Initialize
 allResults = [];
