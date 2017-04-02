@@ -19,11 +19,10 @@ end_y = pozitie_sfarsit_y;
 
 mod2Benzi = 1;
 
-idxx = 1;
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
     clc
-%     tic
+    tic
     img = readFrame(video);
 
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
@@ -33,14 +32,14 @@ while hasFrame(video)
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
 
-    zonaInteresImagine = imagineCurenta(y_zona_interes:end,min(liniiImagine):max(liniiImagine),:);
+    x_s = min(liniiImagine);
+    x_e = max(liniiImagine);
+    zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
     
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
     
     imagineTrasata = img;
-    numarSplines = 0;
-    textCompus = '';
     
     p = punctePlan;
     x = xInceputDecupare;
@@ -56,9 +55,6 @@ while hasFrame(video)
  
     for u = 1:size(punctePlan,1)/4
         puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
-            puncte = ccvEvalBezSpline(puncte);
-        textCompus = strcat(textCompus, ['\tspline#', num2str(u), ' has ', ...
-            num2str(size(puncte,1)), ' points and score ', num2str(10), '\n']);
         
         for idx = 2:size(puncte,1)
             i = round(puncte(idx-1,1));
@@ -69,28 +65,23 @@ while hasFrame(video)
             imagineTrasata = cv.line(imagineTrasata, ...
                 [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
                 'Thickness',5,'Color',[0 255 0]);
-        
-            textCompus = strcat(textCompus, ['\t\t', num2str(i+xInceputDecupare),', ',num2str(j+yInceputDecupare),'\n']);
         end
-        textCompus = strcat(textCompus, ['\t\t', num2str(ii+xInceputDecupare),', ',num2str(jj+yInceputDecupare),'\n']);
-        
-        numarSplines = numarSplines + 1;
     end
-%     toc
+    toc
   
     if size(p,1) >= 8
         imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shape},'Color', {'green'},'Opacity',0.5);
     end
     
     tic
-    [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri, zonaInteresImagine);
+    [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
     toc
     
     if size(detectii) > 0
-    imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+min(liniiImagine)+xInceputDecupare detectii(2)+y_zona_interes+yInceputDecupare],...
-            [detectii(3)+min(liniiImagine)+xInceputDecupare detectii(4)+y_zona_interes+yInceputDecupare],'Thickness',2,'Color',[0 255 0]);
+    imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare detectii(2)+y_zona_interes+yInceputDecupare],...
+            [detectii(3)+x_s+xInceputDecupare detectii(4)+y_zona_interes+yInceputDecupare],'Thickness',2,'Color',[0 255 0]);
     end
     
     image(imagineTrasata);
-    pause(0.001);
+    pause(0.00001);
 end

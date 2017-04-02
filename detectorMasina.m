@@ -1,4 +1,4 @@
-function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri, frameCurent)
+function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frameCurent)
     % 'detectii' = matrice Nx4, unde 
     %           N este numarul de detectii  
     %           detectii(i,:) = [x_min, y_min, x_max, y_max]
@@ -23,18 +23,11 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
     detectii = zeros(0,4);
     scoruriDetectii = zeros(0,1);
     imageIdx = cell(0,1);
-    imaginiFinale = cell(0,1);
-    
-    imaginiPuternicNegative = [];
-    exemplePuternicNegative = 0;
-    idxPN = 0;
 
     img = frameCurent;    
     if(size(img,3) > 1)
         img = rgb2gray(img);
     end
-
-    %completati codul functiei in continuare
 
     imgOriginala = img;
     marimeInitiala = size(img);
@@ -47,8 +40,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
 
     detectiiTemporareMarire = zeros(0,4);
     scoruriDetectiiTemporareMarire = zeros(0,1);
-    imageIdxTemporareMarire = cell(0,1);
-    imaginiTemporareMarire = cell(0,1);
 
     img = imgOriginala;
     scale = 1.2;
@@ -59,7 +50,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
         dimCelula = parametri.dimensiuneCelulaHOG;
         detectiiCurente = zeros(0,4);
         scoruriDetectiiCurente = zeros(0,1);
-        imageIdxCurente = cell(0,1);
         dim = parametri.dimensiuneFereastra;
 
         for j = 1:size(descriptorHOGImagine,1)-step
@@ -74,7 +64,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
 
                     detectiiCurente = [detectiiCurente; ceil(((k-1)*dimCelula+1)*raport_x) ceil(((j-1)*dimCelula+1)*raport_y) ceil(((k-1)*dimCelula+dim)*raport_x) ceil(((j-1)*dimCelula+dim)*raport_y)];
                     scoruriDetectiiCurente = [scoruriDetectiiCurente rezultat_clasificare];
-%                     imageIdxCurente = [imageIdxCurente imgFiles(i).name];
                 end
             end
         end
@@ -86,7 +75,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
 
         detectiiTemporareMarire = [detectiiTemporareMarire; detectiiCurente(rezultate,:)];
         scoruriDetectiiTemporareMarire = [scoruriDetectiiTemporareMarire scoruriDetectiiCurente(rezultate)];
-%         imageIdxTemporareMarire = [imageIdxTemporareMarire imageIdxCurente(rezultate)];
     end
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,8 +85,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
 
     detectiiTemporareMicsorare = zeros(0,4);
     scoruriDetectiiTemporareMicsorare = zeros(0,1);
-    imageIdxTemporareMicsorare = cell(0,1);
-    imaginiTemporareMicsorare = cell(0,1);
 
 %         img = imgOriginala;
 %         scale = 0.9;
@@ -159,12 +145,9 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
 
     detectiiTemporare = zeros(0,4);
     scoruriDetectiiTemporare = zeros(0,1);
-    imageIdxTemporare = cell(0,1);
-    imaginiTemporare = cell(0,1);
 
     detectiiTemporare = [detectiiTemporare; detectiiTemporareMicsorare; detectiiTemporareMarire];
     scoruriDetectiiTemporare = [scoruriDetectiiTemporare scoruriDetectiiTemporareMicsorare scoruriDetectiiTemporareMarire];
-%     imageIdxTemporare = [imageIdxTemporare imageIdxTemporareMicsorare imageIdxTemporareMarire];
 
     rezultate = [];
     if(size(detectiiTemporare,1) > 0)
@@ -173,6 +156,4 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorFacial(parametri
 
     detectii = [detectii; detectiiTemporare(rezultate,:)];
     scoruriDetectii = [scoruriDetectii scoruriDetectiiTemporare(rezultate)];
-%     imageIdx = [imageIdx imageIdxTemporare(rezultate)];
-
 end
