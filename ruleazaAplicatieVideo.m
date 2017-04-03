@@ -6,6 +6,7 @@ numeVideo = 'traffic_video_2.mp4';
 configuratie_video_2;
 configuratie_decupaj_asfalt_video_2;
 configuratie_detector_masina;
+configuratie_detectie_masina;
 
 yInceputDecupare = configuratie.yInceputDecupare;
 xInceputDecupare = configuratie.xInceputDecupare;
@@ -38,7 +39,7 @@ while hasFrame(video)
     
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
-    
+
     imagineTrasata = img;
     
     puncteFinale = [];
@@ -143,7 +144,17 @@ while hasFrame(video)
     imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare detectii(2)+y_zona_interes+yInceputDecupare],...
             [detectii(3)+x_s+xInceputDecupare detectii(4)+y_zona_interes+yInceputDecupare],'Thickness',2,'Color',[0 255 0]);
     end
-    
+
+    [imagineIPM, matriceInversa] = obtineIPM(imagineTrasata,configuratie_detectie);
+%     imshow(imagineTrasata),impixelinfo;
+%     imshow(imagineIPM),impixelinfo;
+
+    if isempty(detectii) == 0
+        d1 = (detectii(1)+x_s+xInceputDecupare+detectii(3)+x_s+xInceputDecupare)/2;
+        d2 = detectii(4)+y_zona_interes+yInceputDecupare;
+        obtineDistantaMasina([d1 d2],inv(matriceInversa));
+    end
+
     image(imagineTrasata);
     pause(0.00001);
 end

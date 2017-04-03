@@ -32,5 +32,5 @@ bOptim = [];
  plot([0 max(size(scoruriExempleNegative,1),size(scoruriExempleNegative,1))], [0 0], 'b');
  legend('Scoruri exemple pozitive','Scoruri exemple negative');
  title('Distributia scorurilor clasificatorului pe exemplele de antrenare');
- pause(2);
+%  pause(2);
  hold off;
