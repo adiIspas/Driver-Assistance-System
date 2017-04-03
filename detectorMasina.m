@@ -125,7 +125,6 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
             img = imresize(img,scale);
         end
 
-
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %                                               %
     %  Partea in care trecem prin toate detectiile  %

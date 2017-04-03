@@ -36,6 +36,9 @@ while hasFrame(video)
     x_s = min(liniiImagine);
     x_e = max(liniiImagine);
     zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
+    [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
+    
+%     imshow(zonaInteresImagine)
     
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
@@ -66,15 +69,17 @@ while hasFrame(video)
         puncteFinale = [puncteFinale; ii jj];
         puncteInceput = [puncteInceput; puncteTemporareInceput];
     end
-    toc
+%     toc
     
-    tic
-    [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
-    toc
+%     tic
+    if length(zonaInteresImagine) >= 45
+        [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
+    end
+%     toc
     
     yMax = 0;
     if isempty(detectii) == 0
-        yMax = detectii(1,end) + y_zona_interes;
+        yMax = detectii(1,end) + y_zona_interes + deplasareY;
     end
     
     p = punctePlan;
@@ -141,8 +146,8 @@ while hasFrame(video)
     end
     
     if size(detectii) > 0
-    imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare detectii(2)+y_zona_interes+yInceputDecupare],...
-            [detectii(3)+x_s+xInceputDecupare detectii(4)+y_zona_interes+yInceputDecupare],'Thickness',2,'Color',[0 255 0]);
+    imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY],...
+            [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY],'Thickness',2,'Color',[0 255 0]);
     end
 
     [imagineIPM, matriceInversa] = obtineIPM(imagineTrasata,configuratie_detectie);
@@ -154,7 +159,9 @@ while hasFrame(video)
         d2 = detectii(4)+y_zona_interes+yInceputDecupare;
         obtineDistantaMasina([d1 d2],inv(matriceInversa));
     end
-
+    
+    toc
+    
     image(imagineTrasata);
     pause(0.00001);
 end
