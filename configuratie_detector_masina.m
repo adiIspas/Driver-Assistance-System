@@ -11,14 +11,14 @@ parametri.numeDirectorSalveazaFisiere = fullfile(numeDirectorSetDate,'salveazaFi
 mkdir(parametri.numeDirectorSalveazaFisiere);
 %seteaza valori pentru diferiti parametri
 parametri.dimensiuneFereastra = 64;              %exemplele pozitive (fete de oameni cropate) au 36x36 pixeli
-parametri.dimensiuneCelulaHOG = 4;               %dimensiunea celulei
+parametri.dimensiuneCelulaHOG = 8;               %dimensiunea celulei
 parametri.dimensiuneDescriptorCelula = 31;       %dimensiunea descriptorului unei celule
 parametri.overlap = 0.3;                         %cat de mult trebuie sa se suprapuna doua detectii pentru a o elimina pe cea cu scorul mai mic
 parametri.antrenareCuExemplePuternicNegative = 0;%(optional)antrenare cu exemple puternic negative
 parametri.genereazaExemplePuternicNegative = 0;
 parametri.numarExemplePozitive = 1475;           %numarul exemplelor pozitive
 parametri.numarExempleNegative = 2000;          %numarul exemplelor negative
-parametri.threshold = 1.5;                        %toate ferestrele cu scorul > threshold si maxime locale devin detectii
+parametri.threshold = 1.3;                        %toate ferestrele cu scorul > threshold si maxime locale devin detectii
 parametri.vizualizareTemplateHOG = 0;            %vizualizeaza template HOG
 
 %% Pasul 1. Incarcam exemplele pozitive (cropate) si exemple negative generate

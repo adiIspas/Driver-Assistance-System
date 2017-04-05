@@ -62,14 +62,13 @@ while hasFrame(video)
             ii = round(puncte(idx,1));
             jj = round(puncte(idx,2));
             
-            imagineTrasata = cv.line(imagineTrasata, ...
-                [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-                'Thickness',1,'Color',[0 255 0]);
+%             imagineTrasata = cv.line(imagineTrasata, ...
+%                 [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
+%                 'Thickness',1,'Color',[0 255 0]);
         end
         puncteFinale = [puncteFinale; ii jj];
         puncteInceput = [puncteInceput; puncteTemporareInceput];
     end
-%     toc
     
 %     tic
     if length(zonaInteresImagine) >= 45
@@ -97,9 +96,9 @@ while hasFrame(video)
             end
             jj = j + 30;
             p = [p; ii jj];
-            imagineTrasata = cv.line(imagineTrasata, ...
-                    [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-                    'Thickness',1,'Color',[0 255 0]);
+%             imagineTrasata = cv.line(imagineTrasata, ...
+%                     [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
+%                     'Thickness',1,'Color',[0 255 0]);
         end
     end
     
@@ -117,9 +116,9 @@ while hasFrame(video)
             end
             jj = yMax;
             p = [p; ii jj];
-            imagineTrasata = cv.line(imagineTrasata, ...
-                    [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-                    'Thickness',1,'Color',[0 255 0]);
+%             imagineTrasata = cv.line(imagineTrasata, ...
+%                     [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
+%                     'Thickness',1,'Color',[0 255 0]);
         end
     end
     

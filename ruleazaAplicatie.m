@@ -25,7 +25,7 @@ end
 
 % The ground truth labels
 truthFiles = {
-  'videos_paper/cordova1/labels.ccvl'
+  'videos_paper/cordova2/labels.ccvl'
   };
 truths = ccvLabel('read', truthFiles{1});
 
