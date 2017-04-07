@@ -38,8 +38,6 @@ while hasFrame(video)
     zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
     [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
     
-%     imshow(zonaInteresImagine)
-    
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
 
@@ -61,20 +59,14 @@ while hasFrame(video)
             
             ii = round(puncte(idx,1));
             jj = round(puncte(idx,2));
-            
-%             imagineTrasata = cv.line(imagineTrasata, ...
-%                 [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-%                 'Thickness',1,'Color',[0 255 0]);
         end
         puncteFinale = [puncteFinale; ii jj];
         puncteInceput = [puncteInceput; puncteTemporareInceput];
     end
     
-%     tic
     if length(zonaInteresImagine) >= 45
         [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
     end
-%     toc
     
     yMax = 0;
     if isempty(detectii) == 0
@@ -96,9 +88,6 @@ while hasFrame(video)
             end
             jj = j + 30;
             p = [p; ii jj];
-%             imagineTrasata = cv.line(imagineTrasata, ...
-%                     [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-%                     'Thickness',1,'Color',[0 255 0]);
         end
     end
     
@@ -116,9 +105,6 @@ while hasFrame(video)
             end
             jj = yMax;
             p = [p; ii jj];
-%             imagineTrasata = cv.line(imagineTrasata, ...
-%                     [i+xInceputDecupare j+yInceputDecupare],[ii+xInceputDecupare jj+yInceputDecupare], ...
-%                     'Thickness',1,'Color',[0 255 0]);
         end
     end
     
@@ -150,17 +136,15 @@ while hasFrame(video)
     end
 
     [imagineIPM, matriceInversa] = obtineIPM(imagineTrasata,configuratie_detectie);
-%     imshow(imagineTrasata),impixelinfo;
-%     imshow(imagineIPM),impixelinfo;
 
     if isempty(detectii) == 0
         d1 = (detectii(1)+x_s+xInceputDecupare+detectii(3)+x_s+xInceputDecupare)/2;
         d2 = detectii(4)+y_zona_interes+yInceputDecupare;
         obtineDistantaMasina([d1 d2],inv(matriceInversa));
     end
-    
     toc
     
     image(imagineTrasata);
     pause(0.00001);
 end
+clc

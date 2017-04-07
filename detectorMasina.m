@@ -57,7 +57,6 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
         for j = 1:size(descriptorHOGImagine,1)-step
             for k = 1:size(descriptorHOGImagine,2)-step
                 descriptorHOGCurent = descriptorHOGImagine(j:j-1+step,k:k-1+step,:);
-%                 result = descriptorHOGCurent(:)'*parametri.w+parametri.b;
                 
                 values = zeros(1,size(svms,1));
                 for idx = 1:size(svms,1)
@@ -111,7 +110,6 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
             for j = 1:size(descriptorHOGImagine,1)-step
                 for k = 1:size(descriptorHOGImagine,2)-step
                     descriptorHOGCurent = descriptorHOGImagine(j:j-1+step,k:k-1+step,:);
-%                     result = descriptorHOGCurent(:)'*parametri.w+parametri.b;
                     
                     values = zeros(1,size(svms,1));
                     for idx = 1:size(svms,1)

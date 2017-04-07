@@ -1,30 +1,16 @@
-function [ svms ] = antreneazaClasificatorMulticlasa()
-%antreneazaClasificatorMulticlasa
-    parametri.dimensiuneFereastra = 64;              
-    parametri.dimensiuneCelulaHOG = 8;            
-    parametri.dimensiuneDescriptorCelula = 31;
-    parametri.extensie = 'png';
-    
+function [ svms ] = antreneazaClasificatorMulticlasa(parametri)
+%antreneazaClasificatorMulticlasa    
     dateAntrenarePozitive = zeros(1,0);
     dateAntrenareNegative = zeros(1,0);
     
-    fisiereExemplePozitive = {
-        'data/vehicles/Far'
-        'data/vehicles/Left'
-        'data/vehicles/MiddleClose'
-        'data/vehicles/Right'
-        };
+    fisiereExemplePozitive = parametri.fisiereExemplePozitive;
+    fisiereExempleNegative = parametri.fisiereExempleNegative;
     
-    fisiereExempleNegative = {
-        'data/non-vehicles/Far'
-        'data/non-vehicles/Left'
-        'data/non-vehicles/MiddleClose'
-        'data/non-vehicles/Right'
-        };
+    path = parametri.path;
     
     try
         disp('Incarcam modelul de antrenare');
-        load('data/salveazaFisiere/model_antrenare');
+        load([path '/model_antrenare' '_' num2str(parametri.dimensiuneCelulaHOG)]);
     catch
         % Procesam exemple
         for idx = 1:size(fisiereExempleNegative,1)
@@ -56,6 +42,6 @@ function [ svms ] = antreneazaClasificatorMulticlasa()
         disp('Salvam modelul de antrenare');
         
         % Salvam modelul de antrenare
-        save('data/salveazaFisiere/model_antrenare','svms');
+        save([path '/model_antrenare' '_' num2str(parametri.dimensiuneCelulaHOG)],'svms');
     end 
 end
