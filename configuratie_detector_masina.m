@@ -21,25 +21,27 @@ parametri.numarExempleNegative = 2000;          %numarul exemplelor negative
 parametri.threshold = 1.3;                        %toate ferestrele cu scorul > threshold si maxime locale devin detectii
 parametri.vizualizareTemplateHOG = 0;            %vizualizeaza template HOG
 
-%% Pasul 1. Incarcam exemplele pozitive (cropate) si exemple negative generate
-%exemple pozitive
-numeFisierDescriptoriExemplePozitive = [parametri.numeDirectorSalveazaFisiere 'descriptoriExemplePozitive_' num2str(parametri.dimensiuneCelulaHOG) '_' ...
-    num2str(parametri.numarExemplePozitive) '.mat'];
-temp = load(numeFisierDescriptoriExemplePozitive);
-descriptoriExemplePozitive = temp.descriptoriExemplePozitive;
-disp('Am incarcat descriptorii pentru exemplele pozitive');
+% %% Pasul 1. Incarcam exemplele pozitive (cropate) si exemple negative generate
+% %exemple pozitive
+% numeFisierDescriptoriExemplePozitive = [parametri.numeDirectorSalveazaFisiere 'descriptoriExemplePozitive_' num2str(parametri.dimensiuneCelulaHOG) '_' ...
+%     num2str(parametri.numarExemplePozitive) '.mat'];
+% temp = load(numeFisierDescriptoriExemplePozitive);
+% descriptoriExemplePozitive = temp.descriptoriExemplePozitive;
+% disp('Am incarcat descriptorii pentru exemplele pozitive');
+% 
+% %exemple negative
+% numeFisierDescriptoriExempleNegative = [parametri.numeDirectorSalveazaFisiere 'descriptoriExempleNegative_' num2str(parametri.dimensiuneCelulaHOG) '_' ...
+%     num2str(parametri.numarExempleNegative) '.mat'];
+% temp = load(numeFisierDescriptoriExempleNegative);
+% descriptoriExempleNegative = temp.descriptoriExempleNegative;
+% disp('Am incarcat descriptorii pentru exemplele negative');
+% 
+% disp('Am obtinut exemplele de antrenare');
+% %% Pasul 2. Invatam clasificatorul liniar
+%  exempleAntrenare = [descriptoriExemplePozitive;descriptoriExempleNegative]';
+%  eticheteExempleAntrenare = [ones(size(descriptoriExemplePozitive,1),1); -1*ones(size(descriptoriExempleNegative,1),1)];
+%  [w, b] = antreneazaClasificator(exempleAntrenare,eticheteExempleAntrenare);
+%  parametri.w = w;
+%  parametri.b = b;
 
-%exemple negative
-numeFisierDescriptoriExempleNegative = [parametri.numeDirectorSalveazaFisiere 'descriptoriExempleNegative_' num2str(parametri.dimensiuneCelulaHOG) '_' ...
-    num2str(parametri.numarExempleNegative) '.mat'];
-temp = load(numeFisierDescriptoriExempleNegative);
-descriptoriExempleNegative = temp.descriptoriExempleNegative;
-disp('Am incarcat descriptorii pentru exemplele negative');
-
-disp('Am obtinut exemplele de antrenare');
-%% Pasul 2. Invatam clasificatorul liniar
- exempleAntrenare = [descriptoriExemplePozitive;descriptoriExempleNegative]';
- eticheteExempleAntrenare = [ones(size(descriptoriExemplePozitive,1),1); -1*ones(size(descriptoriExempleNegative,1),1)];
- [w, b] = antreneazaClasificator(exempleAntrenare,eticheteExempleAntrenare);
- parametri.w = w;
- parametri.b = b;
+parametri.svms = antreneazaClasificatorMulticlasa();

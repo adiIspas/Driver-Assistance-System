@@ -24,6 +24,8 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
     scoruriDetectii = zeros(0,1);
     imageIdx = cell(0,1);
 
+    svms = parametri.svms;
+    
     img = frameCurent;    
     if(size(img,3) > 1)
         img = rgb2gray(img);
@@ -55,7 +57,15 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
         for j = 1:size(descriptorHOGImagine,1)-step
             for k = 1:size(descriptorHOGImagine,2)-step
                 descriptorHOGCurent = descriptorHOGImagine(j:j-1+step,k:k-1+step,:);
-                result = descriptorHOGCurent(:)'*parametri.w+parametri.b;
+%                 result = descriptorHOGCurent(:)'*parametri.w+parametri.b;
+                
+                values = zeros(1,size(svms,1));
+                for idx = 1:size(svms,1)
+                    values(idx) = descriptorHOGCurent(:)'*svms(idx).w+svms(idx).b;
+                end
+
+                result = max(values);
+                
                 if result > parametri.threshold
                     rezultat_clasificare = result;
                     marimeActuala = size(img);
@@ -101,7 +111,16 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
             for j = 1:size(descriptorHOGImagine,1)-step
                 for k = 1:size(descriptorHOGImagine,2)-step
                     descriptorHOGCurent = descriptorHOGImagine(j:j-1+step,k:k-1+step,:);
-                    result = descriptorHOGCurent(:)'*parametri.w+parametri.b;
+%                     result = descriptorHOGCurent(:)'*parametri.w+parametri.b;
+                    
+                    values = zeros(1,size(svms,1));
+                    for idx = 1:size(svms,1)
+                        values(idx) = descriptorHOGCurent(:)'*svms(idx).w+svms(idx).b;
+                    end
+
+                    result = max(values);
+                
+                    
                     if result > parametri.threshold
                         rezultat_clasificare = result;
                         marimeActuala = size(img);
