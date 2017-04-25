@@ -23,14 +23,11 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
     
     svms = parametri.svms;
     
-    %initializare variabile de returnat
     detectii = zeros(0,4);
     scoruriDetectii = zeros(0,1);
     imageIdx = cell(0,1);
     imaginiFinale = cell(0,1);
-    
-    puternicNegative = parametri.genereazaExemplePuternicNegative;
-    
+
     imaginiPuternicNegative = [];
     exemplePuternicNegative = 0;
     idxPN = 0;
@@ -40,8 +37,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
         if(size(img,3) > 1)
             img = rgb2gray(img);
         end
-        
-        %completati codul functiei in continuare
 
         imgOriginala = img;
         marimeInitiala = size(img);
@@ -81,18 +76,11 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
                     result = max(values);
                     
                     if result > parametri.threshold
-%                      if strcmp(predict(model,descriptorHOGCurent(:)'),'nonvehicle') == 0
                         rezultat_clasificare = result;
                         marimeActuala = size(img);
                         raport_x = (marimeInitiala(2)/marimeActuala(2));
                         raport_y = (marimeInitiala(1)/marimeActuala(1));
-                        
-                        if puternicNegative == 1
-                            idxPN = idxPN + 1;
-                            imagineCurenta = uint8(img((j-1)*dimCelula+1:(j-1)*dimCelula+dim,(k-1)*dimCelula+1:(k-1)*dimCelula+dim));  
-                            imaginiTemporareMarire = [imaginiTemporareMarire imagineCurenta];
-                        end
-                        
+
                         detectiiCurente = [detectiiCurente; ceil(((k-1)*dimCelula+1)*raport_x) ceil(((j-1)*dimCelula+1)*raport_y) ceil(((k-1)*dimCelula+dim)*raport_x) ceil(((j-1)*dimCelula+dim)*raport_y)];
                         scoruriDetectiiCurente = [scoruriDetectiiCurente rezultat_clasificare];
                         imageIdxCurente = [imageIdxCurente imgFiles(i).name];
@@ -108,10 +96,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
             detectiiTemporareMarire = [detectiiTemporareMarire; detectiiCurente(rezultate,:)];
             scoruriDetectiiTemporareMarire = [scoruriDetectiiTemporareMarire scoruriDetectiiCurente(rezultate)];
             imageIdxTemporareMarire = [imageIdxTemporareMarire imageIdxCurente(rezultate)];
-            
-            if puternicNegative == 1
-                imaginiTemporareMarire = [imaginiTemporareMarire imaginiTemporareMarire(rezultate)];
-            end
         end
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,7 +112,6 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
         img = imgOriginala;
         scale = 0.9;
         while size(img,1) >= 31 && size(img,2) >= 31
-%             img = imresize(img,scale);
             descriptorHOGImagine = vl_hog(single(img),parametri.dimensiuneCelulaHOG);
             step = round(parametri.dimensiuneFereastra/parametri.dimensiuneCelulaHOG);
             dimCelula = parametri.dimensiuneCelulaHOG;
@@ -153,13 +136,7 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
                         marimeActuala = size(img);
                         raport_x = (marimeInitiala(2)/marimeActuala(2));
                         raport_y = (marimeInitiala(1)/marimeActuala(1));
-                        
-                        if puternicNegative == 1
-                            idxPN = idxPN + 1;
-                            imagineCurenta = uint8(img((j-1)*dimCelula+1:(j-1)*dimCelula+dim,(k-1)*dimCelula+1:(k-1)*dimCelula+dim));
-                            imaginiTemporareMicsorare = [imaginiTemporareMicsorare imagineCurenta];
-                        end
-                        
+
                         detectiiCurente = [detectiiCurente; ceil(((k-1)*dimCelula+1)*raport_x) ceil(((j-1)*dimCelula+1)*raport_y) ceil(((k-1)*dimCelula+dim)*raport_x) ceil(((j-1)*dimCelula+dim)*raport_y)];
                         scoruriDetectiiCurente = [scoruriDetectiiCurente rezultat_clasificare];
                         imageIdxCurente = [imageIdxCurente imgFiles(i).name];
@@ -175,10 +152,7 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
             detectiiTemporareMicsorare = [detectiiTemporareMicsorare; detectiiCurente(rezultate,:)];
             scoruriDetectiiTemporareMicsorare = [scoruriDetectiiTemporareMicsorare scoruriDetectiiCurente(rezultate)];
             imageIdxTemporareMicsorare = [imageIdxTemporareMicsorare imageIdxCurente(rezultate)];
-            
-            if puternicNegative == 1
-                imaginiTemporareMicsorare = [imaginiTemporareMicsorare imaginiTemporareMicsorare(rezultate)];
-            end
+           
             img = imresize(img,scale);
         end
         
@@ -197,11 +171,7 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
         detectiiTemporare = [detectiiTemporare; detectiiTemporareMicsorare; detectiiTemporareMarire];
         scoruriDetectiiTemporare = [scoruriDetectiiTemporare scoruriDetectiiTemporareMicsorare scoruriDetectiiTemporareMarire];
         imageIdxTemporare = [imageIdxTemporare imageIdxTemporareMicsorare imageIdxTemporareMarire];
-        
-%         if puternicNegative == 1
-%             imaginiTemporare = [imaginiTemporare imageIdxTemporareMicsorare imaginiTemporareMarire];
-%         end
-        
+
         rezultate = [];
         if(size(detectiiTemporare,1) > 0)
             rezultate = eliminaNonMaximele(detectiiTemporare,scoruriDetectiiTemporare,size(imgOriginala));
@@ -210,23 +180,5 @@ function [detectii, scoruriDetectii, imageIdx] = ruleazaDetectorMasina(parametri
         detectii = [detectii; detectiiTemporare(rezultate,:)];
         scoruriDetectii = [scoruriDetectii scoruriDetectiiTemporare(rezultate)];
         imageIdx = [imageIdx imageIdxTemporare(rezultate)];
-        if puternicNegative == 1
-            imaginiFinale = [imaginiFinale imaginiTemporare(rezultate)];
-        end
-        exemplePuternicNegative = exemplePuternicNegative + sum(rezultate);
     end
-%     if puternicNegative == 1
-%         disp('--Fete detectate in poze non-fata--')
-%         numarTotal = exemplePuternicNegative
-%         size(imaginiFinale)
-%         
-%         for i = 1:size(imaginiFinale,2)
-%             fullFileName = fullfile('imaginiPuternicNegative/', ['imaginea' num2str(i) '.jpg']);
-%             imagineCurenta = uint8(imaginiFinale{i});
-%             if size(imagineCurenta,1) == 36 && size(imagineCurenta,2) == 36
-%                 imwrite(imagineCurenta, fullFileName)
-%             end
-%         end
-%     end
-
 end
