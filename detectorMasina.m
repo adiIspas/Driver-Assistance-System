@@ -97,7 +97,7 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
 
         img = imgOriginala;
         scale = 0.9;
-        while size(img,1) >= 45 && size(img,2) >= 45
+        while size(img,1) >= 31 && size(img,2) >= 31
             img = imresize(img,scale);
             descriptorHOGImagine = vl_hog(single(img),parametri.dimensiuneCelulaHOG);
             step = round(parametri.dimensiuneFereastra/parametri.dimensiuneCelulaHOG);

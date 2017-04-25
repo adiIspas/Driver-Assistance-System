@@ -2,7 +2,7 @@ parametri.dimensiuneFereastra = 64;
 parametri.dimensiuneCelulaHOG = 8;            
 parametri.dimensiuneDescriptorCelula = 31;
 parametri.extensie = 'png';
-parametri.threshold = 1.3;  
+parametri.threshold = 3.5;  
 parametri.path = 'data/salveazaFisiere';
 
 fisiereExemplePozitive = {
