@@ -2,8 +2,8 @@ fprintf('Incarcam imaginile din director \n');
 
 clear, clc, close all;
 
-numeFolderImagini = 'cordova2';
-% numeFolderImagini = 'washington2';
+numeFolderImagini = 'cordova1';
+% numeFolderImagini = 'washington1';
 numeDirector = [pwd '\videos_paper\' numeFolderImagini '\'];
 tipImagine = 'png';
 
@@ -25,49 +25,53 @@ end
 
 % The ground truth labels
 truthFiles = {
-  'videos_paper/cordova2/labels.ccvl'
+  'videos_paper/cordova1/labels.ccvl'
   };
 truths = ccvLabel('read', truthFiles{1});
 
+ddd = [];
 for idxImg = 1:length(filelist)
-        clc
-    
+%     clc
+    splines = {};
         %%%%% detectii paper
     imgName = filelist(idxImg).name;
     image = imread([numeDirector imgName]);
-    
-    if(size(truths.frames(idxImg).labels,1) > 0)
-        imagineTrasata = image;
-        for idy = 1:size(truths.frames(idxImg).labels,2)
-            punctePlan = truths.frames(idxImg).labels(idy).points;
-
-            for u = 1:size(punctePlan,1)/4
-                puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
-                
-                for idx = 2:size(puncte,1)
-                    i = round(puncte(idx-1,1));
-                    j = round(puncte(idx-1,2));
-                    ii = round(puncte(idx,1));
-                    jj = round(puncte(idx,2));
-                    
-                    if truths.frames(idxImg).labels(idy).subtype == 'dy'
-                        imagineTrasata = cv.line(imagineTrasata, ...
-                            [i j],[ii jj], ...
-                            'Thickness',5,'Color',[0 255 0]);
-                    elseif truths.frames(idxImg).labels(idy).subtype == 'sw'
-                        imagineTrasata = cv.line(imagineTrasata, ...
-                            [i j],[ii jj], ...
-                            'Thickness',5,'Color',[255 0 0]);
-                    elseif truths.frames(idxImg).labels(idy).subtype == 'bw'
-                        imagineTrasata = cv.line(imagineTrasata, ...
-                            [i j],[ii jj], ...
-                            'Thickness',5,'Color',[0 0 255]);
-                    end
-                    imagineTrasata = cv.putText(imagineTrasata, num2str(idy), [i j]);
-                end
-            end
-        end
-    end
+    imagineTrasata = image;
+%     if(size(truths.frames(idxImg).labels,1) > 0)
+%         imagineTrasata = image;
+%         for idy = 1:size(truths.frames(idxImg).labels,2)
+%             punctePlan = truths.frames(idxImg).labels(idy).points;
+%             
+% %             punctePlan
+%             for u = 1:size(punctePlan,1)/4
+%                 puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
+%                 
+%                 for idx = 2:size(puncte,1)
+%                     i = round(puncte(idx-1,1));
+%                     j = round(puncte(idx-1,2));
+%                     ii = round(puncte(idx,1));
+%                     jj = round(puncte(idx,2));
+%                     
+%                     if abs(320 - i) <= 40
+%                         if truths.frames(idxImg).labels(idy).subtype == 'dy'
+%                             imagineTrasata = cv.line(imagineTrasata, ...
+%                                 [i j],[ii jj], ...
+%                                 'Thickness',5,'Color',[0 255 0]);
+%                         elseif truths.frames(idxImg).labels(idy).subtype == 'sw'
+%                             imagineTrasata = cv.line(imagineTrasata, ...
+%                                 [i j],[ii jj], ...
+%                                 'Thickness',5,'Color',[255 0 0]);
+%                         elseif truths.frames(idxImg).labels(idy).subtype == 'bw'
+%                             imagineTrasata = cv.line(imagineTrasata, ...
+%                                 [i j],[ii jj], ...
+%                                 'Thickness',5,'Color',[0 0 255]);
+%                         end
+%                         imagineTrasata = cv.putText(imagineTrasata, num2str(idy), [i j]);
+%                     end
+%                 end
+%             end
+%         end
+%     end
         %%%%% detectii paper
 
 %         fprintf(['Imaginea ' num2str(idxImg) ' din ' num2str(length(filelist)) ' ... \n']);
@@ -100,7 +104,7 @@ for idxImg = 1:length(filelist)
 %             puncte = ccvEvalBezSpline(puncte,.01);
             textCompus = strcat(textCompus, ['\tspline#', num2str(u), ' has ', ...
                 num2str(size(puncte,1)), ' points and score ', num2str(10), '\n']);
-            
+            splines = [splines; puncte];
             for idx = 2:size(puncte,1)
                 i = round(puncte(idx-1,1));
                 j = round(puncte(idx-1,2));
@@ -118,13 +122,105 @@ for idxImg = 1:length(filelist)
             numarSplines = numarSplines + 1;
         end
 
-        imshow(imagineTrasata)
+%         '---'
+        if(size(truths.frames(idxImg).labels,1) > 0)
+        %         imagineTrasata = image;
+        splines2 = {};
+        for idy = 1:size(truths.frames(idxImg).labels,2)
+            punctePlan = truths.frames(idxImg).labels(idy).points;
 
+        %             punctePlan
+            for u = 1:size(punctePlan,1)/4
+                puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
+                
+                for idx = 2:size(puncte,1)
+                    i = round(puncte(idx-1,1));
+                    j = round(puncte(idx-1,2));
+                    ii = round(puncte(idx,1));
+                    jj = round(puncte(idx,2));
+
+                    if abs(320 - i) <= 40
+                        splines2 = [splines2; puncte];
+%                         puncte
+                        if truths.frames(idxImg).labels(idy).subtype == 'dy'
+                            imagineTrasata = cv.line(imagineTrasata, ...
+                                [i j],[ii jj], ...
+                                'Thickness',5,'Color',[0 255 0]);
+                        elseif truths.frames(idxImg).labels(idy).subtype == 'sw'
+                            imagineTrasata = cv.line(imagineTrasata, ...
+                                [i j],[ii jj], ...
+                                'Thickness',5,'Color',[255 0 0]);
+                        elseif truths.frames(idxImg).labels(idy).subtype == 'bw'
+                            imagineTrasata = cv.line(imagineTrasata, ...
+                                [i j],[ii jj], ...
+                                'Thickness',5,'Color',[0 0 255]);
+                        end
+                        imagineTrasata = cv.putText(imagineTrasata, num2str(idy), [i j]);
+                    end
+                end
+            end
+        end
+        end
+%         '---'
+%         splines{1}
+%         splines{2}
+%         '---'
+%         splines2{1}
+%         splines2{2}
+%         
+%         pause
+
+        for j=1:length(splines)
+            %flag
+            detection = 0;
+            %loop on truth and get which one
+            k = 1;
+            while detection==0 && k<=length(splines2)
+%                 ddd = [ddd ccvCheckMergeSplines(splines{j}, ...
+%                                         splines2{k}, meanDistThreshold, ...
+%                                         medianDistThreshold)];
+
+                x = ccvCheckMergeSplines(splines{j}, ...
+                                        splines2{k}, 100, ...
+                                        100);
+                               
+%                     '----'
+%                     splines{j}
+%                     splines2{k}
+%                     
+%                     '----'
+                if ccvCheckMergeSplines(splines{j}, ...
+                                        splines2{k}, 200, ...
+                                        200)
+                                    ddd = [ddd 1];
+                    %not false pos
+                    detection = 1;
+%                     truthDetections(k) = 1;
+                else
+                    ddd = [ddd 0];
+                end;
+                %inc
+                k = k+1;                
+            end; %while
+
+            %check result
+%             result.score = detectionFrame.scores(j);
+%             result.detection = detection;
+%             results = [results, result];
+%             frameDetections = [frameDetections, detection];
+        end; %for
+        
+        
+        imshow(imagineTrasata)
+        
         if salveazaDetectii == 1
             fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);
             fprintf(fileID,textCompus);
         end
 end
+            size(ddd,2)
+            sum(ddd)
+
 if salveazaDetectii == 1
     fclose(fileID);
 end

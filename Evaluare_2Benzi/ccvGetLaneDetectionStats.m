@@ -14,11 +14,11 @@ function ccvGetLaneDetectionStats(detectionFiles, truthFiles)
 %
 
 % Thresholds for merging i.e. matching splines
-% meanDistThreshold = 15;
-% medianDistThreshold = 20;
+meanDistThreshold = 50;
+medianDistThreshold = 50;
 
-meanDistThreshold = 300;
-medianDistThreshold = 350;
+% meanDistThreshold = 100;
+% medianDistThreshold = 100;
 
 % Initialize
 allResults = [];
@@ -31,6 +31,7 @@ allFp = 0;
 disp('------------------------------------------------------------------');
 
 for d=1:length(detectionFiles)
+    ddd = [];
     %get detection and truth file
     detectionFile = detectionFiles{d};
     truthFile = truthFiles{d};
@@ -83,9 +84,12 @@ for d=1:length(detectionFiles)
             %loop on truth and get which one
             k = 1;
             while detection==0 && k<=length(truthSplines)
+                ddd = [ddd ccvCheckMergeSplines(detectionSplines{j}, ...
+                                        truthSplines{k}, meanDistThreshold, ...
+                                        medianDistThreshold)];
                 if ccvCheckMergeSplines(detectionSplines{j}, ...
                                         truthSplines{k}, meanDistThreshold, ...
-                                        medianDistThreshold);
+                                        medianDistThreshold)
                     %not false pos
                     detection = 1;
                     truthDetections(k) = 1;
@@ -140,6 +144,9 @@ for d=1:length(detectionFiles)
     dNumFrames(d) = numFrames;
     dTp(d) = tp;
     dFp(d) = fp;
+    
+    size(ddd,2)
+    sum(ddd)
 end; %for
 
 
@@ -174,25 +181,34 @@ end;
 % ---------------------------------------------------------------------------
 function splines = GetTruthSplines(labels)
 
-
 centruImagine = 320;
-pozitii2Benzi = zeros(1,0);
+ths = 35;
 
-% returns splines in the labels as a cell array of splines
 splines = {};
 for i=1:length(labels)
-  if strcmp(labels(i).type, 'spline')
-      currentSpline = labels(i).points;
-      pozitii2Benzi = [pozitii2Benzi, abs(centruImagine - currentSpline(1,1))];
-  end;
-end;
+%   labels(i).type
+%   if strcmp(labels(i).type, 'spline')
+%     currentSpline = labels(i).points;
+% %     currentSpline = sortrows(currentSpline(:,:),2);
+%     currentSpline = sortrows(currentSpline,2);
+%     if abs(centruImagine - currentSpline(1,1)) <= ths
+%         splines{end+1} = labels(i).points;
+%     end
+%   end;
+  
+    currentSpline = labels(i).points;
+    for u = 1:size(currentSpline,1)/4
+        puncte = sortrows(currentSpline(u*4-4+1:u*4,:),2);
 
-[~, index] = sort(pozitii2Benzi);
+        for idx = 2:size(puncte,1)
+            i = round(puncte(idx-1,1));
+            j = round(puncte(idx-1,2));
+            ii = round(puncte(idx,1));
+            jj = round(puncte(idx,2));
 
-count = 0;
-for i=1:length(index)
-  if strcmp(labels(i).type, 'spline') && count < 2
-      splines{end+1} = labels(index(i)).points;
-  count = count + 1;
-  end;
-end;
+            if abs(centruImagine - i) <= ths
+                splines{end+1} = currentSpline;
+            end
+        end
+    end
+end
