@@ -1,39 +1,42 @@
-
-imageO = imread('image.png');
+imageO = imread('image2.jpg');
 % tic
 imageT = rgb2gray(imageO);
 image = cv.Canny(imageT, 200);
 
-lines = cv.HoughLinesP(image,'Threshold',80,'MinLineLength',100,'MaxLineGap',50);
+lines = cv.HoughLinesP(image,'Theta',0.1,'Threshold',80,'MinLineLength',100,'MaxLineGap',50);
 
 count = 0;
+prag = 200;
+prag1 = 200;
+finalLines = {};
+
 for i = 1:length(lines)
-    
     if abs(711 - lines{i}(1,1)) <= 180
-    imageO = cv.line(imageO,[lines{i}(1,1),lines{i}(1,2)],[lines{i}(1,3),lines{i}(1,4)],...
-        'Thickness',5,'Color',[0 i*10 0]);
-    count = count + 1;
+        finalLines = [finalLines lines{i}];
+        break
     end
-%     imshow(imageT)
-%     pause
 end
-% toc
-count
-% imshowpair(image,imageO,'montage')
+
+for i = 2:length(lines)
+    if abs(711 - lines{i}(1,1)) <= prag1
+        found = 1;
+        for j = 1:length(finalLines)
+            if norm(lines{i} - finalLines{j}) <= prag
+                    found = 0;
+                    break
+            end
+        end
+        
+        if found == 1
+            finalLines = [finalLines lines{i}];
+        end
+    end
+end
+
+for i = 1:length(finalLines)
+    imageO = cv.line(imageO,[finalLines{i}(1,1),finalLines{i}(1,2)], ...
+                     [finalLines{i}(1,3),finalLines{i}(1,4)],...
+                     'Thickness',5,'Color',[0 255 0]);
+end
+
 imshow(imageO),impixelinfo
-% 
-% bool intersection(Point2f o1, Point2f p1, Point2f o2, Point2f p2,
-%                       Point2f &r)
-% {
-%     Point2f x = o2 - o1;
-%     Point2f d1 = p1 - o1;
-%     Point2f d2 = p2 - o2;
-% 
-%     float cross = d1.x*d2.y - d1.y*d2.x;
-%     if (abs(cross) < /*EPS*/1e-8)
-%         return false;
-% 
-%     double t1 = (x.x * d2.y - x.y * d2.x)/cross;
-%     r = o1 + d1 * t1;
-%     return true;
-% }

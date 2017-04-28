@@ -7,7 +7,7 @@ function merge = ccvCheckMergeSplines(spline1, spline2, meanDistThreshold, ...
 %
 % Inputs:
 % -------
-% spline2: Nx2 matrix of spline control points
+% spline1: Nx2 matrix of spline control points
 % spline2: Nx2 matrix of spline control points
 % meanDistThreshold: threshold for the mean distance between points on the
 %   two splines
@@ -22,6 +22,8 @@ function merge = ccvCheckMergeSplines(spline1, spline2, meanDistThreshold, ...
 %get points on both
 p1 = ccvEvalBezSpline(spline1, .01);
 p2 = ccvEvalBezSpline(spline2, .01);
+% p1 = spline1;
+% p2 = spline2;
 
 %now for every point in spline1, compute nearest in spline2, and get that
 %distance
@@ -35,6 +37,7 @@ for i=1:size(p1, 1)
     dist1(i) = min(d);
 end;
 dist2 = zeros(1, size(p2,1));
+
 for i=1:size(p2, 1)
     %get diff
     d = repmat(p2(i,:), size(p1, 1), 1) - p1;

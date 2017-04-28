@@ -17,8 +17,8 @@ function ccvGetLaneDetectionStats(detectionFiles, truthFiles)
 meanDistThreshold = 50;
 medianDistThreshold = 50;
 
-% meanDistThreshold = 100;
-% medianDistThreshold = 100;
+% meanDistThreshold = 200;
+% medianDistThreshold = 200;
 
 % Initialize
 allResults = [];
@@ -31,7 +31,6 @@ allFp = 0;
 disp('------------------------------------------------------------------');
 
 for d=1:length(detectionFiles)
-    ddd = [];
     %get detection and truth file
     detectionFile = detectionFiles{d};
     truthFile = truthFiles{d};
@@ -84,9 +83,6 @@ for d=1:length(detectionFiles)
             %loop on truth and get which one
             k = 1;
             while detection==0 && k<=length(truthSplines)
-                ddd = [ddd ccvCheckMergeSplines(detectionSplines{j}, ...
-                                        truthSplines{k}, meanDistThreshold, ...
-                                        medianDistThreshold)];
                 if ccvCheckMergeSplines(detectionSplines{j}, ...
                                         truthSplines{k}, meanDistThreshold, ...
                                         medianDistThreshold)
@@ -144,9 +140,6 @@ for d=1:length(detectionFiles)
     dNumFrames(d) = numFrames;
     dTp(d) = tp;
     dFp(d) = fp;
-    
-    size(ddd,2)
-    sum(ddd)
 end; %for
 
 
@@ -168,15 +161,26 @@ disp(sprintf('False detections/frame= %f', allFp/allNumFrames));
 
 fprintf(1,'\n\n\n-----');
 disp('Summary results');
+correct = 0;
+false = 0;
+n = length(dDetectionTotal);
 for d=1:length(dDetectionTotal)
     disp(' ');
-    disp(sprintf('Detection %s', detectionFile));
+    disp(sprintf('Detection %s', detectionFiles{d}));
     disp(sprintf('Total = %d', dTruthTotal(d)));
     disp(sprintf('Total detections = %d', dDetectionTotal(d)));
     disp(sprintf('correct detections = %.2f', 100*dTp(d)/dTruthTotal(d)));
     disp(sprintf('false detections = %.2f', 100*dFp(d)/dTruthTotal(d)));
     disp(sprintf('false detections / frame = %.3f', dFp(d)/dNumFrames(d)));
+    
+    correct = correct + 100*dTp(d)/dTruthTotal(d);
+    false = false + 100*dFp(d)/dTruthTotal(d);
 end;
+
+disp(' ');
+disp('--- Final Results ---')
+disp(sprintf('correct detections = %.2f', correct/n));
+disp(sprintf('false detections = %.2f', false/n));
 
 % ---------------------------------------------------------------------------
 function splines = GetTruthSplines(labels)

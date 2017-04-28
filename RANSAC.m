@@ -10,13 +10,13 @@ function [ puncte, scor ] = RANSAC(imagineFiltrata, incadrare) % FUNCTIE FINALIZ
     scorBunFinal = zeros(0,1);
     puncteBune = [];
     for idy = 1:size(incadrare,1)
-        scorBun = 1;
+        scorBun = 0.1;
         for idx = 1:numarIteratii
             puncte = obtinePuncteRandom(incadrare(idy,:),dimensiuneInaltime);
-            punctePotrivite = potrivestePuncte(puncte);
+            punctePotrivite = potrivestePuncte(puncte, size(imagineFiltrata));
             scor = determinaScor(punctePotrivite, imagineFiltrata);
 
-            if scor > scorBun
+            if scor > scorBun                
                 scorBun = scor;
                 puncteBune = punctePotrivite;
             end

@@ -25,10 +25,14 @@ while hasFrame(video)
     clc
     tic
     img = readFrame(video);
-
+    
+    detectii = [];
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
+    
+%     imshow(imagineIPM)
+%     pause
     
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
@@ -86,7 +90,7 @@ while hasFrame(video)
             else
                 ii = i + 20;
             end
-            jj = j + 30;
+            jj = j + 20; % cat de jos se duce cu decuparea pana la masina ta
             p = [p; ii jj];
         end
     end
@@ -145,6 +149,7 @@ while hasFrame(video)
     toc
     
     image(imagineTrasata);
+%     imshow(imagineTrasata)
     pause(0.00001);
 end
 clc
