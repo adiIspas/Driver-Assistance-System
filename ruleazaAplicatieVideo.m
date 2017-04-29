@@ -31,9 +31,6 @@ while hasFrame(video)
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
     
-%     imshow(imagineIPM)
-%     pause
-    
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
 
@@ -49,8 +46,11 @@ while hasFrame(video)
     
     puncteFinale = [];
     puncteInceput = [];
+    puncteTrasare = [];
     for u = 1:size(punctePlan,1)/4
         puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
+        
+        puncteTrasare = [puncteTrasare; puncte(1,:); puncte(end,:)];
         
         puncteTemporareInceput = [];
         for idx = 2:size(puncte,1)
@@ -73,65 +73,76 @@ while hasFrame(video)
     end
     
     yMax = 0;
+    puncteTrasareFinale = puncteTrasare;
     if isempty(detectii) == 0
         yMax = detectii(1,end) + y_zona_interes + deplasareY;
-    end
-    
-    p = punctePlan;
-    if size(puncteFinale,1) == 2
-        puncteFinale = sortrows(puncteFinale,1);
-        
-        for idx = 1:size(puncteFinale,1)
-            i = puncteFinale(idx,1);
-            j = puncteFinale(idx,2);
+
+        x1 = 1;
+        x2 = 2;
+        for i = 0:length(puncteTrasare)/4
+            xa = puncteTrasare(x1+i,1);
+            ya = puncteTrasare(x1+i,2);
+            xb = puncteTrasare(x2+i,1);
+            yb = puncteTrasare(x2+i,2);
+            yc = yMax;
             
-            if mod(idx,2) == 1
-                ii = i - 70;
-            else
-                ii = i + 20;
-            end
-            jj = j + 20; % cat de jos se duce cu decuparea pana la masina ta
-            p = [p; ii jj];
+            xc = (xa*yc - xa*yb - xb*yc + xb*ya)/(ya - yb);
+            x1 = x1 + 1;
+            x2 = x2 + 1;
+            puncteTrasareFinale = [puncteTrasareFinale; xc yc];
         end
     end
     
-    if size(puncteInceput,1) == 2 && yMax ~= 0
-        puncteInceput = sortrows(puncteInceput,1);
+    if length(puncteTrasareFinale) >= 4
+        x = xInceputDecupare;
+        y = yInceputDecupare;
         
-        for idx = 1:size(puncteInceput,1)
-            i = puncteInceput(idx,1);
-            j = puncteInceput(idx,2);
-            
-            if mod(idx,2) == 1
-                ii = i + 30;
-            else
-                ii = i - 20;
-            end
-            jj = yMax;
-            p = [p; ii jj];
+        puncteTrasareFinale(:,1) = puncteTrasareFinale(:,1) + x;
+        puncteTrasareFinale(:,2) = puncteTrasareFinale(:,2) + y;
+        puncteTrasare(:,1) = puncteTrasare(:,1) + x;
+        puncteTrasare(:,2) = puncteTrasare(:,2) + y;
+
+        yMin = 245;
+        x1 = 1;
+        x2 = 2;
+        for i = 0:length(puncteTrasare)/4
+            xa = puncteTrasare(x1+i,1);
+            ya = puncteTrasare(x1+i,2);
+            xb = puncteTrasare(x2+i,1);
+            yb = puncteTrasare(x2+i,2);
+            yc = yMin;
+
+            xc = (xa*yc - xa*yb - xb*yc + xb*ya)/(ya - yb);
+            x1 = x1 + 1;
+            x2 = x2 + 1;
+            puncteTrasareFinale = [puncteTrasareFinale; xc yc];
         end
-    end
-    
-    x = xInceputDecupare;
-    y = yInceputDecupare;
-    p(:,1) = p(:,1) + x;
-    p(:,2) = p(:,2) + y;
-    
-    p = sortrows(p,1);
-    if size(p,1) >= 12
-        shape = [p(1,1) p(1,2) p(2,1) p(2,2) p(3,1) p(3,2) p(4,1) p(4,2) ...
-             p(5,1) p(5,2) p(6,1) p(6,2) p(7,1) p(7,2) p(8,1) p(8,2) ...
-             p(9,1) p(9,2) p(10,1) p(10,2) p(11,1) p(11,2) p(12,1) p(12,2)...
-             p(1,1) p(1,2)];
-    elseif size(p,1) >= 10
-        shape = [p(1,1) p(1,2) p(2,1) p(2,2) p(3,1) p(3,2) p(4,1) p(4,2) ...
-             p(5,1) p(5,2) p(6,1) p(6,2) p(7,1) p(7,2) p(8,1) p(8,2) ...
-             p(9,1) p(9,2) p(10,1) p(10,2) ...
-             p(1,1) p(1,2)];
+
+        pp = sortrows(puncteTrasareFinale,1);
+        
+        X = pp(:,1);
+        Y = pp(:,2);
+        
+        cx = mean(X);
+        cy = mean(Y);
+        
+        a = atan2(Y - cy, X - cx);
+        
+        [~, order] = sort(a);
+        
+        pp(:,1) = X(order);
+        pp(:,2) = Y(order);
+        if size(pp,1) == 6
+            shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
+                 pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(1,1) pp(1,2)];
+        elseif size(pp,1) == 8
+            shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
+                 pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(7,1) pp(7,2) pp(8,1) pp(8,2) pp(1,1) pp(1,2)];
+        end
     end
   
-    if size(p,1) >= 8
-        imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shape},'Color', {'green'},'Opacity',0.5);
+    if size(pp,1) >= 6
+        imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', {'green'},'Opacity',0.5);
     end
     
     if size(detectii) > 0
@@ -149,7 +160,9 @@ while hasFrame(video)
     toc
     
     image(imagineTrasata);
-%     imshow(imagineTrasata)
+%     imshow(imagineTrasata),impixelinfo
+%     pause
     pause(0.00001);
 end
-clc
+
+clear, clc
