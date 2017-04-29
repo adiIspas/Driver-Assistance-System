@@ -1,5 +1,0 @@
-bw - broken white
-sw - solide white
-dy - double yellow
-by - broken yellow
-sy - solid yellow

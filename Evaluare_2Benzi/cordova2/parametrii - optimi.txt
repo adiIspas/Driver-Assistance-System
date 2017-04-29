@@ -1,2 +1,0 @@
-numarIteratii = 40;
-scorBun = 340;
