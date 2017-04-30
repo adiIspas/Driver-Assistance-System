@@ -8,6 +8,7 @@ numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
 eval(['configuratie_decupaj_asfalt_video_' num2str(numarVideo)]);
+configuratie_banda;
 configuratie_detector_masina;
 configuratie_detectie_masina;
 
@@ -21,16 +22,17 @@ end_x = pozitie_sfarsit_x;
 start_y = pozitie_start_y;
 end_y = pozitie_sfarsit_y;
 
+puncteTrasareTemporare = [];
+trasareTemporara = numarTrasariTemporare;
 mod2Benzi = 1;
 
 %% Rulam aplicatia
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
-    clc
-    
+    clc    
     tic %% Inceput rulare
     img = readFrame(video);
-    
+
     detectii = [];
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
@@ -46,13 +48,34 @@ while hasFrame(video)
     
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
-
-    imagineTrasata = img;
     
+    imagineTrasata = img;
     puncteTrasare = [];
     for u = 1:size(punctePlan,1)/4
         puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
         puncteTrasare = [puncteTrasare; puncte(1,:); puncte(end,:)];
+    end
+
+    if length(puncteTrasare) == 4
+        distantaBenzi = ...
+        DistBetween2Segment([puncteTrasare(1,1) puncteTrasare(1,2) 0], ...
+                            [puncteTrasare(2,1) puncteTrasare(2,2) 0], ...
+                            [puncteTrasare(3,1) puncteTrasare(3,2) 0], ...
+                            [puncteTrasare(4,1) puncteTrasare(4,2) 0]);
+    else
+        distantaBenzi = 0;
+    end
+
+    if distantaBenzi < minDistance || distantaBenzi > maxDistance
+        if trasareTemporara > 0
+            puncteTrasare = puncteTrasareTemporare;
+            trasareTemporara = trasareTemporara - 1;
+        else
+            puncteTrasare = [];
+        end
+    else
+        trasareTemporara = numarTrasariTemporare;
+        puncteTrasareTemporare = puncteTrasare;
     end
     
     if length(zonaInteresImagine) >= 45
@@ -61,7 +84,7 @@ while hasFrame(video)
     
     yMax = 0;
     puncteTrasareFinale = puncteTrasare;
-    if isempty(detectii) == 0
+    if isempty(detectii) == 0 && length(puncteTrasare) == 4
         yMax = detectii(1,end) + y_zona_interes + deplasareY;
 
         x1 = 1;
@@ -103,7 +126,7 @@ while hasFrame(video)
             x2 = x2 + 1;
             puncteTrasareFinale = [puncteTrasareFinale; xc yc];
         end
-
+        
         pp = sortrows(puncteTrasareFinale,1);
         
         X = pp(:,1);
@@ -123,6 +146,11 @@ while hasFrame(video)
             shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
                  pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(1,1) pp(1,2)];
             
+            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', {'green'},'Opacity',0.5);
+        elseif size(pp,1) == 7
+            shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
+                 pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(7,1) pp(7,2) pp(1,1) pp(1,2)];
+             
             imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', {'green'},'Opacity',0.5);
         elseif size(pp,1) == 8
             shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
@@ -146,7 +174,7 @@ while hasFrame(video)
     end
     
     toc %% Sfarsit rulare
-    
+     
     image(imagineTrasata);
     pause(0.00001);
 end
