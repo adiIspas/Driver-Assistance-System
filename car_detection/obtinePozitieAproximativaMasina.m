@@ -1,5 +1,12 @@
 function [ zonaInteresImagine, deplasareY, deplasareX ] = obtinePozitieAproximativaMasina( zonaInteresImagineInitiala )
-%obtinePozitieAproximativaMasina 
+% obtinePozitieAproximativaMasina Obtina zona cu cel mai mare potential de
+% a contine masina
+%
+%   zonaInteresImagineInitiala = zona pe care se face verificarea
+%
+%   zonaInteresImagine         = zona rezultata cu potential de a contine masina
+%   deplasareY                 = deplasarea pe axa OY
+%   deplasareX                 = deplasarea pe axa OX
     
     tempImage = rgb2gray(zonaInteresImagineInitiala);
     BW1 = edge(tempImage,'sobel','vertical',0.2);

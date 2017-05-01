@@ -1,14 +1,14 @@
-%% Adrian ISPAS, Facultate de Matematica si Informatica, UNIBUC
+%% Adrian ISPAS, Facultate de Matematicã ?i Informaticã, UNIBUC
 clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 2;
+numarVideo = 5;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
 eval(['configuratie_decupaj_asfalt_video_' num2str(numarVideo)]);
-configuratie_banda;
+eval(['configuratie_banda_video_' num2str(numarVideo)]);
 configuratie_detector_masina;
 configuratie_detectie_masina;
 
@@ -27,6 +27,7 @@ trasareTemporara = numarTrasariTemporare;
 mod2Benzi = 1;
 
 %% Rulam aplicatia
+k = 0;
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
     clc    

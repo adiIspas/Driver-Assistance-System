@@ -1,7 +1,11 @@
-function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata, douaBenzi ) % FUNCTIE FINALIZATA
-    % detectieLinii Foloseste o varianta simplificata a Hough pentru a detecta care dintre coloane este o posibila linie.
-    %   Detaliile despre implementare pot fi gasite in paper-ul 
-    % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
+function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata, douaBenzi )
+% detectieLinii Foloseste o varianta simplificata a Hough pentru a detecta care dintre coloane este o posibila linie.
+%   
+%   imagineFiltrata = imaginea de analizat
+%   douaBenzi       = activarea modului 2 benzi
+%
+%   coloane         = coloanele cu cel mai mare potential de a fi linie marcata
+%   incadrareaLinie = o incadreare a liniei posibila marcata
 
     % Initializam parametrii
     limitaIncadrare = 1; % Dimensiune boundy-box

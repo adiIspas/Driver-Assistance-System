@@ -1,7 +1,11 @@
-function [ imagineIPM, matriceInversa ] = obtineIPM(imagine, configuratie) % FUNCTIE FINALIZATA
-    % obtineIPM Pentru o imagine data se intoarce imaginea IPM asociata
-    %   Detaliile despre implementare pot fi gasite in paper-ul 
-    % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
+function [ imagineIPM, matriceInversa ] = obtineIPM(imagine, configuratie)
+% obtineIPM Pentru o imagine data se intoarce imaginea IPM asociata
+%
+%   imagine        = imaginea pentru care se doreste obtinerea IPM-ului
+%   configuratie   = configuratie data de pozitia camerei
+%
+%   imagineIPM     = imaginea IPM
+%   matriceInversa = matricea inversa cu ajutorul careia s-a obtinut IPM-ul
 
     procentYMin = configuratie.procentYMin;
     pixeliXPotrivire = configuratie.pixeliXPotrivire;

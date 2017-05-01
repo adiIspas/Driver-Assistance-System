@@ -1,5 +1,9 @@
 function [ descriptori ] = obtineDescriptori( parametri )
-%obtineDescriptori 
+% obtineDescriptori Obtine descriptori pentru un set de date
+%
+%   parametri   = parametri de rulare
+%
+%   descriptori = descriptori obtinuti pentru datele de antrenare
 
     imgFiles = dir(fullfile(parametri.numeDirector, ['*.' parametri.extensie]));
     numarImagini = length(imgFiles);

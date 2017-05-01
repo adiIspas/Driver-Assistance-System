@@ -1,5 +1,10 @@
-function [ puncte ] = obtinePuncteRandom(incadrare,dimensiuneInaltime) % FUNCTIE FINALIZATA
-    % obtinePuncteRandom Genereaza puncte ce se incadreaza in jurul liniei detectate.
+function [ puncte ] = obtinePuncteRandom(incadrare,dimensiuneInaltime)
+% obtinePuncteRandom Genereaza puncte ce se incadreaza in jurul liniei detectate.
+%
+%   incadrare          = incadrarea asociata coloanei cu potential de linie
+%   dimensiuneInaltime = inaltimeaImaginii
+%
+%   puncte             = punctele generate in limita incadrarii
     
     % Initializam parametrii
     numarPuncte = 10;

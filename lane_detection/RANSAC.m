@@ -1,7 +1,11 @@
 function [ puncte, scor ] = RANSAC(imagineFiltrata, incadrare) % FUNCTIE FINALIZATA
-    % RANSAC O varianta adaptata a algoritmului RANSAC pentru detectarea punctelor de interes in imagine.
-    %   Detaliile despre implementare pot fi gasite in paper-ul 
-    % Real time Detection of Lane Markers in Urban Streets, Mohamed Aly
+% RANSAC O varianta adaptata a algoritmului RANSAC pentru detectarea punctelor de interes in imagine.
+%  
+%   imagineFiltrata = imaginea filtrata
+%   incadrarea      = incadrarea pentru posibile linii
+%
+%   puncte          = puncte pentru spline
+%   scor            = scor asociat punctelor de spline
     
     % Initializam parametrii
     numarIteratii = 30;

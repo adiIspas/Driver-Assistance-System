@@ -1,7 +1,9 @@
 function [ punctePlan ] = obtinePunctePlan( puncteIPM, matriceInversa )
-%obtinePunctePlan Pentru un set de puncte obtinute in imaginea IPM returneaza punctele in planul imaginii originale
+% obtinePunctePlan Pentru un set de puncte obtinute in imaginea IPM returneaza punctele in planul imaginii originale
+%
 %   puncteIPM     = punctele din imaginea IPM
 %   maticeInversa = matricea inversa transformarii in imaginea IPM
+%
 %   punctePlan    = punctele finale in planul imaginii originale
 
     punctePlan = zeros(size(puncteIPM));

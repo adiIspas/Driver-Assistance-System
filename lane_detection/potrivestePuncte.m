@@ -1,5 +1,10 @@
-function [ punctePotrivite ] = potrivestePuncte(puncte, dimensiune) % FUNCTIE FINALIZATA
-    % potrivestePuncte Pentru un set de puncte dat incearca sa determine cele mai bune puncte.
+function [ punctePotrivite ] = potrivestePuncte(puncte, dimensiune)
+% potrivestePuncte Pentru un set de puncte dat incearca sa determine cele mai bune puncte.
+%
+%   puncte          = set de puncte pentru spline
+%   dimensiune      = dimensiunea
+%
+%   punctePotrivite = cel mai bune puncte plecat de la cele date
 
     % Initializam parametrii
     numarPuncte = size(puncte,1);

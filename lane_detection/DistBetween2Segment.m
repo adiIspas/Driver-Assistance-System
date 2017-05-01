@@ -13,12 +13,9 @@
 %	P1 = [0 0 0];     P2 = [1 0 0];
 %   P3 = [0 1 0];     P4 = [1 1 0];
 %	dist = DistBetween2Segment(P1, P2, P3, P4)
-%   dist =
-%
-%    1
-% 
+%   dist = 1
 
-function [distance varargout] = DistBetween2Segment(p1, p2, p3, p4)
+function [distance, varargout] = DistBetween2Segment(p1, p2, p3, p4)
 
     u = p1 - p2;
     v = p3 - p4;

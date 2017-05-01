@@ -1,5 +1,10 @@
-function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata ) % FUNCTIE FINALIZATA
-    % determinaScor Determina scorul pentru punctele potrivite determinate.
+function [ scor ] = determinaScor( punctePotrivite, imagineFiltrata )
+% determinaScor Determina scorul pentru punctele potrivite determinate.
+%
+%   punctePotrivite = set de puncte pentru o linie detectata
+%   imagineFiltrata = imaginea din care au fost obtinute filtrata
+%
+%   scor            = scorul asociat punctelor primite
 
     % Initializam parametri
     P_01 = calculeazaDistanta(punctePotrivite(1,:),punctePotrivite(2,:));

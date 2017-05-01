@@ -1,5 +1,11 @@
 function [ svms ] = antreneazaClasificatorMulticlasa(parametri)
-%antreneazaClasificatorMulticlasa    
+% antreneazaClasificatorMulticlasa Antreneaza un clasificator pentru toate
+% tipurile de clase date prin parametri
+% 
+%   parametri = parametri de rulare
+%
+%   svms      = clasificatori obtinuti pentru fiecare clasa
+
     dateAntrenarePozitive = zeros(1,0);
     dateAntrenareNegative = zeros(1,0);
     
