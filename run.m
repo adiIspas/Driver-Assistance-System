@@ -1,9 +1,9 @@
-%% Adrian ISPAS, Facultate de Matematicã ?i Informaticã, UNIBUC
+%% Adrian ISPAS, Facultate de Matematicã si Informaticã, UNIBUC
 clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 5;
+numarVideo = 6;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -27,25 +27,26 @@ trasareTemporara = numarTrasariTemporare;
 mod2Benzi = 1;
 
 %% Rulam aplicatia
-k = 0;
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
     clc    
     tic %% Inceput rulare
     img = readFrame(video);
-
+    
     detectii = [];
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
-    
+
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
 
     x_s = min(liniiImagine);
     x_e = max(liniiImagine);
+    
     zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
     [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
+    
     
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
@@ -78,8 +79,9 @@ while hasFrame(video)
         trasareTemporara = numarTrasariTemporare;
         puncteTrasareTemporare = puncteTrasare;
     end
-    
-    if length(zonaInteresImagine) >= 45
+
+    if size(zonaInteresImagine,1) >= parametri.dimensiuneCelulaHOG && ...
+            size(zonaInteresImagine,2) >= parametri.dimensiuneCelulaHOG
         [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
     end
     
