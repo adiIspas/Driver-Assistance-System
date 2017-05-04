@@ -3,14 +3,14 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 6;
+numarVideo = 2;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
 eval(['configuratie_decupaj_asfalt_video_' num2str(numarVideo)]);
 eval(['configuratie_banda_video_' num2str(numarVideo)]);
+eval(['configuratie_detectie_masina_video_' num2str(numarVideo)]);
 configuratie_detector_masina;
-configuratie_detectie_masina;
 
 yInceputDecupare = configuratie.yInceputDecupare;
 xInceputDecupare = configuratie.xInceputDecupare;
@@ -37,7 +37,7 @@ while hasFrame(video)
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
-
+    
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
 
@@ -168,7 +168,7 @@ while hasFrame(video)
             [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY],'Thickness',2,'Color',[0 255 0]);
     end
 
-    [imagineIPM, matriceInversa] = obtineIPM(imagineTrasata,configuratie_detectie);
+    [imagineIPM, matriceInversa] = obtineIPM(imagineTrasata(1:yMin,:,:),configuratie_detectie);
 
     if isempty(detectii) == 0
         x = (detectii(1)+x_s+xInceputDecupare+detectii(3)+x_s+xInceputDecupare)/2;
