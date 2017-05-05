@@ -1,4 +1,4 @@
-function [ imagineIPM, matriceInversa ] = obtineIPM(imagine, configuratie)
+function [ imagineIPM, matriceInversa, M ] = obtineIPM(imagine, configuratie)
 % obtineIPM Pentru o imagine data se intoarce imaginea IPM asociata
 %
 %   imagine        = imaginea pentru care se doreste obtinerea IPM-ului

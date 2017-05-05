@@ -10,6 +10,7 @@ eval(['configuratie_video_' num2str(numarVideo)]);
 eval(['configuratie_decupaj_asfalt_video_' num2str(numarVideo)]);
 eval(['configuratie_banda_video_' num2str(numarVideo)]);
 eval(['configuratie_detectie_masina_video_' num2str(numarVideo)]);
+eval(['configuratie_distanta_viteza_video_' num2str(numarVideo)]);
 configuratie_detector_masina;
 
 yInceputDecupare = configuratie.yInceputDecupare;
@@ -25,15 +26,25 @@ end_y = pozitie_sfarsit_y;
 puncteTrasareTemporare = [];
 trasareTemporara = numarTrasariTemporare;
 mod2Benzi = 1;
+distantaAnterioara = 0;
+centruAnterior = [0 0];
 
 %% Rulam aplicatia
+% k = 0;
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
     clc    
     tic %% Inceput rulare
     img = readFrame(video);
     
+%     imwrite(img,['img_' num2str(k) '.jpg']);
+%     k = k + 1;
+%     pause
+%     
     detectii = [];
+    colorBanda = {'green'};
+    colorDetectie = [0 255 0];
+    
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
@@ -83,6 +94,44 @@ while hasFrame(video)
     if size(zonaInteresImagine,1) >= parametri.dimensiuneCelulaHOG && ...
             size(zonaInteresImagine,2) >= parametri.dimensiuneCelulaHOG
         [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
+    end
+    
+    if size(detectii) > 0
+        [imagineIPM, ~, matriceIPM] = obtineIPM(imagineTrasata(1:yMin,:,:), configuratie_detectie);
+        
+        corner_1 = [detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY];
+        corner_2 = [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY];
+        midPointCar = [(corner_1(1,1) + corner_2(1,1))/2 (corner_1(1,2) + corner_2(1,2))/2];
+
+        
+        x = midPointCar(1,1);
+        y = midPointCar(1,2);
+        distanta = obtineDistantaMasina([x y], matriceIPM, size(imagineIPM,1), pixeliPerMetru);
+
+        vitezaRelativa = (distanta - distantaAnterioara) * 3.6;
+        distantaAnterioara = distanta;
+        
+        if isempty(centruAnterior) == 0
+            pdist([midPointCar; centruAnterior],'euclidean')
+            if pdist([midPointCar; centruAnterior],'euclidean') <= distantaMaximaCentre
+                centruAnterior = midPointCar;
+                distantaAnterioara = distanta;
+            end
+        end
+        
+        if vitezaRelativa < 0
+            colorBanda = {'red'};
+            colorDetectie = [255 0 0];
+        elseif vitezaRelativa <= 10
+            colorBanda = {'yellow'};
+            colorDetectie = [255 255 0];
+        end
+        
+        imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY],...
+                [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY],'Thickness',2,'Color', colorDetectie);
+        
+        imagineTrasata = cv.putText(imagineTrasata, [num2str(distanta) ' m'], corner_1);
+        imagineTrasata = cv.putText(imagineTrasata, [num2str(vitezaRelativa) ' km/h'], [corner_1(1,1) corner_2(1,2)]);
     end
     
     yMax = 0;
@@ -149,36 +198,25 @@ while hasFrame(video)
             shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
                  pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(1,1) pp(1,2)];
             
-            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', {'green'},'Opacity',0.5);
+            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', colorBanda,'Opacity',0.5);
         elseif size(pp,1) == 7
             shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
                  pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(7,1) pp(7,2) pp(1,1) pp(1,2)];
              
-            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', {'green'},'Opacity',0.5);
+            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', colorBanda,'Opacity',0.5);
         elseif size(pp,1) == 8
             shapeFinal = [pp(1,1) pp(1,2) pp(2,1) pp(2,2) pp(3,1) pp(3,2) pp(4,1) pp(4,2) ...
                  pp(5,1) pp(5,2) pp(6,1) pp(6,2) pp(7,1) pp(7,2) pp(8,1) pp(8,2) pp(1,1) pp(1,2)];
              
-            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', {'green'},'Opacity',0.5);
+            imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{shapeFinal},'Color', colorBanda,'Opacity',0.5);
         end
     end
-    
-    if size(detectii) > 0
-    imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY],...
-            [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY],'Thickness',2,'Color',[0 255 0]);
-    end
 
-    [imagineIPM, matriceInversa] = obtineIPM(imagineTrasata(1:yMin,:,:),configuratie_detectie);
-
-    if isempty(detectii) == 0
-        x = (detectii(1)+x_s+xInceputDecupare+detectii(3)+x_s+xInceputDecupare)/2;
-        y = detectii(4)+y_zona_interes+yInceputDecupare;
-        obtineDistantaMasina([x y],inv(matriceInversa));
-    end
-    
     toc %% Sfarsit rulare
-     
-    image(imagineTrasata);
+
+    image(imagineTrasata)
+%     imshow(img)
+%     pause
     pause(0.00001);
 end
 
