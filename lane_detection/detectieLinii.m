@@ -12,7 +12,7 @@ function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata, douaBenzi
     limitaIncadrareLinie = 35; % Diferentia minima dintre oricare 2 coloane
     filtruGaussian = [-1 1];
     incadrareLinie = zeros(0,2);
-    valoareMinimaColoana = 300; % Valoarea minima a unei coloane pentru a fi luata in calcul
+    valoareMinimaColoana = 100; % Valoarea minima a unei coloane pentru a fi luata in calcul
     
     mod2Benzi = struct('activat',0,'centruImagine',size(imagineFiltrata,2)/2);
     if douaBenzi == 1

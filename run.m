@@ -62,16 +62,16 @@ while hasFrame(video)
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
-
+    
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
-
+    
     x_s = min(liniiImagine);
     x_e = max(liniiImagine);
     
     zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
     [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
-
+  
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
     
@@ -266,8 +266,6 @@ while hasFrame(video)
     toc %% Sfarsit rulare
 
     image(imagineTrasata)
-%     imshow(img)
-%     pause
     pause(0.00001);
 %     k = k + 1;
 %     imwrite(imagineTrasata,['images/frame_' num2str(k) '.jpg']);
