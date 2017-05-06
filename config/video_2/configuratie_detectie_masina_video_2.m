@@ -1,1 +1,1 @@
-configuratie_detectie = struct('procentYMin',    70,'pixeliXPotrivire', 85);
+configuratie_detectie = struct('procentYMin', 68,'pixeliXPotrivire', 75);

@@ -93,8 +93,7 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
                     end
 
                     result = max(values);
-                
-                    
+
                     if result > parametri.threshold
                         rezultat_clasificare = result;
                         marimeActuala = size(img);

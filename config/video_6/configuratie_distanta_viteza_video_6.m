@@ -1,3 +1,3 @@
 pixeliPerMetru = 25;
 distantaMaximaCentre = 5;
-numarDetectiiTemporare = 10;
+numarDetectiiTemporare = 5;

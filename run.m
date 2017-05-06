@@ -3,7 +3,7 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 2;
+numarVideo = 6;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -25,12 +25,26 @@ end_y = pozitie_sfarsit_y;
 
 puncteTrasareTemporare = [];
 trasareTemporara = numarTrasariTemporare;
+detectieTemporara = numarDetectiiTemporare;
+deplasareXAnterior = 0;
+deplasareYAnterior = 0;
+zonaInteresImagineAnterior = 0;
+pozitieDetectieTemporare = [];
 mod2Benzi = 1;
 distantaAnterioara = 0;
 centruAnterior = [0 0];
 
+detectiiTemporare = numarDetectiiTemporare;
+detectiiT = [];
+x_sTemporar = 0;
+xInceputDecupareTemporar = 0;
+deplasareXTemporar = 0;
+y_zona_interesTemporar = 0;
+yInceputDecupareTemporar = 0;
+deplasareYTemporar = 0;
+
 %% Rulam aplicatia
-% k = 0;
+k = 0;
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
     clc    
@@ -48,7 +62,7 @@ while hasFrame(video)
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
-    
+
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
 
@@ -57,8 +71,7 @@ while hasFrame(video)
     
     zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
     [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
-    
-    
+
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
     
@@ -96,29 +109,64 @@ while hasFrame(video)
         [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
     end
     
+    if isempty(detectii) == 1
+        if detectiiTemporare > 0 && isempty(detectiiT) == 0
+            detectii = detectiiT;
+            x_s = x_sTemporar;
+            xInceputDecupare = xInceputDecupareTemporar;
+            deplasareX = deplasareXTemporar;
+            y_zona_interes = y_zona_interesTemporar;
+            yInceputDecupare = yInceputDecupareTemporar;
+            deplasareY = deplasareYTemporar;
+            
+            detectiiTemporare = detectiiTemporare - 1;
+        else
+            detectiiT = [];
+            centruAnterior = [0 0];
+        end
+    else
+        corner_1 = [detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY];
+        corner_2 = [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY];
+        midPointCar = [(corner_1(1,1) + corner_2(1,1))/2 (corner_1(1,2) + corner_2(1,2))/2];
+        
+        if pdist([midPointCar; centruAnterior],'euclidean') > distantaMaximaCentre
+            detectiiT = detectii;
+            x_sTemporar = x_s;
+            xInceputDecupareTemporar = xInceputDecupare;
+            deplasareXTemporar = deplasareX;
+            y_zona_interesTemporar = y_zona_interes;
+            yInceputDecupareTemporar = yInceputDecupare;
+            deplasareYTemporar = deplasareY;
+            centruAnterior = midPointCar;
+
+            detectiiTemporare = numarDetectiiTemporare;
+        else
+            detectii = detectiiT;
+            x_s = x_sTemporar;
+            xInceputDecupare = xInceputDecupareTemporar;
+            deplasareX = deplasareXTemporar;
+            y_zona_interes = y_zona_interesTemporar;
+            yInceputDecupare = yInceputDecupareTemporar;
+            deplasareY = deplasareYTemporar;
+            
+            detectiiTemporare = detectiiTemporare - 1;
+        end
+    end
+
     if size(detectii) > 0
         [imagineIPM, ~, matriceIPM] = obtineIPM(imagineTrasata(1:yMin,:,:), configuratie_detectie);
-        
+
         corner_1 = [detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY];
         corner_2 = [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY];
         midPointCar = [(corner_1(1,1) + corner_2(1,1))/2 (corner_1(1,2) + corner_2(1,2))/2];
 
-        
         x = midPointCar(1,1);
         y = midPointCar(1,2);
         distanta = obtineDistantaMasina([x y], matriceIPM, size(imagineIPM,1), pixeliPerMetru);
 
         vitezaRelativa = (distanta - distantaAnterioara) * 3.6;
         distantaAnterioara = distanta;
-        
-        if isempty(centruAnterior) == 0
-            pdist([midPointCar; centruAnterior],'euclidean')
-            if pdist([midPointCar; centruAnterior],'euclidean') <= distantaMaximaCentre
-                centruAnterior = midPointCar;
-                distantaAnterioara = distanta;
-            end
-        end
-        
+
         if vitezaRelativa < 0
             colorBanda = {'red'};
             colorDetectie = [255 0 0];
@@ -127,8 +175,11 @@ while hasFrame(video)
             colorDetectie = [255 255 0];
         end
         
-        imagineTrasata = cv.rectangle(imagineTrasata,[detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY],...
-                [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY],'Thickness',2,'Color', colorDetectie);
+        cornerDetectie1 = [detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY];
+        cornerDetectie2 = [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY];
+        
+        imagineTrasata = cv.rectangle(imagineTrasata,cornerDetectie1,...
+                cornerDetectie2,'Thickness',2,'Color', colorDetectie);
         
         imagineTrasata = cv.putText(imagineTrasata, [num2str(distanta) ' m'], corner_1);
         imagineTrasata = cv.putText(imagineTrasata, [num2str(vitezaRelativa) ' km/h'], [corner_1(1,1) corner_2(1,2)]);
@@ -218,6 +269,8 @@ while hasFrame(video)
 %     imshow(img)
 %     pause
     pause(0.00001);
+%     k = k + 1;
+%     imwrite(imagineTrasata,['images/frame_' num2str(k) '.jpg']);
 end
 
 %% Curatam spatiul de lucru

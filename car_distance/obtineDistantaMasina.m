@@ -12,7 +12,7 @@ function [ distanta ] = obtineDistantaMasina( puncteDetectie, matriceIPM, maxY, 
     for idx = 1:size(puncteDetectie,1)
         puncteDetectieIPM(idx,:) = cv.perspectiveTransform(puncteDetectie(idx,:),matriceIPM);
     end
-    
+
     X = [puncteDetectieIPM(1,1), puncteDetectieIPM(1,2); ...
          puncteDetectieIPM(1,1), maxY];
      
