@@ -6,5 +6,5 @@ pozitie_start_y = 115;
 lungime_y = 30;
 pozitie_sfarsit_y = pozitie_start_y + lungime_y;
 
-y_zona_interes = 30;
+y_zona_interes = 60;
 yMin = 245;

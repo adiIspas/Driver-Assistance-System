@@ -130,4 +130,7 @@ function [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, frame
 
     detectii = [detectii; detectiiTemporare(rezultate,:)];
     scoruriDetectii = [scoruriDetectii scoruriDetectiiTemporare(rezultate)];
+    
+    [~, indexiSortati] = sort(scoruriDetectii,'descend');
+    detectii = detectii(indexiSortati,:);
 end

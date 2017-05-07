@@ -3,7 +3,7 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 6;
+numarVideo = 3;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -71,7 +71,7 @@ while hasFrame(video)
     
     zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
     [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
-  
+ 
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
     
@@ -266,6 +266,8 @@ while hasFrame(video)
     toc %% Sfarsit rulare
 
     image(imagineTrasata)
+%     imshow(imagineTrasata),impixelinfo
+%     pause
     pause(0.00001);
 %     k = k + 1;
 %     imwrite(imagineTrasata,['images/frame_' num2str(k) '.jpg']);

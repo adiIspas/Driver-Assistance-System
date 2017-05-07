@@ -9,8 +9,8 @@ function [ zonaInteresImagine, deplasareY, deplasareX ] = obtinePozitieAproximat
 %   deplasareX                 = deplasarea pe axa OX
     
     tempImage = rgb2gray(zonaInteresImagineInitiala);
-    BW1 = edge(tempImage,'sobel','vertical',0.2);
-    BW2 = edge(tempImage,'sobel','horizontal',0.2);
+    BW1 = edge(tempImage,'sobel','vertical',0.1);
+    BW2 = edge(tempImage,'sobel','horizontal',0.1);
 
     result = BW1 + BW2;
 
