@@ -3,7 +3,7 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 8;
+numarVideo = 9;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -143,6 +143,8 @@ while hasFrame(video)
         end
     end
 
+    imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{[10 5 10 70 250 70 250 5]},'Color', {'black'},'Opacity',0.4);
+    details = 0;
     if size(detectii) > 0
         [imagineIPM, ~, matriceIPM] = obtineIPM(imagineTrasata(1:yMin, ...
             y_start:y_end,:), configuratie_detectie);
@@ -172,10 +174,19 @@ while hasFrame(video)
         imagineTrasata = cv.rectangle(imagineTrasata,cornerDetectie1,...
                 cornerDetectie2,'Thickness',2,'Color', colorDetectie);
         
+%         imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{[10 5 10 70 250 70 250 5]},'Color', {'black'},'Opacity',0.4);
         imagineTrasata = cv.putText(imagineTrasata, [num2str(distanta) ' m'], ...
-            corner_1, 'FontScale', 0.9, 'Color', colorDetectie);
+            [10, 30], 'FontScale', 0.9, 'Color', colorDetectie);
         imagineTrasata = cv.putText(imagineTrasata, [num2str(vitezaRelativa) ' km/h'], ...
-            [corner_1(1,1) corner_2(1,2)], 'FontScale', 0.9, 'Color', colorDetectie);
+            [10, 60], 'FontScale', 0.9, 'Color', colorDetectie);
+        details = 1;
+    end
+    
+    if details == 0
+        imagineTrasata = cv.putText(imagineTrasata, [num2str(0) ' m'], ...
+            [10, 30], 'FontScale', 0.9, 'Color', colorDetectie);
+        imagineTrasata = cv.putText(imagineTrasata, [num2str(0) ' km/h'], ...
+            [10, 60], 'FontScale', 0.9, 'Color', colorDetectie);
     end
     
     yMax = 0;
@@ -258,8 +269,8 @@ while hasFrame(video)
 
     toc %% Sfarsit rulare
 
-    image(imagineTrasata)
-%     imshow(imagineTrasata)
+%     image(imagineTrasata)
+    imshow(imagineTrasata)
 %     pause
     pause(0.00001);
 end
