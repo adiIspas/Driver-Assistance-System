@@ -3,7 +3,7 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 3;
+numarVideo = 8;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -17,11 +17,6 @@ yInceputDecupare = configuratie.yInceputDecupare;
 xInceputDecupare = configuratie.xInceputDecupare;
 yLungimeDecupare = configuratie.yLungimeDecupare;
 xLungimeDecupare = configuratie.xLungimeDecupare;
-
-start_x = pozitie_start_x;
-end_x = pozitie_sfarsit_x;
-start_y = pozitie_start_y;
-end_y = pozitie_sfarsit_y;
 
 puncteTrasareTemporare = [];
 trasareTemporara = numarTrasariTemporare;
@@ -44,17 +39,12 @@ yInceputDecupareTemporar = 0;
 deplasareYTemporar = 0;
 
 %% Rulam aplicatia
-k = 0;
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 while hasFrame(video)
     clc    
     tic %% Inceput rulare
     img = readFrame(video);
-    
-%     imwrite(img,['img_' num2str(k) '.jpg']);
-%     k = k + 1;
-%     pause
-%     
+
     detectii = [];
     colorBanda = {'green'};
     colorDetectie = [0 255 0];
@@ -62,7 +52,7 @@ while hasFrame(video)
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
     [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
-    
+
     imagineFiltrata = filtrareIPM(imagineIPM);
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
     
@@ -154,7 +144,8 @@ while hasFrame(video)
     end
 
     if size(detectii) > 0
-        [imagineIPM, ~, matriceIPM] = obtineIPM(imagineTrasata(1:yMin,:,:), configuratie_detectie);
+        [imagineIPM, ~, matriceIPM] = obtineIPM(imagineTrasata(1:yMin, ...
+            y_start:y_end,:), configuratie_detectie);
 
         corner_1 = [detectii(1)+x_s+xInceputDecupare+deplasareX detectii(2)+y_zona_interes+yInceputDecupare+deplasareY];
         corner_2 = [detectii(3)+x_s+xInceputDecupare+deplasareX detectii(4)+y_zona_interes+yInceputDecupare+deplasareY];
@@ -181,8 +172,10 @@ while hasFrame(video)
         imagineTrasata = cv.rectangle(imagineTrasata,cornerDetectie1,...
                 cornerDetectie2,'Thickness',2,'Color', colorDetectie);
         
-        imagineTrasata = cv.putText(imagineTrasata, [num2str(distanta) ' m'], corner_1);
-        imagineTrasata = cv.putText(imagineTrasata, [num2str(vitezaRelativa) ' km/h'], [corner_1(1,1) corner_2(1,2)]);
+        imagineTrasata = cv.putText(imagineTrasata, [num2str(distanta) ' m'], ...
+            corner_1, 'FontScale', 0.9, 'Color', colorDetectie);
+        imagineTrasata = cv.putText(imagineTrasata, [num2str(vitezaRelativa) ' km/h'], ...
+            [corner_1(1,1) corner_2(1,2)], 'FontScale', 0.9, 'Color', colorDetectie);
     end
     
     yMax = 0;
@@ -266,11 +259,9 @@ while hasFrame(video)
     toc %% Sfarsit rulare
 
     image(imagineTrasata)
-%     imshow(imagineTrasata),impixelinfo
+%     imshow(imagineTrasata)
 %     pause
     pause(0.00001);
-%     k = k + 1;
-%     imwrite(imagineTrasata,['images/frame_' num2str(k) '.jpg']);
 end
 
 %% Curatam spatiul de lucru
