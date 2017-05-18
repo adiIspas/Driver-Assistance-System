@@ -3,7 +3,7 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 9;
+numarVideo = 8;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -38,8 +38,10 @@ y_zona_interesTemporar = 0;
 yInceputDecupareTemporar = 0;
 deplasareYTemporar = 0;
 
+detalii = 1;
 %% Rulam aplicatia
 video = VideoReader([numeFolderVideo '/' numeVideo]);
+figure('units','normalized','outerposition',[0 0 1 1])
 while hasFrame(video)
     clc    
     tic %% Inceput rulare
@@ -51,9 +53,11 @@ while hasFrame(video)
     
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
-    [imagineIPM, matriceInversa] = obtineIPM(rgb2gray(imagineCurenta), configuratie);
-
-    imagineFiltrata = filtrareIPM(imagineIPM);
+    [imagineIPM, matriceInversa] = obtineIPM((imagineCurenta), configuratie);
+    
+    imagineIPMAfisare = imagineIPM;
+    
+    imagineFiltrata = filtrareIPM(rgb2gray(imagineIPM));
     [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
     
     x_s = min(liniiImagine);
@@ -269,9 +273,13 @@ while hasFrame(video)
 
     toc %% Sfarsit rulare
 
-%     image(imagineTrasata)
-    imshow(imagineTrasata)
-%     pause
+    if detalii == 1
+        subplot(2,2,3), imshow(img), title('Original image');
+        subplot(2,2,4), imshow(imagineIPMAfisare), title('IPM Image');
+        subplot(2,2,[1,2]), imshow(imagineTrasata), title('Result image');
+    else
+        image(imagineTrasata)
+    end
     pause(0.00001);
 end
 
