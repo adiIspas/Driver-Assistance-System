@@ -3,7 +3,7 @@ clear, clc, close all;
 
 %% Initializam parametrii de lucru
 numeFolderVideo = 'videos';
-numarVideo = 8;
+numarVideo = 9;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
 eval(['configuratie_video_' num2str(numarVideo)]);
@@ -38,7 +38,7 @@ y_zona_interesTemporar = 0;
 yInceputDecupareTemporar = 0;
 deplasareYTemporar = 0;
 
-detalii = 1;
+detalii = 0;
 %% Rulam aplicatia
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 figure('units','normalized','outerposition',[0 0 1 1])
