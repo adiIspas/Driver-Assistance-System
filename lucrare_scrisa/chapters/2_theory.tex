@@ -183,3 +183,57 @@ Tehnica prezentată anterior este ilustrată și în figura 2.7 sau în figura 2
 	\caption{Metoda glisării ferestrei în practică, în patru momente diferite.}
 	\label{fig:nonfloat}
 \end{figure}
+
+\section{IPM (Inverse Perspective Mapping)}
+
+\subsection{Noțiuni generale}
+
+IPM-ul reprezintă o tehnică de transformare geometrică care proiectează fiecare pixel a unui obiect din 3D într-o perspectivă 2D. Acest lucru înseamnă repoziționarea fiecărui pixel într-o poziție nouă corespunzătoare noii perspective, astfel construindu-se noua imagine. Din punct de vedere matematic acest lucru poate fi descris printr-o proiecție din planul Euclidian 3D de forma $W = \{(x,y,z)\} \in E^3$ într-un plan 2D de forma $I = \{(u,v)\} \in E^2$. Această transformare mai poartă numele și de „Bird's eye view” datorită privirii de sus pe care o oferă asupra imaginii originale. În figura 2.9 este prezentat vizual acest model.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_2_9}
+	\caption{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală.}
+	\label{fig:nonfloat}
+\end{figure}
+
+Pentru aflarea coordonatelor în noul plan putem folosi următoarele formule 2.12 și 2.13 rezultate pe baza modelului IPM.
+
+\begin{align}	
+	u(x,0,z) = \frac{\gamma(x,0,z) - (Y-\alpha)}{\frac{2\alpha}{n-1}}
+\end{align}
+\begin{align}	
+	v(x,0,z) = \frac{\theta(x,0,z) - (\Theta - \alpha)}{\frac{2\alpha}{m-1}}
+\end{align}
+
+În formulele prezentate au fost folosite:
+
+$\gamma = tan^{-1}(\frac{z}{x})$;
+
+$\theta = tan^{-1}(\frac{h}{\sqrt{x^2+z^2}})$;
+
+$Y$ - reprezintă unghiul dintre proiecția axei optice pe planul real; 
+
+$\Theta$ - reprezintă unghiul dintre proiecția axei optice și planul orizontal;
+ 
+$\alpha$ - reprezintă unghiul de înclinație al camerei;
+
+$m$ x $n$ reprezintă rezoluția imaginii.
+
+În figura 2.10 se poate observa un exemplu practic al IPM-ului.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=17cm,max height=17cm,keepaspectratio]{img_2_10}
+	\caption{Imaginea IPM (b) asociată unei imaginii din plan real (a).}
+	\label{fig:nonfloat}
+\end{figure}
+
+Evident, formulele prezentate anterior prezintă un dezavantaj datorită faptului că procesarea prin intermediul lor se face pixel cu pixel. În elaborarea lucrării practice au fost folosite metode de obținere a IPM-ului mult mai rapide pentru unul dintre obiectivului lucrării și anume rularea în timp real a aplicației.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=17cm,max height=17cm,keepaspectratio]{img_2_11}
+	\caption{Reprezentarea grafică a IPM.}
+	\label{fig:nonfloat}
+\end{figure}
