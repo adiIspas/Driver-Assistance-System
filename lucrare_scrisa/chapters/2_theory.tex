@@ -16,7 +16,7 @@ Vectorii suport mașină abordează problema prin conceptul de „margine” ce 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_1}
-	\caption{Marginea este definită ca distanța perpendiculara dintre limita de decizie și cel mai apropiat punct, după cum se poate observa în figura din stânga. Maximizăm limita marginii precum în figura din dreapta. Locația acestei limite este determinată de vectorii suport mașină indicați prin cercuri.}
+	\caption[Vectori suport mașină]{Marginea este definită ca distanța perpendiculara dintre limita de decizie și cel mai apropiat punct, după cum se poate observa în figura din stânga. Maximizăm limita marginii precum în figura din dreapta. Locația acestei limite este determinată de vectorii suport mașină indicați prin cercuri.}
 \end{figure} 
 
 În cazul vectorilor suport mașină limita de decizie este aleasă să fie drept locația unde „marginea” este maximă. Această decizie este motivată de folosirea „teoriei computaționale de învățare” cunoscută drept „teoria statistică de învățare”. 
@@ -71,7 +71,7 @@ exemplu ilustrat în figura 2.2.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_2}
-	\caption{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare.}
+	\caption[Vector suport mașină regresie]{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare.}
 \end{figure}
  
 Prin urmare, vom minimiza o funcție de eroare regularizata dată prin
@@ -83,7 +83,7 @@ Similar cu cele prezentate anterior putem alege un prag $\xi_n \geq 0$ și $ \wi
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_3}
-	\caption{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$.}
+	\caption[Vector suport mașină regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$.}
 \end{figure}
 
 Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \epsilon \leq t_n \leq y_n + \epsilon$ unde $y_n = y(x_n)$. Introducând variabilele $\xi_n$ și $\widehat{\xi_n}$ permitem punctelor să se afle în afara zonei de interes condiționat de faptul ca variabilele introduse sunt nenule iar următoarele condiții sunt indeplinite
@@ -98,7 +98,7 @@ Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \e
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_4}
-	\caption{Este prezentată un vector suport mașină pentru regresie aplicat pe un set de date sinusoidal și utilizând un nucleu Gaussian. Curba de regresie prezisă este ilustrată prin linia roșie, iar zona $\epsilon - intensiv$ este ilustrată prin zona roșie hașurată. Datele sunt indicate prin cercurile verzi, iar vectorii suport mașină sunt indicați prin cercurile albastre.}
+	\caption[Vector suport mașină regresie 3]{Este prezentată un vector suport mașină pentru regresie aplicat pe un set de date sinusoidal și utilizând un nucleu Gaussian. Curba de regresie prezisă este ilustrată prin linia roșie, iar zona $\epsilon - intensiv$ este ilustrată prin zona roșie hașurată. Datele sunt indicate prin cercurile verzi, iar vectorii suport mașină sunt indicați prin cercurile albastre.}
 \end{figure}
 
 \section{Histograme de gradienți orientați}
@@ -113,7 +113,7 @@ Ideea principală ce stă la baza histogramei de gradienți orientați este repr
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_5}
-	\caption{(a) imaginea originală; (b) descriptorul histogramei de gradienți orientați asociate imaginii; (c) valorile pozitive din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii; (d) valorile negative din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii}
+	\caption[Descriptor HOG]{(a) imaginea originală; (b) descriptorul histogramei de gradienți orientați asociate imaginii; (c) valorile pozitive din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii; (d) valorile negative din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii}
 \end{figure}
 
 Imaginea este împărțită în mici regiuni conectate numite celule, iar pentru pixelii din fiecare celulă se obține o histograma de gradienți orientați. Descriptorul este rezultatul concatenării acestor histograme. Se poate îmbunătății acuratețea prin normalizarea histogramelor, această normalizare are ca rezultat o invarianță mai bună a schimbărilor intensităților luminii sau apariției umbrelor. În figura 2.6 sunt reprezentate vizual aceste noțiuni.
@@ -193,7 +193,7 @@ IPM-ul reprezintă o tehnică de transformare geometrică care proiectează fiec
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_2_9}
-	\caption{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală.}
+	\caption[Modelul IPM]{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală.}
 	\label{fig:nonfloat}
 \end{figure}
 
@@ -225,7 +225,7 @@ $m$ x $n$ reprezintă rezoluția imaginii.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=17cm,max height=17cm,keepaspectratio]{img_2_10}
-	\caption{Imaginea IPM (b) asociată unei imaginii din plan real (a).}
+	\caption[Imagine IPM]{Imaginea IPM (b) asociată unei imaginii din plan real (a).}
 	\label{fig:nonfloat}
 \end{figure}
 

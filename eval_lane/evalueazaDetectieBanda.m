@@ -13,7 +13,7 @@ xInceputDecupare = configuratie.xInceputDecupare;
 yLungimeDecupare = configuratie.yLungimeDecupare;
 xLungimeDecupare = configuratie.xLungimeDecupare;
 
-salveazaDetectii = 1;
+salveazaDetectii = 0;
 mod2Benzi = 1;
 
 filelist = dir([numeDirector '*.' tipImagine]);
@@ -107,7 +107,7 @@ for idxImg = 1:length(filelist)
         numarSplines = numarSplines + 1;
     end
 
-%     imshow(imagineTrasata)
+    imshow(imagineTrasata)
 
     if salveazaDetectii == 1
         fprintf(fileID,'frame#%u has %u splines\n',idxImg,numarSplines);

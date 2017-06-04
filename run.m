@@ -42,9 +42,11 @@ detalii = 0;
 %% Rulam aplicatia
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 figure('units','normalized','outerposition',[0 0 1 1])
+tic
+k = 0;
 while hasFrame(video)
     clc    
-    tic %% Inceput rulare
+%     tic %% Inceput rulare
     img = readFrame(video);
 
     detectii = [];
@@ -271,7 +273,7 @@ while hasFrame(video)
         end
     end
 
-    toc %% Sfarsit rulare
+%     toc %% Sfarsit rulare
 
     if detalii == 1
         subplot(2,2,3), imshow(img), title('Original image');
@@ -281,7 +283,9 @@ while hasFrame(video)
         image(imagineTrasata)
     end
     pause(0.00001);
+    k = k + 1;
 end
+toc
 
 %% Curatam spatiul de lucru
-clear, clc
+% clear, clc
