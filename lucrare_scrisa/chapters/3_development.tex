@@ -33,23 +33,151 @@ Următoare etapă în procesul de detecție a benzii curente de circulație este
 
 \subsubsection{Etapa 3: Filtrarea imaginii IPM}
 
-Filtrarea imaginii IPM are rolul de a păstra în imagine doar zonele cele mai plauzibile de a fi marcaje delimitatorii de bandă și eliminarea celulalt conținut. Noua imagine, imagine, va fi o imagine binară de alb și negru. Pentru filtrare se folosește filtrul Gaussian orizontal
-$ FG = 
+Filtrarea imaginii IPM are rolul de a păstra în imagine doar zonele cele mai plauzibile de a fi marcaje delimitatorii de bandă și eliminarea celulalt conținut. Noua imagine, imagine, va fi o imagine binară de alb și negru. Pentru filtrare se folosește filtrul Gaussian 2D orizontal
+$ filtruGaussian\_2D = 
 \begin{bmatrix}
 	0 & 0 & 0 \\
 	0 & 1 & -1 \\
 	0 & 0 & 0 \\
 \end{bmatrix}
-$
+$. După aplicarea acestui filtru, matricea rezultată va mai fi filtrată cu un prag, astfel toate valorile din matric se se află sub acel prag vor deveni 0 celelalte păstrându-și intensitatea neschimbată.
+
+În figura 3.4 putem vedea o astfel de imagine IPM filtrată.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_4}
 	\caption[Imagine IPM filtrată]{a) Imaginea IPM b) Imaginea IPM filtrată.}
 \end{figure}
 
+\subsubsection{Etapa 4: Extragere linii din imaginea filtrată}
+
+În continuare ne vom ocupa de extragerea potențialelor linii din imaginea filtrată. Pentru aceasta vom face în primă instanță sumele cumulate pe coloane ale imaginii filtrate. În următorul pas vom aplica un filtru Gaussian, de data aceasta 1D, de forma $filtruGaussian\_1D = [-1, 1]$, iar pe baza rezultatului generat de acest filtru vom selecta maximele semnalului, în cazul nostru ne vom dori primele 2 maxime.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_5}
+	\caption[Linii din semnal]{a) Imaginea IPM b) Sumele cumulate ale imagini IPM filtrată pe coloane c) Normalizarea semnalului prin aplicarea filtrului Gaussian.}
+\end{figure}
+
+\subsubsection{Etapa 5: Determinare linii finale}
+
+Această ultimă etapă este împărțite în subetape după cum urmează.
+
+\textbf{A. Generează random puncte}
+Această funcție are rolul de a genera un număr prestabilit de puncte din zona celor două maxime găsite la pasul anterior. În aplicația noastră acest număr a fost setat la 10.
+
+\textbf{B. Potrivire puncte generate}
+Pentru cele $n$ puncte generate, în cazul nostru 10, vom asigna o valoare $t_i \in [0, 1]$ pentru fiecare punct $p_i = (u_i, v_i)$. Vom defini
+\begin{align}
+	t_i = \frac{\sum_{j = 1}^{i} d(p_j,p_{j-1})}{\sum_{j = 1}^{n} d(p_j,p_{j-1})} \quad pentru \quad t_i = 1, ..., n
+\end{align}
+$d$ reprezintă distanța euclidiană dată de formula
+\begin{align}
+	d(p_i,p_j) = \sqrt{(u_i - u_j)^2 + (v_i - v_j)^2}
+\end{align}
+
+În continuare, vom folosi datele obținute pentru a crea următoarele matrice.
+\begin{center}
+	$ Q = 
+	\begin{bmatrix}
+	p_1 \\
+	... \\
+	p_n \\
+	\end{bmatrix}
+	$ și $ T = 
+	\begin{bmatrix}
+	t_1^3 & t_1^2 & t_1 & 1 \\
+	...\\
+	t_n^3 & t_n^2 & t_n & 1\\
+	\end{bmatrix}
+	$
+\end{center}
+
+În final vom obține punctele după următoarea formula
+\begin{align}
+	P = (TM)^+Q
+\end{align}
+unde $(TM)^+$ reprezintă pseudoinversa matricei $TM$.
+
+\textbf{C. Determină scorul asociat noilor puncte}
+În final vom calcula pentru fiecare linie generată de punctele procesate un scor ce se bazează pe penalizarea liniilor scurte și foarte curbate. Scor-ul este obținut pe baza formulei:
+\begin{align}
+	scor = s(1 + k_1l^{'}+k_2\theta^{'})
+\end{align}
+unde
+
+$s$ - reprezintă suma pixelilor determinată de linia punctelor;
+
+$l^{'} = (l/v) - 1$ - unde $l$ este lungimea liniei, $v$ este înalțimea imaginii, astfel dacă $l^{'}$ va fi 0 atunci vom avea o linie foarte lungă, iar daca va fi -1 vom avea o linie foarte scurtă;
+
+$\theta^{'} = (\theta - 1)/2$ - unde $\theta = (cos\theta_1 + cos\theta_2)/2$;
+
+$k_1$ și $k_2$ - sunt factori de regularizare prestabiliți, în cazul nostru $k_1 = k_2 = 0.5$.
+
+În figura 3.6 sunt prezentate vizual componentele necesare determinării scorului.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_6}
+	\caption{Determinare scor linie.}
+\end{figure}
+
+\textbf{D. Determinare cea mai bună linie}
+În această ultimă etapă va trebui să rulăm de un număr $N$ prestabilit de ori, în cazul nostru 30, pașii 1 - 3 și să alegem din aceste $N$ rulări cel mai bun scor și implicit punctele asociate lui.
+
+Aceste puncte rezultate sunt cele corespunzătoare imaginii IPM. Pentru a le aduce în planul imaginii de interes, imaginea de la care am plec avem nevoie de inversa matricei care a dus punctele în planul IPM, inversă pe care o vom utiliza cu funcția din OpenCV $cv.perspectiveTransform$. 
+
+În acest punct, toate datele obținute sunt raportate la zona noastră de interes.
+
 \section{Detectare mașină}
 \subsection{Noțiuni introductive}
+
+A doua componentă esențială aplicației dezvoltate este ce reprezentată de detectarea de mașini. Aceasta primește de la prima componentă banda de circulație detectată, iar pe baza acesteia încearcă să găsească mașini strict în zona respectivă.
 \subsection{Algoritm detecție mașină}
+Detecția mașinii, în situația de față, presupune două etape. Prima etapă preliminară este cea de antrenare a clasificatorilor, iar cea de-a doua este detectarea propriu-zisă a mașinii.
+
+\textbf{Etapa I - Antrenarea calsificatorilor}
+
+\textbf{Extragerea descriptorilor}
+Primul pas în antrenarea clasificatorilor este reprezentat de extragerea descriptorilor din exemplele pozitive și negative. 
+Acest lucru se va face cu funcția $vl\_hog$ din biblioteca $VLFeat$. 
+
+\textbf{Antrenarea}
+Toate exemplele negative vor forma un set de date. Cele 4 clase de exemple pozitive vor fi antrenate separat cu setul de exemple negative. Astfel, vom obține 4 vectori suport mașină pentru cele 4 tipuri de imagini cu mașini. 
+Pentru antrenare se va folosi funcția $vl\_svmtrain$ din biblioteca $VLFeat$.
+
+\textbf{Etapa II - Detectarea propriu-zisă}
+
+\textbf{Extragere regiune interes}
+După cum a fost menționat anterior la detecția benzii curente de circulație vom folosi în continuare aceste informații pentru elimina zona redundantă căutării mașinii în imagine.
+
+\textbf{Anticipare poziție mașină}
+Pentru a mări și mai mult viteza de rulare a programului se poate reduce zona de interes în care este foarte probabil să se afle o mașină cu ajutorul filtrelor de muchii, spre exemplu filtru Sobel pentru muchii orizontale și verticale.
+\begin{center}
+	$ Sx = 
+	\begin{bmatrix}
+	-1 & 0 & 1 \\
+	-2 & 0 & 2 \\
+	-1 & 0 & 1
+	\end{bmatrix}
+	$
+	$ Sy = 
+	\begin{bmatrix}
+	1 & 2 & 1 \\
+	0 & 0 & 0 \\
+	-1 & -2 & -1 \\
+	\end{bmatrix}
+	$
+\end{center}
+Figura 3.7 ilustrează un exemplu în acest sens.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_7}
+	\caption[Regiune interes detecție mașină]{a) Imaginea inițială b) Imaginea rezultată pe baza detecției benzii c) Aplicarea filtrelor de muchii d) Extragerea zonei finale de interes.}
+\end{figure}
+
+
+\textbf{Rulare detector mașină}
+
 
 \section{Determinare distanță}
 \subsection{Noțiuni introductive}
