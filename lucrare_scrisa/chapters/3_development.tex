@@ -175,14 +175,40 @@ Figura 3.7 ilustrează un exemplu în acest sens.
 	\caption[Regiune interes detecție mașină]{a) Imaginea inițială b) Imaginea rezultată pe baza detecției benzii c) Aplicarea filtrelor de muchii d) Extragerea zonei finale de interes.}
 \end{figure}
 
-
 \textbf{Rulare detector mașină}
-
+Ultima fază din acest proces confirmă sau infirmă existența unei mașini în regiunea extrasă anterior. Pentru aceasta imaginea este mărită cu un factor de scală de 1.2 de 3 ori și micșorată cu un factor de scală 0.9 până când dimensiunea dimensiunea imaginii de analizat ajunge la $31 \times 31$ de pixeli, iar pe fiecare dintre aceaste 3 imagini, în cazul primului tip de operație executat asupra imaginii, plus cele n imagini, în cazul celui de-al doilea tip de operație executat asupra imaginii, se aplică metoda glisării ferestrei pentru a extrage cu ajutorul HOG caracteristici. În final, aceste caracteristici sunt trecute prin cele 4 tipuri de mașini cu vectori suport, iar dacă cel puțin unul returnează un scor mai mare sau egal cu pragul stabilit de noi pentru respectiva porțiune, afirmăm că există o mașină pe banda curentă de circulație.
 
 \section{Determinare distanță}
 \subsection{Noțiuni introductive}
+
+O primă componentă secundară este cea care determină distanța până la eventuala mașină detectată pe banda curentă de circulație. Figura 3.8 prezintă un exemplu practic.
+
 \subsection{Algoritm determinare distanță}
+
+Această componentă se folosește de detectarea de mașină prezentată anterior. Mai exact, aceasta trece în planul IPM coordonatele centrului detecției mașinii, iar din acel punct până la baza imaginii care reprezintă în IPM locația mașinii din care este realizat video-ul, se determină cu ajutorul raportării la o configurație 1 metru = n pixeli distanța efectivă în cadrul curent. Configurația este direct determinată de amplasarea camerei și tipul de video produs de aceasta. 
+
+Pentru a evita schimbările foarte rapide de distanță, o detecție într-un frame nou este acceptată ca fiind o nouă detecție doar în situația în care diferența euclidiană dintre centrul detecției curente în planul IPM și centrul detecției anterioare în același plan depășește un anumit prag stabilit în prealabil.
 
 \section{Determinare viteză relativă}
 \subsection{Noțiuni introductive}
+
+O ultimă componentă, în prezenta aplicație, se ocupă de calcularea vitezei relative de deplasare a mașinii din față de pe banda curentă de circulație față de mașina din care este înregistrat video-ul, astfel existând 3 situații de raspuns a acestei componente:
+
+\begin{itemize}
+	\item Viteza de deplasare a mașinii din față este mai mare;
+	\item Viteza de deplasare a mașinii din față este similară;
+	\item Viteza de deplasare a mașinii din față este mai mică;
+\end{itemize}
+
+Figura 3.8 prezintă un exemplu practic.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_8}
+	\caption[Determinare distanță și viteză]{a) Distanță 27 m, viteză relativă +11 km/h b) Distanță 19 m, viteză relativă +0 km/h c) Distanță 34 m, viteză relativă -13 km/h .}
+\end{figure}
+
 \subsection{Algoritm determinare viteză relativă}
+
+Precum componenta de detectare a distanței față de mașina din față și această componentă se folosește de detectarea de mașină prezentată anterior. Însă, de data aceasta se folosesc perechi de 2 frame-uri pentru a determina viteza relativă. Mai exact, aceasta trece în planul IPM coordonatele centrului detecției mașinii atât în frame-ul curent cât și în cel anterior, iar diferența dintre aceste două puncte o vom înmulți cu 3.6 pentru a obține kilometri pe oră. Configurația este direct determinată de amplasarea camerei și tipul de video produs de aceasta. 
+
+Pentru a evita schimbările foarte rapide de viteză, o detecție într-un frame nou este acceptată ca fiind o nouă detecție doar în situația în care diferența euclidiană dintre centrul detecției curente în planul IPM și centrul detecției anterioare în același plan depășește un anumit prag stabilit în prealabil.
