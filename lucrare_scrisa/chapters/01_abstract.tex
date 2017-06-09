@@ -4,17 +4,17 @@
 	\Large \textbf{Abstract}	
 \end{center}
 
-Lucrarea de față își propune abordarea unei teme de interes major din ultima perioadă de timp și anume implementarea de sisteme de asistență în trafic pentru mașini având o relevanță sporită și fiind o temă abordată tot mai des de producătorii auto. 
+Prezenta lucrare de licență propune abordarea unei teme de interes major în ultima perioadă de timp și anume implementarea de sisteme de asistență în trafic pentru autovehicole. Această temă are o relevanță sporită și este o abordată tot mai des de către producătorii auto. 
 
-Principalele obiective ale lucrării sunt reprezentate de detectarea benzi de circulație curentă a mașinii, pentru aceasta fiind folosite diverse metode matematice de schimbare a perspectivei imaginii, IPM, și de detecție a liniilor definitorii benzi (sume cumulate).
+Principalele obiective ale lucrării sunt reprezentate de detectarea benzi curente de circulație a autovehicolului, pentru aceasta fiind folosite diverse metode matematice de schimbare a perspectivei imaginii într-un nou plan, IPM, și de detecție a marcajelor definitorii benzi.
 
-Detecția de mașini, accentuat cu precădere pe detecția mașinii de pe banda curentă de circulație, reprezintă un alt obiectiv major al lucrării. Pentru aceasta fiind folosite noțiuni elementare de Machine Learning și Computer Vision precum vectori suport mașină, utilizați în antrenare descriptori HOG, utilizați pentru extragerea de caracteristici din fiecare frame al video-ului analizat.
+Detecția autovehicolului, accentuat cu precădere pe detecția autovehicolului de pe banda curentă de circulație, reprezintă un alt obiectiv major al lucrării. Pentru aceasta fiind folosite noțiuni elementare de Machine Learning și Computer Vision precum mașini cu vector suport, utilizate în antrenare descriptorilor generați de histogramele de gradienți orientați ce sunt utilizate pentru extragerea de caracteristici din fiecare frame al video-ului analizat.
 
-Printre componentele secundare ale aplicației se numără estimarea distanței față de mașina detectată pe banda curentă de circulație și estimarea vitezei relative a acesteia raportată la mașina din care se inregistrează video-ul. Pentru aceaste componente au fost analizate date oferite de componenta de detecție a mașinii dintr-o succesiune de frame-uri.
+Printre componentele secundare ale prezentei aplicații se regăsește estimarea distanței față de autovehicolul detectată pe banda curentă de circulație și estimarea vitezei relative a acestuia raportată la autovehicolul din care se inregistrează video-ul. Pentru aceaste estimări au fost analizate datele oferite de componenta de detecție a autovehicolului dintr-o succesiune de frame-uri.
 
-În ceea ce privește rezultatele putem afirma că au fost obținute rezultate atât calitativ ca urmare a faptului că atât detectorul de mașini cât și cel de benzi oferă precizie de $92.30\%$, dar și cantitativ ca urmare a faptului că aplicația poate rula atât în condiții bune de iluminare, și anume ziua, dar și în condiții nu mereu prielnice de iluminare, și anume noaptea.
+În ceea ce privește rezultatele, putem afirma că au fost obținute rezultate atât cantitative ca urmare a faptului că atât detectorul de mașini cât și cel de benzi au o precizie de peste $90\%$, dar și calitativ ca urmare a faptului că aplicația poate rula atât în condiții bune de iluminare, și anume ziua, dar și în condiții nu mereu prielnice de iluminare, și anume noaptea.
 
-Din prisma implementării, aplicația a fost dezvoltată în totalitate în Matlab și rulată pe un sistem dotat cu procesor Intel i7, 2.60 GHz și 8 GB RAM. Biblioteca OpenCV a fost, de asemenea, și ea integrată în Matlab și utilizată în diverse circumstanțe la care au fost adaugate și funcții din biblioteca VLFeat.
+Din prisma implementării, aplicația a fost dezvoltată în Matlab și rulată pe un sistem dotat cu procesor Intel i7 Quad Core, 2.60 GHz și 8 GB RAM. Biblioteca OpenCV a fost, de asemenea, și ea integrată în Matlab și utilizată în diverse circumstanțe la care au fost adaugate și funcții din biblioteca VLFeat.
 
-Din punct de vedere al vitezei de rulare a întregului proces, a fost obținut un timp mediu de rulare pe frame de 0.05 secunde cea ce înseamnă o rulare în timp real a intregii aplicații cu o capacitate de procesare de 30 de frame-uri pe secunde.  
+Din punct de vedere al vitezei de rulare a întregului proces, a fost obținut un timp mediu de rulare pe frame de 0.05 secunde cea ce înseamnă o rulare în timp real a intregii aplicații cu o capacitate de procesare de până la 30 de frame-uri pe secunde.  
 \vspace*{\fill}
