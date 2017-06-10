@@ -1,35 +1,36 @@
-\section{Vectori suport mașină}
+\section{Mașini cu vectori suport}
 
 \subsection{Noțiuni generale}
 
-Vectorii suport mașină au devenit populari în ultimii ani pentru rezolvarea problemelor de clasificare sau regresie. Vectorii suport mașină returnează o clasificare de tip două clase prin folosirea modelului liniar de forma
+Mașinile cu vector suport au devenit populare în ultimii ani pentru rezolvarea problemelor de clasificare sau regresie. Acestea realizează o clasificare de tip două clase prin folosirea modelului liniar de forma
 \begin{align}
 	y(x) = w^T\phi(x) + b
 \end{align}
 unde $\phi$ este o transformare a spațiului caracteristic.
 
-Datele de antrenare sunt alcătuite din N vectori de intrare $x_1, ...,x_N$ fiecare dintre având asociate valorile $t_1, ...,t_N$ din mulțimea $t_n \in \{-1,1\}$, iar rezultatul din $y(x)$ reprezintă semnul cel mai potrivit vectorului de intrare $x$.
+Datele de antrenare sunt alcătuite din N vectori de intrare $x_1, ...,x_N$ fiecare dintre aceștia având asociate valorile $t_1, ...,t_N$ din mulțimea $t_n \in \{-1,1\}$, iar rezultatul din $y(x)$ reprezintă scorul asociat vectorului de intrare $x$.
 
-De asemenea trebuie să ne asigură că în momentul antrenării setul de date este liniar separabil în spațiul caracteristicilor ceea ce înseamnă că pentru orice alegere a parametrilor $w$ și $b$ dacă funcția $y(x_n) > 0$ atunci valoarea asociată trebuie să fie $t_n = +1$. Situația este similară și pentru cazul în care $y(x_n ) < 0$ atunci valoarea asociată trebuie să fie $t_n = -1$. Concluzionând cele două proprietăți menționate anterior putem afirma faptul că următoarea inecuație trebuie să fie mereu validă  $t_n y(x_n) > 0$. 
+De asemenea trebuie să ne asigură că în momentul antrenării setul de date este liniar separabil în spațiul caracteristicilor ceea ce înseamnă că pentru orice alegere a parametrilor $w$ și $b$ dacă funcția $y(x_n) > 0$ atunci valoarea asociată trebuie să fie $t_n = +1$. Situația este similară și pentru cazul în care $y(x_n ) < 0$, atunci valoarea asociată trebuie să fie $t_n = -1$. 
+Concluzionând cele două proprietăți menționate anterior putem afirma faptul că următoarea inecuație trebuie să fie mereu validă  $t_n y(x_n) > 0$. 
 
-Vectorii suport mașină abordează problema prin conceptul de „margine” ce este definită ca fiind cea mai mică distanță dintre o frontieră de decizie și orice exemplu primit. O ilustrație a acestui fapt se poate vedea în figura 2.1.
+Mașinile cu vector suport abordează problema prin conceptul de „margine” ce este definită ca fiind cea mai mică distanță dintre o frontieră de decizie și orice exemplu primit. O ilustrație a acestui fapt se poate vedea în figura 2.1.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_1}
-	\caption[Vectori suport mașină]{Marginea este definită ca distanța perpendiculara dintre limita de decizie și cel mai apropiat punct, după cum se poate observa în figura din stânga. Maximizăm limita marginii precum în figura din dreapta. Locația acestei limite este determinată de vectorii suport mașină indicați prin cercuri.}
+	\caption[Vectori suport mașină]{Marginea este definită ca distanța perpendiculara dintre limita de decizie și cel mai apropiat punct, după cum se poate observa în figura din stânga. Maximizăm limita marginii precum în figura din dreapta. Locația acestei limite este determinată de mașinile cu vectori suport indicate prin cercuri.}
 \end{figure} 
 
-În cazul vectorilor suport mașină limita de decizie este aleasă să fie drept locația unde „marginea” este maximă. Această decizie este motivată de folosirea „teoriei computaționale de învățare” cunoscută drept „teoria statistică de învățare”. 
+În cazul mașinilor cu vectori suport, limita de decizie este aleasă să fie drept locația unde „marginea” este maximă. Această decizie este motivată de folosirea „teoriei computaționale de învățare” cunoscută drept „teoria statistică de învățare”. 
 
 Primul model de distribuție peste vectorii de intrare $x$ pentru orice clasa folosește densitatea Parzen cu un nucleu Gaussian având parametrul comun $\sigma^2$. Utilizarea limitei optime determină cel mai bun hiperplan prin minimizarea probabilității de eroare relative densității modelului învățat. 
 
-În cazul limitei $\sigma^2 \rightarrow 0$, hiperplanul optim este cel care are marginea maximă. Intuitiv, deoarece $\sigma^2$ este redus, hiperplanul este dominat mai mult de punctele din apropiere decât de cele din depărtare, în limită hiperplanul devenind independent de datele ce nu sunt vectori suport.
+În cazul limitei $\sigma^2 \rightarrow 0$, hiperplanul optim este cel care are marginea maximă. Intuitiv, deoarece $\sigma^2$ este redus, hiperplanul este dominat mai mult de punctele din apropiere decât de cele din depărtare, în limită hiperplanul devenind independent de datele ce nu sunt mașini cu vector suport \hyperlink{ChristopherBishop}{[8]}. 
 
-\subsection{Vectori suport mașină multiclasă}
+\subsection{Mașini cu vector suport multiclasă}
 
-În principiu vectorii suport mașină sunt clasificatori de tip două clase însă, în practică întâlnim multe cazuri în care avem nevoie de probleme ce presupun mai mult de două clase. De-a lungul timpului au fost propuse diferite variante de rezolvare a problemei construcției unui suport vector mașină multiclasă.
+În principiu, mașinile cu vector suport sunt clasificatori de tip două clase însă, în practică întâlnim multe cazuri în care avem nevoie de probleme ce presupun mai mult de două clase. De-a lungul timpului au fost propuse diferite variante de rezolvare a problemei construcției mașini cu vector suport multiclasă.
 
-Cea mai cunoscută abordarea (Vapnik, 1998) este reprezentată de construcția a K vectori suport mașină separați unde în fiecare $k^{th}$  model $y_k(x)$ este antrenat folosind date din clasa $C_k$ pe post de date de antrenare pozitive, iar datele din celelalte $K-1$ clase rămase pe post de date de antrenare negative. Această tehnică este cunoscută sub numele de „unul-versus-toți”. 
+Cea mai cunoscută abordarea (Vapnik, 1998) este reprezentată de construcția a K mașini cu vectori suport separate, unde în fiecare $k^{th}$  model, $y_k(x)$ este antrenat folosind date din clasa $C_k$ pe post de date de antrenare pozitive, iar datele din celelalte $K-1$ clase rămase pe post de date de antrenare negative. Această tehnică este cunoscută sub numele de „unul-versus-toți”. 
 
 Astfel noile predicții pentru un input $x$ for fi făcute pe baza următoarei relații
 \begin{align}
@@ -38,19 +39,19 @@ Astfel noile predicții pentru un input $x$ for fi făcute pe baza următoarei r
 
 Evident, în această abordare pot apărea anumite probleme precum cea legată de faptul că acești clasificatori au fost antrenați pe diferite clase, ceea ce înseamnă că nu avem neapărat o garanție a faptului că se vor comporta în practică pe tipuri diferite de intrări similar cu datele de antrenare.
 
-O altă problemă întâlnită în această abordare de unu-versus-toți este legată de cantitatea datelor de antrenare în sensul de pierdere al echilibrului dintre exemplele pozitive și cele negative. Spre exemplu, să presupunem că avem 10 tipuri de clase. Pentru o instanță a unui suport vector mașină vom avea $10\%$ dintre toate datele de antrenare disponibile încadrate precum exemple pozitive, iar cealaltă parte, mult mai densă, de $90\%$ vor reprezenta exemple de antrenare negative, fapt ce va crea o discrepanță foarte mare între ele, astfel simetria fiind pierdută.
+O altă problemă întâlnită în această abordare de unu-versus-toți este legată de cantitatea datelor de antrenare în sensul de pierdere al echilibrului dintre exemplele pozitive și cele negative. Spre exemplu, să presupunem că avem 10 tipuri de clase. Pentru o instanță a unei mașini cu vector suport vom avea $10\%$ dintre toate datele de antrenare disponibile încadrate precum exemple pozitive, iar cealaltă parte, mult mai densă, de $90\%$ vor reprezenta exemple de antrenare negative, fapt ce va crea o discrepanță foarte mare între ele, astfel simetria fiind pierdută.
 
 Weston and Watkins (1999) definesc o singură funcție obiectiv pentru antrenarea tuturor celor $K$ vectori suport mașină simultan, acest procedeu fiind bazat pe maximizarea marginilor pentru fiecare clasă. Acest lucru produce un efect de rulare înceată a antrenării deoarece rezolvarea a $K$ probleme separate de optimizare ar însemna că pentru fiecare $N$ punct de date are un cost de rulare per total de $O(KN^2)$, iar o singură problemă de optimizare cu dimensiunea $(K - 1)N$ poate fi rezolvată cu un cost total de $O(K^2N^2)$.
 
-Una dintre cele mai întâlnite metode de rezolvare a acestor probleme este o abordare în care vom antrena $K(K-1)/2$ vectori suport mașină diferiți pentru toate perechile de clase posibile, iar rezultatul final va fi determinat de acel vector suport mașină care va răspunde cu un număr cât mai mare de voturi dintre toate cele $K(K-1)/2$ posibilități. Această este numită deseori drept o antrenare „unu-versus-unu”. Evident, în această situație timpul de rulare va crește odată cu numărul claselor pentru care trebuie antrenați vectori suport mașină.
+Una dintre cele mai întâlnite metode de rezolvare a acestor probleme este o abordare în care vom antrena $K(K-1)/2$ vectori suport mașină diferiți pentru toate perechile de clase posibile, iar rezultatul final va fi determinat de aceea mașină cu vector suport care va răspunde cu un număr cât mai mare de voturi (scor) dintre toate cele $K(K-1)/2$ posibilități. Această este numită deseori drept o antrenare „unu-versus-unu”. Evident, în această situație timpul de rulare va crește odată cu numărul claselor pentru care trebuie antrenate mașinile cu vector suport.
 
-Pentru a rezolva această problemă a timpului de execuție putem organiza perechile de clasificare într-un graf aciclic (Platt et al., 2000). Astfel, pentru K clase pe care le avem de analizat vom avea în total $K(K-1)/2$ vectori suport mașină, iar pentru a clasifica o intrare vom avea nevoie doar de $K-1$ perechi de clasificatori spre a fi evaluați cu clasificatorii specifici traversări grafului.
+Pentru a rezolva această problemă a timpului de execuție putem organiza perechile de clasificare într-un graf aciclic. Astfel, pentru K clase pe care le avem de analizat vom avea în total $K(K-1)/2$ vectori suport mașină, iar pentru a clasifica o intrare vom avea nevoie doar de $K-1$ perechi de clasificatori spre a fi evaluați cu clasificatorii specifici traversări grafului.
 
-O abordare diferită a clasificării multiclasă în cazul vectorilor suport mașină, bazată pe coduri de ieșire corectoare de erori dezvoltate de Dietterich și Bakiri (1995) și ulterior aplicate pe vectori suport mașină de către Allwein, Schapire și Singer (2000). 
+O abordare diferită a clasificării multiclasă în cazul mașinilor cu vectori suport, bazată pe coduri de ieșire corectoare de erori dezvoltate de Dietterich și Bakiri (1995) și ulterior aplicate pe mașini cu vector suport de către Allwein, Schapire și Singer (2000). 
 Acest lucru poate fi văzut precum o generalizare a schemei de vot unu-versus-unu în care cele mai generale părți ale clasei sunt folosite pentru formarea de clasificatori individuali.
 Cele $K$ clase sunt representate precum seturi particulare de răspunsuri provenite din clasificatori de două clase, iar împreună cu o schemă de decodare potrivită oferă robustețe la erori și la ambiguitatea rezultatelor clasificatorilor individuali.
 
-Deși clasificarea cu vectori suport mașină multiclasă încă are multe capitole de îmbunătățit, în practică abordarea unul-versus-toți rămâne cea mai utiliza în ciuda limitărilor de performanță aferente.
+Deși clasificarea cu mașini vectori suport multiclasă încă are multe capitole de îmbunătățit, în practică abordarea unul-versus-toți rămâne cea mai utiliza în ciuda limitărilor de performanță aferente \hyperlink{ErinAllweinRobertSchapireYoramSinger}{[9}, \hyperlink{JasonWestonSimonWatkins}{10}, \hyperlink{ThomasDietterichGhulumBakiri}{18}, \hyperlink{VladimirVapnik}{19}.
 
 \subsection{Vectori suport mașină pentru regresie}
 
@@ -59,7 +60,7 @@ Deși clasificarea cu vectori suport mașină multiclasă încă are multe capit
 	\frac{1}{2}\sum_{n=1}^{N}\{y_n-t_n\}^2+\frac{\lambda}{2}\norm w^2
 \end{align}
 
-Pentru a obține soluțiile, funcția cuadrică de eroare va fi înlocuită de o funcție numită $\epsilon - functie de eroare intensivă$ (Vapnik, 1995) ce ne returnează eroarea 0 daca diferența absolută dintre predicția $y(x)$ și asocierea sa $t$ este mai mică decât $\epsilon$ unde $\epsilon > 0$. Un exemplu simplu de $\epsilon - functie de eroare intensivă$ cu un cost liniar asociat cu eroarea din exteriorul regiunii este
+Pentru a obține soluțiile, funcția cuadrică de eroare va fi înlocuită de o funcție numită $\epsilon$ - funcție de eroare intensivă (Vapnik, 1995) ce ne returnează eroarea 0 dacă diferența absolută dintre predicția $y(x)$ și asocierea sa $t$ este mai mică decât $\epsilon$ unde $\epsilon > 0$. Un exemplu simplu de $\epsilon$ - funcție de eroare intensivă cu un cost liniar asociat cu eroarea din exteriorul regiunii este
 \begin{align}
 	E_{\epsilon}(y(x) - t) = 
 	\begin{cases}
@@ -71,7 +72,7 @@ exemplu ilustrat în figura 2.2.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_2}
-	\caption[Vector suport mașină regresie]{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare.}
+	\caption[Vector suport mașină regresie]{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
  
 Prin urmare, vom minimiza o funcție de eroare regularizata dată prin
@@ -83,10 +84,10 @@ Similar cu cele prezentate anterior putem alege un prag $\xi_n \geq 0$ și $ \wi
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_3}
-	\caption[Vector suport mașină regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$.}
+	\caption[Vector suport mașină regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
 
-Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \epsilon \leq t_n \leq y_n + \epsilon$ unde $y_n = y(x_n)$. Introducând variabilele $\xi_n$ și $\widehat{\xi_n}$ permitem punctelor să se afle în afara zonei de interes condiționat de faptul ca variabilele introduse sunt nenule iar următoarele condiții sunt indeplinite
+Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \epsilon \leq t_n \leq y_n + \epsilon$ unde $y_n = y(x_n)$. Introducând variabilele $\xi_n$ și $\widehat{\xi_n}$ permitem punctelor să se afle în afara zonei de interes condiționat de faptul că variabilele introduse sunt nenule iar următoarele condiții sunt indeplinite
 \begin{align}	
 	t_n \leq y(x_n) + \epsilon + \xi_n
 \end{align}
@@ -94,11 +95,11 @@ Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \e
 	t_n \geq y(x_n) - \epsilon - \widehat{\xi_n}
 \end{align}
 
-În practică, în detrimentul fixării unui parametru $\epsilon$ se preferă fixarea unui parametru $v$ ce are drept rol principal limitarea punctelor din afara zonei $\epsilon$. O rezolvare a unei probleme de regresie având un set de date sinusoidal cu vectori suport mașină este ilustrată în figura 2.4. În această situație parametrii $v$ și $C$ au fost aleși manual, însă în practică aceste valori sunt determinate automat.
+În practică, în detrimentul fixării unui parametru $\epsilon$ se preferă fixarea unui parametru $v$ ce are drept rol principal limitarea punctelor din afara zonei $\epsilon$. O rezolvare a unei probleme de regresie având un set de date sinusoidal cu vectori suport mașină este ilustrată în figura 2.4. În această situație parametrii $v$ și $C$ au fost aleși manual, însă în practică aceste valori sunt determinate automat \hyperlink{ChristopherBishop}{[8]}.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_4}
-	\caption[Vector suport mașină regresie 3]{Este prezentată un vector suport mașină pentru regresie aplicat pe un set de date sinusoidal și utilizând un nucleu Gaussian. Curba de regresie prezisă este ilustrată prin linia roșie, iar zona $\epsilon - intensiv$ este ilustrată prin zona roșie hașurată. Datele sunt indicate prin cercurile verzi, iar vectorii suport mașină sunt indicați prin cercurile albastre.}
+	\caption[Vector suport mașină regresie 3]{Este prezentată un vector suport mașină pentru regresie aplicat pe un set de date sinusoidal și utilizând un nucleu Gaussian. Curba de regresie prezisă este ilustrată prin linia roșie, iar zona $\epsilon - intensiv$ este ilustrată prin zona roșie hașurată. Datele sunt indicate prin cercurile verzi, iar vectorii suport mașină sunt indicați prin cercurile albastre. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
 
 \section{Histograme de gradienți orientați}
@@ -109,21 +110,21 @@ Histograma de gradienți orientați este un descriptor utilizat în vederea arti
 
 Prin această tehnică se numără aparițiile orientării gradientului în anumite porțiuni localizate ale imaginii.
 
-Ideea principală ce stă la baza histogramei de gradienți orientați este reprezentată de faptul că aspectul și forma obiectului dintr-o imagine pot fi descrise prin distribuirea intensității gradienților  sau a muchiilor direcțiilor. În figura 2.5 este prezentat un exemplu practic.
+Ideea principală ce stă la baza histogramei de gradienți orientați este reprezentată de faptul că aspectul și forma obiectului dintr-o imagine pot fi descrise prin distribuirea intensității gradienților sau a muchiilor direcțiilor. În figura 2.5 este prezentat un exemplu practic.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_5}
-	\caption[Descriptor HOG]{(a) imaginea originală; (b) descriptorul histogramei de gradienți orientați asociate imaginii; (c) valorile pozitive din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii; (d) valorile negative din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii}
+	\caption[Descriptor HOG]{(a) imaginea originală; (b) descriptorul histogramei de gradienți orientați asociate imaginii; (c) valorile pozitive din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii; (d) valorile negative din $w$ a descriptorul histogramei de gradienți orientați asociate imaginii. Imagine preluată din \hyperlink{NavneetDalalBillTriggs}{[12]}.}
 \end{figure}
 
-Imaginea este împărțită în mici regiuni conectate numite celule, iar pentru pixelii din fiecare celulă se obține o histograma de gradienți orientați. Descriptorul este rezultatul concatenării acestor histograme. Se poate îmbunătății acuratețea prin normalizarea histogramelor, această normalizare are ca rezultat o invarianță mai bună a schimbărilor intensităților luminii sau apariției umbrelor. În figura 2.6 sunt reprezentate vizual aceste noțiuni.
+Imaginea este împărțită în mici regiuni conectate numite celule, iar pentru pixelii din fiecare celulă se obține o histogramă de gradienți orientați. Descriptorul este rezultatul concatenării acestor histograme. Se poate îmbunătății acuratețea prin normalizarea histogramelor, această normalizare are ca rezultat o invarianță mai bună a schimbărilor intensităților luminii sau apariției umbrelor. În figura 2.6 sunt reprezentate vizual aceste noțiuni.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_6}
 	\caption{Procesul de extragere a histogramelor de gradienți orientați.}
 \end{figure}
 
-Histogramele de gradienți orientați prezintă principalul avantaj prin faptul că lucrează la nivel de celulă locală, astfel, în practică, se comportă bine la invarianța geometrică și transformările fotometrice, exceptând, desigur, orientarea obiectului.
+Histogramele de gradienți orientați prezintă principalul avantaj prin faptul că lucrează la nivel de celulă locală, astfel, în practică, se comportă bine la invarianța geometrică și transformările fotometrice, exceptând, desigur, orientarea obiectului \hyperlink{RichardSzeliski}{[13]}. 
 
 \subsection{Etapele metodei}
 
@@ -144,7 +145,7 @@ Datorită diferitelor situații în care iluminarea și contrastul pot varia, es
 
 \subsubsection {Normalizarea blocului}
 
-În ceea ce privește normalizarea blocurilor putem folosi mai multe metode propuse de Dalal și Triggs. În continuare vom presupune că $v$ este vectorul nenormalizat ce conține histogramele, $\norm{v}_k$ reprezintă norma vectorului, pentru $k = 1,2$ la care adugăm și o constantă $e$. Din acestea deducem următoarele forme de normalizare
+În ceea ce privește normalizarea blocurilor putem folosi mai multe metode propuse de Dalal și Triggs. În continuare vom presupune că $v$ este vectorul ce nu este normalizat și ce conține histogramele, $\norm{v}_k$ reprezintă norma vectorului, pentru $k = 1,2$ la care adugăm și o constantă $e$. Din acestea deducem următoarele forme de normalizare
 \begin{align}	
 	L2-norm: f = \frac{v}{\sqrt{\norm{v}_2^2 + e^2}}
 \end{align}
@@ -162,13 +163,13 @@ Pasul final în procesul de detecție folosind histogramele de gradienți orient
 
 \subsubsection {Clasificarea cu rețele neuronale}
 
-În cazul în care se dorește o acuratețe de clasificare mai bună se pot folosi rețele neuronale în detrimentul vectorilor suport mașină.
+În cazul în care se dorește o acuratețe de clasificare mai bună se pot folosi rețele neuronale în detrimentul vectorilor suport mașină \hyperlink{NavneetDalalBillTriggs}{[12]}.
 
 \section{Metoda glisării ferestrei}
 
 \subsection{Noțiuni generale}
 
-Tehnica de glisare a ferestrei este una des întâlnită în detectarea de obiecte în imagini. Aceasta presupune deplasarea ferestrei pe toată suprafața imaginii cu un anumit salt de pixel stabilit în prealabil. De asemenea, această tehnică poate fi folosită pentru diferite dimensiuni de detecție. Astfel avem ca alternative, fie să mărim sau să micșorăm dimensiunea ferestrei glisante, fie să mărim sau să micșorăm dimensiunea imaginii și să rulăm aceeași dimensiune a ferestrei pe diferite dimensiuni ale imaginii.
+Tehnica de glisare a ferestrei este una des întâlnită în detectarea de obiecte în imagini. Aceasta presupune deplasarea ferestrei pe toată suprafața imaginii cu un anumit salt de pixel stabilit în prealabil. De asemenea, această tehnică poate fi folosită pentru diferite dimensiuni de detecție. Astfel avem ca alternative, fie să mărim sau să micșorăm dimensiunea ferestrei glisante, fie să mărim sau să micșorăm dimensiunea imaginii și să rulăm aceeași dimensiune a ferestrei pe diferite dimensiuni ale imaginii \hyperlink{RichardSzeliski}{[13]}.
 
 Tehnica prezentată anterior este ilustrată și în figura 2.7 sau în figura 2.8
 \begin{figure}[!h]
@@ -193,7 +194,7 @@ IPM-ul reprezintă o tehnică de transformare geometrică care proiectează fiec
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_2_9}
-	\caption[Modelul IPM]{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală.}
+	\caption[Modelul IPM]{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală. Imagine preluată din \hyperlink{AnuarMikdadMuadAiniHussainSalinaAbdulSamadMohdMarzukiMustaffaBurhanuddinYeopMajlis}{[1]}}
 	\label{fig:nonfloat}
 \end{figure}
 
@@ -218,7 +219,7 @@ $\Theta$ - reprezintă unghiul dintre proiecția axei optice și planul orizonta
  
 $\alpha$ - reprezintă unghiul de înclinație al camerei;
 
-$m$ x $n$ reprezintă rezoluția imaginii.
+$m \times n$ reprezintă rezoluția imaginii.
 
 În figura 2.10 se poate observa un exemplu practic al IPM-ului.
 
@@ -229,11 +230,11 @@ $m$ x $n$ reprezintă rezoluția imaginii.
 	\label{fig:nonfloat}
 \end{figure}
 
-Evident, formulele prezentate anterior prezintă un dezavantaj datorită faptului că procesarea prin intermediul lor se face pixel cu pixel. În elaborarea lucrării practice au fost folosite metode de obținere a IPM-ului mult mai rapide pentru unul dintre obiectivului lucrării și anume rularea în timp real a aplicației.
+Evident, formulele prezentate anterior prezintă un dezavantaj datorită faptului că procesarea prin intermediul lor se face pixel cu pixel. În elaborarea lucrării practice au fost folosite metode de obținere a IPM-ului mult mai rapide pentru a îndeplini unul dintre obiectivului lucrării și anume rularea în timp real a aplicației.
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=17cm,max height=17cm,keepaspectratio]{img_2_11}
-	\caption{Reprezentarea grafică a IPM.}
+	\caption[Reprezentare grafică IPM]{Reprezentarea grafică a IPM. Imagine preluată din \hyperlink{AnuarMikdadMuadAiniHussainSalinaAbdulSamadMohdMarzukiMustaffaBurhanuddinYeopMajlis}{[1]}.}
 	\label{fig:nonfloat}
 \end{figure}
