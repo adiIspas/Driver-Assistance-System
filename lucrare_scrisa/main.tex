@@ -28,6 +28,7 @@
 \usepackage[section]{placeins}
 \graphicspath{ {figures/} }
 \usepackage{array}
+\usepackage{afterpage}
 
 \geometry{
 	a4paper,
@@ -43,6 +44,11 @@
 \renewcommand\appendixtocname{Anexe}
 \renewcommand\appendixname{Anexe}
 \renewcommand\appendixpagename{Anexe}
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
 
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
@@ -72,12 +78,14 @@
 
 \listoftables
 
-\newpage
+\newpage\null\newpage
 \subfile{chapters/01_abstract}
 
+\newpage\null\newpage
 \chapter{Introducere}
 \input{chapters/1_introduction}
 
+\newpage\null\newpage
 \chapter{Fundamente teoretice}
 \input{chapters/2_theory}
 
@@ -87,6 +95,7 @@
 \chapter{Baze de date}
 \input{chapters/4_databases}
 
+\newpage\null\newpage
 \chapter*{Concluzii}
 \input{chapters/5_conclusions}
 

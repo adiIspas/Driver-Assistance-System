@@ -1,4 +1,4 @@
-\section{Mașini cu vectori suport}
+\section{Mașini cu vector suport}
 
 \subsection{Noțiuni generale}
 
@@ -17,7 +17,7 @@ Mașinile cu vector suport abordează problema prin conceptul de „margine” c
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_1}
-	\caption[Vectori suport mașină]{Marginea este definită ca distanța perpendiculara dintre limita de decizie și cel mai apropiat punct, după cum se poate observa în figura din stânga. Maximizăm limita marginii precum în figura din dreapta. Locația acestei limite este determinată de mașinile cu vectori suport indicate prin cercuri.}
+	\caption[Mașini cu vector suport]{Marginea este definită ca distanța perpendiculara dintre limita de decizie și cel mai apropiat punct, după cum se poate observa în figura din stânga. Maximizăm limita marginii precum în figura din dreapta. Locația acestei limite este determinată de mașinile cu vectori suport indicate prin cercuri.}
 \end{figure} 
 
 În cazul mașinilor cu vectori suport, limita de decizie este aleasă să fie drept locația unde „marginea” este maximă. Această decizie este motivată de folosirea „teoriei computaționale de învățare” cunoscută drept „teoria statistică de învățare”. 
@@ -51,9 +51,9 @@ O abordare diferită a clasificării multiclasă în cazul mașinilor cu vectori
 Acest lucru poate fi văzut precum o generalizare a schemei de vot unu-versus-unu în care cele mai generale părți ale clasei sunt folosite pentru formarea de clasificatori individuali.
 Cele $K$ clase sunt representate precum seturi particulare de răspunsuri provenite din clasificatori de două clase, iar împreună cu o schemă de decodare potrivită oferă robustețe la erori și la ambiguitatea rezultatelor clasificatorilor individuali.
 
-Deși clasificarea cu mașini vectori suport multiclasă încă are multe capitole de îmbunătățit, în practică abordarea unul-versus-toți rămâne cea mai utiliza în ciuda limitărilor de performanță aferente \hyperlink{ErinAllweinRobertSchapireYoramSinger}{[9}, \hyperlink{JasonWestonSimonWatkins}{10}, \hyperlink{ThomasDietterichGhulumBakiri}{18}, \hyperlink{VladimirVapnik}{19}.
+Deși clasificarea cu mașini vectori suport multiclasă încă are multe capitole de îmbunătățit, în practică abordarea unul-versus-toți rămâne cea mai utiliza în ciuda limitărilor de performanță aferente \hyperlink{ErinAllweinRobertSchapireYoramSinger}{[9}, \hyperlink{JasonWestonSimonWatkins}{10}, \hyperlink{ThomasDietterichGhulumBakiri}{18}, \hyperlink{VladimirVapnik}{19]}.
 
-\subsection{Vectori suport mașină pentru regresie}
+\subsection{Mașini cu vector suport pentru regresie}
 
 În regresia liniară simplă se minimizează o funcție de eroare regularizată definită de
 \begin{align}
@@ -72,7 +72,7 @@ exemplu ilustrat în figura 2.2.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_2}
-	\caption[Vector suport mașină regresie]{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
+	\caption[Mașini cu vector suport pentru regresie]{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
  
 Prin urmare, vom minimiza o funcție de eroare regularizata dată prin
@@ -84,7 +84,7 @@ Similar cu cele prezentate anterior putem alege un prag $\xi_n \geq 0$ și $ \wi
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_3}
-	\caption[Vector suport mașină regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
+	\caption[Mașini cu vector suport pentru regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
 
 Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \epsilon \leq t_n \leq y_n + \epsilon$ unde $y_n = y(x_n)$. Introducând variabilele $\xi_n$ și $\widehat{\xi_n}$ permitem punctelor să se afle în afara zonei de interes condiționat de faptul că variabilele introduse sunt nenule iar următoarele condiții sunt indeplinite
@@ -99,7 +99,7 @@ Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \e
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_4}
-	\caption[Vector suport mașină regresie 3]{Este prezentată un vector suport mașină pentru regresie aplicat pe un set de date sinusoidal și utilizând un nucleu Gaussian. Curba de regresie prezisă este ilustrată prin linia roșie, iar zona $\epsilon - intensiv$ este ilustrată prin zona roșie hașurată. Datele sunt indicate prin cercurile verzi, iar vectorii suport mașină sunt indicați prin cercurile albastre. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
+	\caption[Mașini cu vector suport pentru regresie 3]{Este prezentată un vector suport mașină pentru regresie aplicat pe un set de date sinusoidal și utilizând un nucleu Gaussian. Curba de regresie prezisă este ilustrată prin linia roșie, iar zona $\epsilon - intensiv$ este ilustrată prin zona roșie hașurată. Datele sunt indicate prin cercurile verzi, iar vectorii suport mașină sunt indicați prin cercurile albastre. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
 
 \section{Histograme de gradienți orientați}
@@ -121,7 +121,7 @@ Imaginea este împărțită în mici regiuni conectate numite celule, iar pentru
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_6}
-	\caption{Procesul de extragere a histogramelor de gradienți orientați.}
+	\caption{Procesul de extragere a histogramelor de gradienți orientați}
 \end{figure}
 
 Histogramele de gradienți orientați prezintă principalul avantaj prin faptul că lucrează la nivel de celulă locală, astfel, în practică, se comportă bine la invarianța geometrică și transformările fotometrice, exceptând, desigur, orientarea obiectului \hyperlink{RichardSzeliski}{[13]}. 
@@ -175,13 +175,13 @@ Tehnica prezentată anterior este ilustrată și în figura 2.7 sau în figura 2
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_7}
-	\caption{Metoda glisării ferestrei la nivel de concept.}
+	\caption{Metoda glisării ferestrei la nivel de concept}
 	\label{fig:nonfloat}
 \end{figure}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_2_8}
-	\caption{Metoda glisării ferestrei în practică, în patru momente diferite.}
+	\caption{Metoda glisării ferestrei în practică, în patru momente diferite}
 	\label{fig:nonfloat}
 \end{figure}
 
@@ -194,7 +194,7 @@ IPM-ul reprezintă o tehnică de transformare geometrică care proiectează fiec
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_2_9}
-	\caption[Modelul IPM]{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală. Imagine preluată din \hyperlink{AnuarMikdadMuadAiniHussainSalinaAbdulSamadMohdMarzukiMustaffaBurhanuddinYeopMajlis}{[1]}}
+	\caption[Modelul IPM]{a) vizualizarea geometrică „de sus” în planul construit; b) vizualizarea geometrică din lumea reală. Imagine preluată din \hyperlink{AnuarMikdadMuadAiniHussainSalinaAbdulSamadMohdMarzukiMustaffaBurhanuddinYeopMajlis}{[1]}.}
 	\label{fig:nonfloat}
 \end{figure}
 
