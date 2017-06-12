@@ -1,4 +1,4 @@
-function [ coloane, incadrareLinie ] = detectieLinii( imagineFiltrata, douaBenzi )
+function [ coloane, incadrareLinie, sumaColoane ] = detectieLinii( imagineFiltrata, douaBenzi )
 % detectieLinii Foloseste o varianta simplificata a Hough pentru a detecta care dintre coloane este o posibila linie.
 %   
 %   imagineFiltrata = imaginea de analizat

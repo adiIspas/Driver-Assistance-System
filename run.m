@@ -1,16 +1,18 @@
 %% Adrian ISPAS, Facultate de Matematicã si Informaticã, UNIBUC
 clear, clc, close all;
 
+for i = 1:6
 %% Initializam parametrii de lucru
-numeFolderVideo = 'videos';
-numarVideo = 8;
+tip_video = 'sd';
+numeFolderVideo = ['videos_' tip_video];
+numarVideo = i;
 numeVideo = ['traffic_video_' num2str(numarVideo) '.mp4'];
 
-eval(['configuratie_video_' num2str(numarVideo)]);
-eval(['configuratie_decupaj_asfalt_video_' num2str(numarVideo)]);
-eval(['configuratie_banda_video_' num2str(numarVideo)]);
-eval(['configuratie_detectie_masina_video_' num2str(numarVideo)]);
-eval(['configuratie_distanta_viteza_video_' num2str(numarVideo)]);
+eval(['configuratie_video_' tip_video '_' num2str(numarVideo)]);
+eval(['configuratie_decupaj_asfalt_video_' tip_video '_' num2str(numarVideo)]);
+eval(['configuratie_banda_video_' tip_video '_' num2str(numarVideo)]);
+eval(['configuratie_detectie_masina_video_' tip_video '_' num2str(numarVideo)]);
+eval(['configuratie_distanta_viteza_video_' tip_video '_' num2str(numarVideo)]);
 configuratie_detector_masina;
 
 yInceputDecupare = configuratie.yInceputDecupare;
@@ -38,7 +40,7 @@ y_zona_interesTemporar = 0;
 yInceputDecupareTemporar = 0;
 deplasareYTemporar = 0;
 
-detalii = 0;
+detalii = 1;
 %% Rulam aplicatia
 video = VideoReader([numeFolderVideo '/' numeVideo]);
 figure('units','normalized','outerposition',[0 0 1 1])
@@ -54,19 +56,19 @@ while hasFrame(video)
     
     imagineCurenta = img(yInceputDecupare:yInceputDecupare+yLungimeDecupare,...
         xInceputDecupare:xInceputDecupare+xLungimeDecupare,:);
-    [imagineIPM, matriceInversa] = obtineIPM((imagineCurenta), configuratie);
-    
+    [imagineIPM, matriceInversa] = obtineIPM(imagineCurenta, configuratie);
+
     imagineIPMAfisare = imagineIPM;
-    
+
     imagineFiltrata = filtrareIPM(rgb2gray(imagineIPM));
-    [liniiImagine, incadrare] = detectieLinii(imagineFiltrata, mod2Benzi);
+    [liniiImagine, incadrare, coloaneFiltrate] = detectieLinii(imagineFiltrata, mod2Benzi);
     
     x_s = min(liniiImagine);
     x_e = max(liniiImagine);
-    
-    zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);
+           
+    zonaInteresImagine = imagineCurenta(y_zona_interes:end,x_s:x_e,:);    
     [zonaInteresImagine, deplasareY, deplasareX] = obtinePozitieAproximativaMasina(zonaInteresImagine);
- 
+    
     [puncteInteres, scorLinie] = RANSAC(imagineFiltrata, incadrare);
     punctePlan = obtinePunctePlan(puncteInteres,matriceInversa);
     
@@ -76,7 +78,7 @@ while hasFrame(video)
         puncte = sortrows(punctePlan(u*4-4+1:u*4,:),2);
         puncteTrasare = [puncteTrasare; puncte(1,:); puncte(end,:)];
     end
-
+    
     if length(puncteTrasare) == 4
         distantaBenzi = ...
         DistBetween2Segment([puncteTrasare(1,1) puncteTrasare(1,2) 0], ...
@@ -98,7 +100,7 @@ while hasFrame(video)
         trasareTemporara = numarTrasariTemporare;
         puncteTrasareTemporare = puncteTrasare;
     end
-
+    
     if size(zonaInteresImagine,1) >= parametri.dimensiuneCelulaHOG && ...
             size(zonaInteresImagine,2) >= parametri.dimensiuneCelulaHOG
         [detectii, scoruriDetectii, imageIdx] = detectorMasina(parametri, zonaInteresImagine);
@@ -178,8 +180,7 @@ while hasFrame(video)
         
         imagineTrasata = cv.rectangle(imagineTrasata,cornerDetectie1,...
                 cornerDetectie2,'Thickness',2,'Color', colorDetectie);
-        
-%         imagineTrasata = insertShape(imagineTrasata,'FilledPolygon',{[10 5 10 70 250 70 250 5]},'Color', {'black'},'Opacity',0.4);
+    
         imagineTrasata = cv.putText(imagineTrasata, [num2str(distanta) ' m'], ...
             [10, 30], 'FontScale', 0.9, 'Color', colorDetectie);
         imagineTrasata = cv.putText(imagineTrasata, [num2str(vitezaRelativa) ' km/h'], ...
@@ -275,9 +276,12 @@ while hasFrame(video)
     toc %% Sfarsit rulare
 
     if detalii == 1
-        subplot(2,2,3), imshow(img), title('Original image');
-        subplot(2,2,4), imshow(imagineIPMAfisare), title('IPM Image');
-        subplot(2,2,[1,2]), imshow(imagineTrasata), title('Result image');
+        subplot(3,3,1), image(img), title('Original image. Step 0');
+        subplot(3,3,2), image(imagineIPMAfisare), title('IPM Image. Step 1');
+        subplot(3,3,3), image(imagineFiltrata), title('Image filtering. Step 2');
+        subplot(3,3,4), findpeaks(coloaneFiltrate), title('Lane signal. Step 3');
+        subplot(3,3,7), image(zonaInteresImagine), title('Region of interes. Step 4');
+        subplot(3,3,[5, 6, 8, 9]), image(imagineTrasata), title('Final result. Step 5');
     else
         image(imagineTrasata)
     end
@@ -285,4 +289,5 @@ while hasFrame(video)
 end
 
 %% Curatam spatiul de lucru
-clear, clc
+clear, clc, close all
+end
