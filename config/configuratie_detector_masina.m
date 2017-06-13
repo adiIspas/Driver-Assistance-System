@@ -2,7 +2,6 @@ parametri.dimensiuneFereastra = 64;
 parametri.dimensiuneCelulaHOG = 8;            
 parametri.dimensiuneDescriptorCelula = 31;
 parametri.extensie = 'png';
-parametri.threshold = 2.5;  
 parametri.path = 'eval_car/data/salveazaFisiere';
 
 fisiereExemplePozitive = {
