@@ -1,0 +1,23 @@
+\thispagestyle{plain}
+
+\begin{center}
+	\Large \textbf{Abstract}	
+\end{center}
+
+Prezenta lucrare de licență propune abordarea unei teme de interes major în ultima perioadă de timp și anume implementarea de sisteme de asistență în trafic pentru mașini. 
+
+Prin noțiunea de sistem de asistență în trafic se înțeleg următoarele:
+
+\begin{enumerate}
+	\item Detectarea benzi curente de circulație a mașinii;
+	\item Detectarea mașinii de pe banda curentă de circulație;
+	\item Estimarea distanței față de mașina detectată pe banda curentă de circulație;
+	\item Estimarea vitezei relative a mașinii de pe banda curentă de circulație față de mașina din care se intregistreaza video-ul.
+\end{enumerate}
+
+Lucrarea prezintă în capitolul de evaluare experimentală rezultate din punct de vedere cantitativ și calitativ. Arătăm că aplicația detectează mașinile și benzile cu o acuratețe foarte mare, in jur de $90\%$, putând rula în diferite condiții de iluminare.
+
+Din prisma implementării, aplicația a fost dezvoltată în Matlab și rulată pe un sistem dotat cu procesor Intel i7 Quad Core, 2.60 GHz și 8 GB RAM. Biblioteca OpenCV a fost în Matlab și utilizată în diverse circumstanțe la care au fost adaugate și funcții din biblioteca VLFeat.
+
+Din punct de vedere al vitezei de rulare a întregului proces, a fost obținut un timp mediu de rulare pe frame de 0.05 secunde cea ce înseamnă o rulare în timp real a intregii aplicații cu o capacitate de procesare de până la 30 de frame-uri pe secunde.  
+\vspace*{\fill}

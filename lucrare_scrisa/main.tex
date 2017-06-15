@@ -29,6 +29,7 @@
 \graphicspath{ {figures/} }
 \usepackage{array}
 \usepackage{afterpage}
+\usepackage[font=small,labelfont=bf]{caption}
 
 \geometry{
 	a4paper,
@@ -72,14 +73,18 @@
 \subfile{chapters/0_first_page}
 \restoregeometry
 
+\subfile{chapters/01_abstract_ro}
+
+\newpage
+\subfile{chapters/01_abstract_en}
+
 \tableofcontents
 
+\label{listoffigures}
 \listoffigures
 
+\label{listoftables}
 \listoftables
-
-\newpage\null\newpage
-\subfile{chapters/01_abstract}
 
 \newpage\null\newpage
 \chapter{Introducere}
@@ -92,8 +97,8 @@
 \chapter{Dezvoltarea aplicației}
 \input{chapters/3_development}
 
-\chapter{Baze de date}
-\input{chapters/4_databases}
+\chapter{Evaluare experimentală}
+\input{chapters/4_experimental_evaluation}
 
 \newpage\null\newpage
 \chapter*{Concluzii}

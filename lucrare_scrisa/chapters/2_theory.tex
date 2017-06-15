@@ -6,11 +6,11 @@ Mașinile cu vector suport au devenit populare în ultimii ani pentru rezolvarea
 \begin{align}
 	y(x) = w^T\phi(x) + b
 \end{align}
-unde $\phi$ este o transformare a spațiului caracteristic.
+unde $\phi$ este o transformare a spațiului caracteristicilor.
 
-Datele de antrenare sunt alcătuite din N vectori de intrare $x_1, ...,x_N$ fiecare dintre aceștia având asociate valorile $t_1, ...,t_N$ din mulțimea $t_n \in \{-1,1\}$, iar rezultatul din $y(x)$ reprezintă scorul asociat vectorului de intrare $x$.
+Datele de antrenare sunt alcătuite din N vectori de intrare $x_1, ...,x_N$ fiecare dintre aceștia având asociate etichetele $t_1, ...,t_N$ din mulțimea $t_n \in \{-1,1\}$, iar rezultatul din $y(x)$ reprezintă scorul asociat vectorului de intrare $x$.
 
-De asemenea trebuie să ne asigură că în momentul antrenării setul de date este liniar separabil în spațiul caracteristicilor ceea ce înseamnă că pentru orice alegere a parametrilor $w$ și $b$ dacă funcția $y(x_n) > 0$ atunci valoarea asociată trebuie să fie $t_n = +1$. Situația este similară și pentru cazul în care $y(x_n ) < 0$, atunci valoarea asociată trebuie să fie $t_n = -1$. 
+De asemenea trebuie să ne asigură că în momentul antrenării setul de date este liniar separabil în spațiul caracteristicilor ceea ce înseamnă că pentru orice alegere a parametrilor $w$ și $b$ dacă funcția $y(x_n) > 0$ atunci eticheta asociată trebuie să fie $t_n = +1$. Situația este similară și pentru cazul în care $y(x_n ) < 0$, atunci eticheta asociată trebuie să fie $t_n = -1$. 
 Concluzionând cele două proprietăți menționate anterior putem afirma faptul că următoarea inecuație trebuie să fie mereu validă  $t_n y(x_n) > 0$. 
 
 Mașinile cu vector suport abordează problema prin conceptul de „margine” ce este definită ca fiind cea mai mică distanță dintre o frontieră de decizie și orice exemplu primit. O ilustrație a acestui fapt se poate vedea în figura 2.1.
@@ -30,7 +30,7 @@ Primul model de distribuție peste vectorii de intrare $x$ pentru orice clasa fo
 
 În principiu, mașinile cu vector suport sunt clasificatori de tip două clase însă, în practică întâlnim multe cazuri în care avem nevoie de probleme ce presupun mai mult de două clase. De-a lungul timpului au fost propuse diferite variante de rezolvare a problemei construcției mașini cu vector suport multiclasă.
 
-Cea mai cunoscută abordarea (Vapnik, 1998) este reprezentată de construcția a K mașini cu vectori suport separate, unde în fiecare $k^{th}$  model, $y_k(x)$ este antrenat folosind date din clasa $C_k$ pe post de date de antrenare pozitive, iar datele din celelalte $K-1$ clase rămase pe post de date de antrenare negative. Această tehnică este cunoscută sub numele de „unul-versus-toți”. 
+Cea mai cunoscută abordarea (Vapnik, 1998) este reprezentată de construcția a K mașini cu vectori suport separate, unde în fiecare al $k$-lea  model, $y_k(x)$, este antrenat folosind date din clasa $C_k$ pe post de date de antrenare pozitive, iar datele din celelalte $K-1$ clase rămase pe post de date de antrenare negative. Această tehnică este cunoscută sub numele de „unul-versus-toți”. 
 
 Astfel noile predicții pentru un input $x$ for fi făcute pe baza următoarei relații
 \begin{align}
@@ -47,10 +47,6 @@ Una dintre cele mai întâlnite metode de rezolvare a acestor probleme este o ab
 
 Pentru a rezolva această problemă a timpului de execuție putem organiza perechile de clasificare într-un graf aciclic. Astfel, pentru K clase pe care le avem de analizat vom avea în total $K(K-1)/2$ vectori suport mașină, iar pentru a clasifica o intrare vom avea nevoie doar de $K-1$ perechi de clasificatori spre a fi evaluați cu clasificatorii specifici traversări grafului.
 
-O abordare diferită a clasificării multiclasă în cazul mașinilor cu vectori suport, bazată pe coduri de ieșire corectoare de erori dezvoltate de Dietterich și Bakiri (1995) și ulterior aplicate pe mașini cu vector suport de către Allwein, Schapire și Singer (2000). 
-Acest lucru poate fi văzut precum o generalizare a schemei de vot unu-versus-unu în care cele mai generale părți ale clasei sunt folosite pentru formarea de clasificatori individuali.
-Cele $K$ clase sunt representate precum seturi particulare de răspunsuri provenite din clasificatori de două clase, iar împreună cu o schemă de decodare potrivită oferă robustețe la erori și la ambiguitatea rezultatelor clasificatorilor individuali.
-
 Deși clasificarea cu mașini vectori suport multiclasă încă are multe capitole de îmbunătățit, în practică abordarea unul-versus-toți rămâne cea mai utiliza în ciuda limitărilor de performanță aferente \hyperlink{ErinAllweinRobertSchapireYoramSinger}{[9}, \hyperlink{JasonWestonSimonWatkins}{10}, \hyperlink{ThomasDietterichGhulumBakiri}{18}, \hyperlink{VladimirVapnik}{19]}.
 
 \subsection{Mașini cu vector suport pentru regresie}
@@ -60,7 +56,7 @@ Deși clasificarea cu mașini vectori suport multiclasă încă are multe capito
 	\frac{1}{2}\sum_{n=1}^{N}\{y_n-t_n\}^2+\frac{\lambda}{2}\norm w^2
 \end{align}
 
-Pentru a obține soluțiile, funcția cuadrică de eroare va fi înlocuită de o funcție numită $\epsilon$ - funcție de eroare intensivă (Vapnik, 1995) ce ne returnează eroarea 0 dacă diferența absolută dintre predicția $y(x)$ și asocierea sa $t$ este mai mică decât $\epsilon$ unde $\epsilon > 0$. Un exemplu simplu de $\epsilon$ - funcție de eroare intensivă cu un cost liniar asociat cu eroarea din exteriorul regiunii este
+Pentru a obține soluțiile, funcția pătratică de eroare va fi înlocuită de o funcție numită $\epsilon - intensiv$ - funcție de eroare (Vapnik, 1995) ce ne returnează eroarea 0 dacă diferența absolută dintre predicția $y(x)$ și asocierea sa $t$ este mai mică decât $\epsilon$ unde $\epsilon > 0$. Un exemplu simplu de $\epsilon - intensiv$ - funcție de eroare cu un cost liniar asociat cu eroarea din exteriorul regiunii este
 \begin{align}
 	E_{\epsilon}(y(x) - t) = 
 	\begin{cases}
@@ -72,7 +68,7 @@ exemplu ilustrat în figura 2.2.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_2}
-	\caption[Mașini cu vector suport pentru regresie]{Cu roșu se poate observa $\epsilon - functie de eroare intensivă$, iar cu verde se poate observa o funcție cuadrică de eroare. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
+	\caption[Mașini cu vector suport pentru regresie]{Cu roșu se poate observa $\epsilon - intensiv$ - functie de eroare, iar cu verde se poate observa o funcție pătratică de eroare. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
  
 Prin urmare, vom minimiza o funcție de eroare regularizata dată prin
@@ -84,7 +80,7 @@ Similar cu cele prezentate anterior putem alege un prag $\xi_n \geq 0$ și $ \wi
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=10cm,max height=10cm,keepaspectratio]{img_2_3}
-	\caption[Mașini cu vector suport pentru regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon – intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din interiorul zonei $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
+	\caption[Mașini cu vector suport pentru regresie 2]{Este prezentată o regresie vector suport mașină evidențiind curba de regresie împreună cu zona $\epsilon - intensiv$. De asemenea, sunt prezentate variabilele $\xi$ și $ \widehat{\xi}$. Punctele de deasupra zonei $\epsilon$ au $\xi > 0$ și $ \widehat{\xi} = 0$, iar punctele de sub zona $\epsilon$ au $\xi = 0$ și $ \widehat{\xi} > 0$, în cele din urmă, punctele din zona de margine $\epsilon$ au $\xi = 0$ cât și $ \widehat{\xi} = 0$. Imagine preluată din \hyperlink{ChristopherBishop}{[8]}.}
 \end{figure}
 
 Condiția ca un punct să fie în interiorul zone $ \epsilon $ este ca $y_n - \epsilon \leq t_n \leq y_n + \epsilon$ unde $y_n = y(x_n)$. Introducând variabilele $\xi_n$ și $\widehat{\xi_n}$ permitem punctelor să se afle în afara zonei de interes condiționat de faptul că variabilele introduse sunt nenule iar următoarele condiții sunt indeplinite
@@ -147,13 +143,13 @@ Datorită diferitelor situații în care iluminarea și contrastul pot varia, es
 
 În ceea ce privește normalizarea blocurilor putem folosi mai multe metode propuse de Dalal și Triggs. În continuare vom presupune că $v$ este vectorul ce nu este normalizat și ce conține histogramele, $\norm{v}_k$ reprezintă norma vectorului, pentru $k = 1,2$ la care adugăm și o constantă $e$. Din acestea deducem următoarele forme de normalizare
 \begin{align}	
-	L2-norm: f = \frac{v}{\sqrt{\norm{v}_2^2 + e^2}}
+	Norma L2: f = \frac{v}{\sqrt{\norm{v}_2^2 + e^2}}
 \end{align}
 \begin{align}	
-	L1-norm: f = \frac{v}{\norm{v}_1 + e}
+	Norma L1: f = \frac{v}{\norm{v}_1 + e}
 \end{align}
 \begin{align}	
-	L1-sqrt: f = \sqrt{\frac{v}{\norm{v}_1 + e}}
+	Norma L1-radical: f = \sqrt{\frac{v}{\norm{v}_1 + e}}
 \end{align}
 Toate aceste metode de normalizare oferă o îmbunătățire semnificativă făță de datele nenormalizate, iar cea care pare a se comporta puțin mai bine în detrimentul celorlalte este $L1-norm$.
 
@@ -181,7 +177,7 @@ Tehnica prezentată anterior este ilustrată și în figura 2.7 sau în figura 2
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_2_8}
-	\caption{Metoda glisării ferestrei în practică, în patru momente diferite}
+	\caption{Metoda glisării ferestrei în practică, în patru poziții diferite}
 	\label{fig:nonfloat}
 \end{figure}
 
