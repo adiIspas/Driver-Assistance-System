@@ -6,13 +6,13 @@ Aplicația are o precizie în detecție a benzilor de circulație pe video-urile
 	\centering
 	\begin{tabular}{||c | c | c | c | c | c ||} 
 		\hline
-		Video & Total frame-uri & Total linii & Detectații & Detecții corecte & Detecții false \\ [0.5ex] 
+		Video & Total frame-uri & Total linii & Detecții & Detecții corecte & Detecții false \\ [0.5ex] 
 		\hline\hline
-		cordova1 & 250 & 449 & 467 & 91.31\% & 12.69\%  \\ 
-		washington1 & 336 & 667 & 662 & 88.48\% & 9.31\% \\
-		washington2 & 232 & 448 & 454 & 97.10\% & 4.24\%  \\ 
+		cordova1 & 250 & 449 & 467 & 91.31\% & 8.69\%  \\ 
+		washington1 & 336 & 667 & 662 & 88.48\% & 11.52\% \\
+		washington2 & 232 & 448 & 454 & 97.10\% & 2.90\%  \\ 
 		\hline\hline
-		Total & 818 & 1 564 & 1 583 & 92.30\% & 8.75\% \\ [1ex]
+		Total & 818 & 1 564 & 1 583 & 92.30\% & 7.70\% \\ [1ex]
 		
 		\hline
 	\end{tabular}
@@ -36,7 +36,7 @@ Aplicația are o precizie în detecție a benzilor de circulație pe video-urile
 \section{Bază de date benzi circulație}
 \subsection*{Informații generale}
 
-Partea din aplicație ce are rolul de a detecta banda curentă de circulație a fost dezvoltat plecând de la baza de date Caltech Lanes Dataset de imagini.  \hyperlink{Bazadedatebenzidecirculatie}{[4]}
+Partea din aplicație ce are rolul de a detecta banda curentă de circulație a fost dezvoltată plecând de la baza de date Caltech Lanes Dataset de imagini.  \hyperlink{Bazadedatebenzidecirculatie}{[4]}
 
 \subsection*{Tipuri de imagini}
 
@@ -94,4 +94,4 @@ Baza oferită de Universitatea Oxford este formată la rândul ei din alte două
 
 \subsection*{Algoritm de evaluare}
 
-În ceea ce privește algoritmul de evaluare, fiecare fereastră ce poate conține o mașină oferită de aplicație a fost comparată cu etichetele asociate imaginii respective, iar dacă suprapunere dintre locația indicată de aplicație și locația etichetată se află într-un anumit prag predefinit este acceptată ca detecție adevărată, în caz contrar, este clasificată ca fiind o detecție falsă.
+În ceea ce privește algoritmul de evaluare, fiecare fereastră ce poate conține o mașină oferită de aplicație a fost comparată cu etichetele asociate imaginii respective, iar dacă suprapunere dintre locația indicată de aplicație și locația etichetată se află într-un anumit prag predefinit este acceptată ca detecție adevărată, în caz contrar, ca detecție falsă.

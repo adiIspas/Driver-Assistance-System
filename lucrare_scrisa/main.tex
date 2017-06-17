@@ -50,6 +50,8 @@
 	\thispagestyle{empty}%
 	\addtocounter{page}{-1}%
 	\newpage}
+\newcommand*\xor{\mathbin{\oplus}}
+
 
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
@@ -70,9 +72,11 @@
 
 \begin{document}
 
+\afterpage{\blankpage}
 \subfile{chapters/0_first_page}
 \restoregeometry
 
+\setcounter{page}{3}
 \subfile{chapters/01_abstract_ro}
 
 \newpage
@@ -80,10 +84,12 @@
 
 \tableofcontents
 
-\label{listoffigures}
+\newpage
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-\label{listoftables}
+\newpage
+\addcontentsline{toc}{chapter}{Listă de tabele}
 \listoftables
 
 \newpage\null\newpage
@@ -97,6 +103,7 @@
 \chapter{Dezvoltarea aplicației}
 \input{chapters/3_development}
 
+\newpage\null\newpage
 \chapter{Evaluare experimentală}
 \input{chapters/4_experimental_evaluation}
 

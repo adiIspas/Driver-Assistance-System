@@ -15,8 +15,8 @@ Abordarea unei teme de actualitate cu implicații majore în prezent și probabi
 
 \section{Obiective propuse}
 
-Prezenta lucrare de licență are drept obiective prinicpale detecția benzii curente de circulație pe care se află mașina, iar pe baza acestei detecții, cautarea eventualei mașini ce se află pe această bandă. 
-Acestor două obiective principale li se alătură alte două obiective secundare și anume determinarea distanței față de eventuala mașină aflată pe banda detectată și determinarea vitezi relative de deplasare a mașinii curente raportată la mașina detectată ca fiind în fața acesteia pe banda de circulație aferentă.
+Prezenta lucrare de licență are drept obiective principale detecția benzii curente de circulație pe care se află mașina, iar pe baza acestei detecții, cautarea eventualei mașini ce se află pe această bandă. 
+Acestor două obiective principale li se alătură alte două obiective secundare și anume determinarea distanței față de eventuala mașină aflată pe banda detectată și determinarea vitezi relative de deplasare a mașinii curente raportată la mașina detectată ce se află în fața acesteia pe banda de circulație aferentă.
 
 Figura 1.2 ilustrează un exemplu practic al obiectivelor propuse.
 \begin{figure}[!h]
@@ -27,11 +27,11 @@ Figura 1.2 ilustrează un exemplu practic al obiectivelor propuse.
 
 \section{Actualitate}
 
-În ceea ce privește acutalele sisteme de asistență în trafic, cele dezvoltate de Tesla și Waymo (Google) se numără printre cele mai complexe și complete.
+În ceea ce privește actualele sisteme de asistență în trafic, cele dezvoltate de Tesla și Waymo (Google) se numără printre cele mai complexe și complete.
 
 \subsubsection{Tesla Autopilot}
 
-Sistemul oferit de Tesla vine în dotare cu 8 camere ce oferă o vizibilitate de 360 de grade până la o distanță de 250 de metri. La acestea se adugă alți 12 senzori ultrasonici cu rolul de a completa vizibilitatea oferită de cele 8 camere. Sistemul dispune și de alți senzori cu rolul de a oferi în plus informații esențiale în detectarea obiectelor. Un radar aplasat în partea frontală a mașinii oferă și mai multe informații fiind capabil să vădă prin ploi ambudente, ceață, praf, chiar și prin mașina din față. \hyperlink{TeslaAutopilotSystem}{[16]}
+Sistemul oferit de Tesla vine în dotare cu 8 camere ce oferă o vizibilitate de 360 de grade până la o distanță de 250 de metri. La acestea se adugă alți 12 senzori ultrasonici cu rolul de a completa vizibilitatea oferită de cele 8 camere. Sistemul dispune și de alți senzori cu rolul de a oferi în plus informații esențiale în detectarea obiectelor. Un radar amplasat în partea frontală a mașinii oferă și mai multe informații ceea ce îi oferă capabiltatea de a vedea prin ploi ambudente, ceață, praf, chiar și prin mașina din față. \hyperlink{TeslaAutopilotSystem}{[16]}
 
 \begin{figure}[!h]
 	\centering
@@ -41,7 +41,7 @@ Sistemul oferit de Tesla vine în dotare cu 8 camere ce oferă o vizibilitate de
 
 \subsubsection{Waymo}
 
-Mașinile Waymo sunt dotate cu senzori și sisteme capabile să detecteze zonele pietonale, bicicliști, alte autovehicole și multe altele pe distanțe similare cu a două terenuri de fotbal. \hyperlink{WaymoSystem}{[20]}
+Mașinile Waymo sunt dotate cu senzori și sisteme capabile să detecteze zonele pietonale, bicicliști, alte autovehicule și multe altele pe distanțe similare cu a două terenuri de fotbal. \hyperlink{WaymoSystem}{[20]}
 
 \begin{figure}[!h]
 	\centering
@@ -51,18 +51,18 @@ Mașinile Waymo sunt dotate cu senzori și sisteme capabile să detecteze zonele
 
 \section{Structura lucrării}
 
-Prezentarea lucrării debutează prin detalierea fundamentelor teoretice în capitolului II. Aici menționăm fundamentele teoretice ce stau la baza realizării prezentei lucrări de licență. 
+Prezentarea lucrării debutează prin detalierea fundamentelor teoretice în capitolul II. Aici menționăm fundamentele teoretice ce stau la baza realizării prezentei lucrări de licență. 
 Capitolul se deschide prin prezentarea noțiunilor despre mașini cu vector suport (SVM), un element esențial în antrenarea detectorului de mașini. Pe parcursul acestui capitol prezentăm noțiunile generale despre mașinile cu vector suport, noțiuni despre mașinile cu vector suport multiclasă dar și despre mașinile cu vector suport pentru regresie.
 
 Continuăm prin a descrie histogramele de gradienți orientați (HOG) folosite în extragerea de caracteristici din imagini. Aceste caracteristici sunt trimise mașinilor cu vectori suport pentru antrenarea dar sunt folosite ulterior și pentru testarea și validarea potențialelor zone ce conțin mașini. 
 Prezentăm pe lângă noțiunile generale și etapele algoritmului de extragere a caracteristicilor prin această metodă. 
 
-Metoda glisării ferestrei este și ea abordată în fundamentarea teoretică, această metodă fiind cea care stă la baza identificării zonelor din imagine pentru care detectorul produce scoruri pozitive în ceea ce privește detecția de mașini.
+Metoda glisării ferestrei este și ea abordată în fundamentarea teoretică, această metodă este cea care stă la baza identificării zonelor din imagine pentru care detectorul produce scoruri pozitive în ceea ce privește detecția de mașini.
 
 În finalul acestui capitol prezentatăm noțiunea de IPM, noțiune esențială în detectarea benzii de circulație, pe de o parte, dar și în analiza datelor privind distanța față de mașina aflătă pe banda curentă și de viteza relativă a acesteia în maniera abordată de lucrare.
 
 Capitolul III este dedicat procesului propriu-zis de dezvoltare al aplicației. Începe prin prezentarea componentei ce se ocupă de detectarea benzi. Continuăm prin prezentarea componentei care determină pozițiile eventualelor mașini din imagini și incheiem prin prezentarea metodelor abordate de detectare a distanței față de mașina din față pe banda curentă de circulație împreună cu viteza relativă în raport cu ea.
 
-Spre finalul lucrării, în capitolul IV, sunt prezentate bazele de date utilizate atât în cadrul componentei ce se ocupă de detectarea benzii de circulație cât și a componentei ce se ocupă de detectarea de mașini. Pentru fiecare dintre acestea sunt prezentate informații generale despre respectiva bază de date, tipurile de imagini pe care le conține, algoritmii de evaluare utilizați pentru validarea rezultatelor obținute, dar și rezultatele propriu-zise.
+Spre finalul lucrării, în capitolul IV, sunt prezentate rezultatele propriu-zise dar și bazele de date utilizate atât în cadrul componentei ce se ocupă de detectarea benzii de circulație cât și a componentei ce se ocupă de detectarea de mașini. Pentru fiecare dintre acestea sunt prezentate informații generale despre respectiva bază de date, tipurile de imagini pe care le conține și algoritmii de evaluare utilizați pentru validarea rezultatelor obținute.
 
 În închierea lucrării sunt trase concluziile finale și sunt prezentate posibile viitoare direcții de dezvoltare ale curentei aplicații.

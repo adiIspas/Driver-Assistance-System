@@ -6,9 +6,9 @@ O primă componentă a aplicației de față este ceea care se ocupă de detecț
 \subsubsection*{Etapa 1: Extragere regiune interes}
 
 Această etapă are rolul de a elimina din imagine zonele redundante detecției \hyperlink{WaymoSystem}{[11]}. Atât în situația de față, cât și ulterior în cazul detecției de mașini, ne putem focusa pe o anumită zonă din cadrul frame-ului pentru a detecta banda curentă de circulație și ulterior mașina de pe aceasta. 
-Această zonă este direct determinată de cameră, rezoluție acesteia, amplasarea camerei pe mașină, iar în funcție de toți acești factori se va crea un fișier de configurație specific montajului respectiv cu parametri necesari extragerii zonei de interes.
+Această zonă este direct determinată de cameră, rezoluția acesteia, amplasarea camerei pe mașină, iar în funcție de toți acești factori se va crea un fișier de configurație specific montajului respectiv cu parametri necesari extragerii zonei de interes.
 
-În figura 3.1 putem observa un exemple concrete.
+În figura 3.1 putem observa un exemplu concret.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_1}
@@ -17,7 +17,7 @@ Această zonă este direct determinată de cameră, rezoluție acesteia, amplasa
 
 \subsubsection*{Etapa 2: Obținere imagine IPM}
 
-Următoare etapă în procesul de detecție a benzii curente de circulație este cea în care schimba perspectiva de vizualizare a zonei de interes. Prin intermediul unui fișier de configurare se vor da parametri ce vor fi folosiți ulterior în funcțiea de obținere IPM. Fie A, B, C și D punctele extreme ale imaginii. Redefini punctele B și C conform figurii 3.2. Cei doi vectori de puncte îi pasăm funcției $cv.getPerspectiveTransform$ din biblioteca OpenCV spre a obține matrice $M$ de trecere din perspectiva a), conform figurii 3.2, în perspectiva b). Matricea $M$ este folosită în continuare cu funcția $cv.warpPerspective$ pentru pentru a obține imaginea în planul IPM.
+Următoare etapă în procesul de detecție a benzii curente de circulație este cea în care schimba perspectiva de vizualizare a zonei de interes. Prin intermediul unui fișier de configurare se vor da parametri ce vor fi folosiți ulterior în funcția de obținere IPM. Fie A, B, C și D punctele extreme ale imaginii. Redefinim punctele B și C conform figurii 3.2. Cei doi vectori de puncte îi pasăm funcției $cv.getPerspectiveTransform$ din biblioteca OpenCV spre a obține matrice $M$ de trecere din perspectiva a), conform figurii 3.2, în perspectiva b). Matricea $M$ este folosită în continuare cu funcția $cv.warpPerspective$ pentru pentru a obține imaginea în planul IPM.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_2}
@@ -34,14 +34,24 @@ Următoare etapă în procesul de detecție a benzii curente de circulație este
 
 \subsubsection*{Etapa 3: Filtrarea imaginii IPM}
 
-Filtrarea imaginii IPM are rolul de a păstra în imagine doar zonele cele mai plauzibile de a fi marcaje delimitatorii de bandă și eliminarea conținut nerelevant obiectivului nostru. Noua imagine, imagine, va fi o imagine binară (alb - negru). Pentru filtrare se folosește filtrul Gaussian 2D orizontal
-$ derivatăfiltruGaussian\_2D = 
-\begin{bmatrix}
-	0 & 0 & 0 \\
-	0 & 1 & -1 \\
-	0 & 0 & 0 \\
-\end{bmatrix}
-$. După aplicarea acestui filtru, matricea rezultată va mai fi filtrată cu un prag, astfel toate valorile din matric se se află sub acel prag vor deveni 0 celelalte păstrându-și intensitatea neschimbată \hyperlink{WaymoSystem}{[11]}.
+Filtrarea imaginii IPM are rolul de a păstra în imagine doar zonele cele mai plauzibile de a fi marcaje delimitatorii de bandă și eliminarea conținut nerelevant obiectivului nostru. Noua imagine va fi o imagine binară (alb - negru). Pentru filtrare se folosește filtrul Gaussian 2D orizontal dat de formula
+
+\begin{align}
+	d_x \xor (h \xor I) = (d_x \xor h) \xor I
+\end{align}
+\begin{align}
+	d_y \xor (h \xor I) = (d_y \xor h) \xor I
+\end{align}
+
+unde
+
+$d_x$, $d_y$ - reprezintă filtrele de derivare;
+
+$h$ - reprezintă filtrul Gaussian;
+
+$I$ - reprezintă imaginea.
+
+După aplicarea acestui filtru, matricea rezultată va mai fi filtrată cu un prag, astfel toate valorile din matrice se se află sub acel prag vor deveni 0 celelalte păstrându-și intensitatea neschimbată \hyperlink{WaymoSystem}{[11]}.
 
 În figura 3.4 putem vedea o astfel de imagine IPM filtrată.
 \begin{figure}[!h]
@@ -52,7 +62,13 @@ $. După aplicarea acestui filtru, matricea rezultată va mai fi filtrată cu un
 
 \subsubsection*{Etapa 4: Extragere linii din imaginea filtrată}
 
-În continuare ne ocupăm de extragerea potențialelor linii din imaginea filtrată. Pentru aceasta realizăm în primă instanță sumele cumulate pe coloane ale imaginii filtrate \hyperlink{WaymoSystem}{[11]}. În următorul pas vom aplica un filtru Gaussian, de data aceasta 1D, de forma $filtruGaussian\_1D = [-1, 1]$, iar pe baza rezultatului generat de acest filtru vom selecta maximele semnalului, în cazul nostru ne vom dori primele 2 maxime.
+În continuare ne ocupăm de extragerea potențialelor linii din imaginea filtrată. Pentru aceasta realizăm în primă instanță sumele cumulate pe coloane ale imaginii filtrate \hyperlink{WaymoSystem}{[11]}. În următorul pas vom aplica un filtru Gaussian, de data aceasta 1D, de forma
+
+\begin{align}
+	\frac{\partial I}{\partial x}
+\end{align}
+
+iar pe baza rezultatului generat de acest filtru vom selecta maximele semnalului, în cazul nostru ne vom dori primele 2 maxime.
 
 \begin{figure}[!h]
 	\centering
@@ -119,7 +135,7 @@ $k_1$ și $k_2$ - sunt factori de regularizare prestabiliți, în cazul nostru $
 \begin{figure}[!h]
 	\centering
 	\includegraphics[max width=15cm,max height=15cm,keepaspectratio]{img_3_6}
-	\caption{Determinare scor linie}
+	\caption[Determinare scor linie]{Determinare scor linie. Imagine preluată din \hyperlink{MohamedAly}{[11]}.}
 \end{figure}
 
 \textbf{D. Determinare cea mai bună linie}
@@ -137,7 +153,7 @@ A doua componentă esențială aplicației dezvoltate este cea reprezentată de 
 \subsection*{Algoritm detecție mașină}
 Detecția mașinii, în situația de față, presupune două etape. Prima etapă preliminară este cea de antrenare a clasificatorilor, iar cea de-a doua este detectarea propriu-zisă a mașinii.
 
-\textbf{Etapa I - Antrenarea calsificatorilor}
+\textbf{Etapa I - Antrenarea clasificatorilor}
 
 \textbf{Extragerea descriptorilor}
 
@@ -157,23 +173,14 @@ După cum a fost menționat anterior la detecția benzii curente de circulație 
 
 \textbf{Anticipare poziție mașină}
 
-Pentru a mări și mai mult viteza de rulare a programului se poate reduce zona de interes în care este foarte probabil să se afle o mașină cu ajutorul filtrelor de muchii, spre exemplu filtru Sobel pentru muchii orizontale și verticale.
-\begin{center}
-	$ Sx = 
-	\begin{bmatrix}
-	-1 & 0 & 1 \\
-	-2 & 0 & 2 \\
-	-1 & 0 & 1
-	\end{bmatrix}
-	$
-	$ Sy = 
-	\begin{bmatrix}
-	1 & 2 & 1 \\
-	0 & 0 & 0 \\
-	-1 & -2 & -1 \\
-	\end{bmatrix}
-	$
-\end{center}
+Pentru a mări și mai mult viteza de rulare a programului se poate reduce zona de interes în care este foarte probabil să se afle o mașină cu ajutorul filtrelor de muchii, spre exemplu filtru Sobel pentru muchii orizontale și verticale pe baza următoarelor formule
+
+\begin{align}
+	\frac{\partial I(x,y)}{\partial x}
+	\quad \quad
+	\frac{\partial I(x,y)}{\partial y}
+\end{align}
+
 Figura 3.7 ilustrează un exemplu în acest sens.
 \begin{figure}[!h]
 	\centering
