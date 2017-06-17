@@ -121,11 +121,15 @@ for d=1:length(detectionFiles)
     disp(sprintf('Number of correct detections = %d', tp));
     disp(sprintf('Number of false detections = %d', fp));
     disp(' ');
-    disp(sprintf('Percentage of correct detections = %f', tp/truthTotal));
-    disp(sprintf('Percentage of false detections = %f', fp/truthTotal));
+    
+    correct = 100*tp/truthTotal;
+    false = 100 - correct;
+    
+    disp(sprintf('Percentage of correct detections = %f', correct));
+    disp(sprintf('Percentage of false detections = %f', false));
     disp(' ');
     disp(sprintf('False detections/frame= %f', fp/numFrames));
-
+    
     %put in total stats
     allResults = [allResults, results];
     allDetectionTotal = allDetectionTotal + detectionTotal;
@@ -161,26 +165,31 @@ disp(sprintf('False detections/frame= %f', allFp/allNumFrames));
 
 fprintf(1,'\n\n\n-----');
 disp('Summary results');
-correct = 0;
-false = 0;
+correct2 = 0;
+false2 = 0;
 n = length(dDetectionTotal);
 for d=1:length(dDetectionTotal)
     disp(' ');
     disp(sprintf('Detection %s', detectionFiles{d}));
     disp(sprintf('Total = %d', dTruthTotal(d)));
     disp(sprintf('Total detections = %d', dDetectionTotal(d)));
-    disp(sprintf('correct detections = %.2f', 100*dTp(d)/dTruthTotal(d)));
-    disp(sprintf('false detections = %.2f', 100*dFp(d)/dTruthTotal(d)));
+    correct = 100*dTp(d)/dTruthTotal(d);
+    false = 100 - correct;
+    disp(sprintf('correct detections = %.2f', correct));
+    disp(sprintf('false detections = %.2f', false));
     disp(sprintf('false detections / frame = %.3f', dFp(d)/dNumFrames(d)));
     
-    correct = correct + 100*dTp(d)/dTruthTotal(d);
-    false = false + 100*dFp(d)/dTruthTotal(d);
+    correct2 = correct2 + 100*dTp(d)/dTruthTotal(d);
+    false2 = false2 + 100*dFp(d)/dTruthTotal(d);
 end;
 
 disp(' ');
 disp('--- Final Results ---')
-disp(sprintf('correct detections = %.2f', correct/n));
-disp(sprintf('false detections = %.2f', false/n));
+
+correct = correct2/n;
+false = 100 - correct;
+disp(sprintf('correct detections = %.2f', correct));
+disp(sprintf('false detections = %.2f', false));
 
 % ---------------------------------------------------------------------------
 function splines = GetTruthSplines(labels)
@@ -189,17 +198,7 @@ centruImagine = 320;
 ths = 35;
 
 splines = {};
-for i=1:length(labels)
-%   labels(i).type
-%   if strcmp(labels(i).type, 'spline')
-%     currentSpline = labels(i).points;
-% %     currentSpline = sortrows(currentSpline(:,:),2);
-%     currentSpline = sortrows(currentSpline,2);
-%     if abs(centruImagine - currentSpline(1,1)) <= ths
-%         splines{end+1} = labels(i).points;
-%     end
-%   end;
-  
+for i=1:length(labels)  
     currentSpline = labels(i).points;
     for u = 1:size(currentSpline,1)/4
         puncte = sortrows(currentSpline(u*4-4+1:u*4,:),2);
