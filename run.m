@@ -1,11 +1,16 @@
 %% Adrian ISPAS, Facultate de Matematicã si Informaticã, UNIBUC
 clear, clc, close all;
 
-%% Initializãm video-ul.
-writerObj = VideoWriter('out.avi'); % Numele final pentru salvare.
-writerObj.FrameRate = 20; % Numarul de frame-uri dorite.
-open(writerObj);
+% Presetari
 detalii = 0;
+salvareVideo = 0;
+
+if salvareVideo == 1
+    %% Initializãm video-ul.
+    writerObj = VideoWriter('video_simplu.avi'); % Numele final pentru salvare.
+    writerObj.FrameRate = 20; % Numarul de frame-uri dorite.
+    open(writerObj);
+end
 
 for i = 1:6
     %% Initializam parametrii de lucru
@@ -53,6 +58,7 @@ for i = 1:6
         clc    
         tic %% Inceput rulare
         img = readFrame(video);
+        img = imresize(img,[360 640]);
 
         detectii = [];
         colorBanda = {'green'};
@@ -287,16 +293,25 @@ for i = 1:6
             subplot(3,3,7), image(zonaInteresImagine), title('Region of interes. Step 4');
             subplot(3,3,[5, 6, 8, 9]), image(imagineTrasata), title('Final result. Step 5');
             
-            frame = getframe(gcf);
-            writeVideo(writerObj, frame);
+            if salvareVideo == 1
+                frame = getframe(gcf);
+                writeVideo(writerObj, frame);
+            end
         else
             image(imagineTrasata)
+            if salvareVideo == 1
+                writeVideo(writerObj, imagineTrasata);
+            end
         end
         pause(0.00001);
     end
+    
+    close all;
 end
 
-close(writerObj);
+if salvareVideo == 1
+    close(writerObj);
+end
 
 %% Curatam spatiul de lucru
 clear, clc, close all
