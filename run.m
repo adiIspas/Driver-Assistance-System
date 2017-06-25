@@ -58,8 +58,11 @@ for i = 1:6
         clc    
         tic %% Inceput rulare
         img = readFrame(video);
-        img = imresize(img,[360 640]);
-
+        
+        if strcmp(tip_video,'sd')
+            img = imresize(img,[360 640]);
+        end
+        
         detectii = [];
         colorBanda = {'green'};
         colorDetectie = [0 255 0];
@@ -98,7 +101,7 @@ for i = 1:6
         else
             distantaBenzi = 0;
         end
-
+        
         if distantaBenzi < minDistance || distantaBenzi > maxDistance
             if trasareTemporara > 0
                 puncteTrasare = puncteTrasareTemporare;
