@@ -1,0 +1,31 @@
+Slide 1: Salutari, prezentari
+
+Slide 2: Prezenta lucrare de licenta propune abordarea unor componente de baza dintr-un sistem de Self Drive si anume:
+ - detectarea benzii curente de circulatie si a eventualei masinii ce se afla pe respectiva banda.
+ - estimarea distantei si a vitezei relative fata de masina detectata anterior, evident, in cazul in care exista
+
+Slide 3 - 6: Toate acestea au ca scop final crearea unui sistem ce poate reduce accidentele rutiere cauzate de erorile umane, erori umane reprezentate in principal de
+ - Neatentia la volan – 62%
+ - Folosirea telefonului mobil – 12%
+ - Interesul pentru lucruri exterioare – 7%
+
+
+Slide 7: Solutia propusa consta in
+ - detectarea benzii de circulatie pe baza proiectiei in planul IPM
+ - detectarea masinilor cu ajutorul SVM-urilor
+ - estimarea distantei si vitezei relative pe baza proiectiilor detectiilor in planul IPM
+
+Slide 8: Iar rezultatul final al acestei solutii poate fi vazut in urmatoarele imagini
+
+Slide 9 - 19: In ceea ce priveste algoritmul acesta este compus din urmatoarele etape
+ - extragere regiune interes
+ - detectare banda de circulatie in planul IPM
+ - etragere regiune interes pentru detectia masinii
+ - anticipare pozitite masina
+ - verificare existenta masina
+ - estimare distanta si viteza realtiva prin trecerea detectiei in planul IPM
+
+Slide 20 - 22: Rezultatele cantitative sunt reprezentate in urmatorul tabel iar cele calitative in urmatoarele imagini.
+
+Slide 23 - 25: Rezultatele cantitative sunt reprezentate in urmatorul tabel iar cele calitative in urmatoarele imagini.
+ 
