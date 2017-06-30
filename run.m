@@ -3,7 +3,7 @@ clear, clc, close all;
 
 % Presetari
 detalii = 1;
-salvareVideo = 1;
+salvareVideo = 0;
 
 if salvareVideo == 1
     %% Initializãm video-ul.
