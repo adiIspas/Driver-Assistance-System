@@ -2,12 +2,12 @@
 clear, clc, close all;
 
 % Presetari
-detalii = 0;
-salvareVideo = 0;
+detalii = 1;
+salvareVideo = 1;
 
 if salvareVideo == 1
     %% Initializãm video-ul.
-    writerObj = VideoWriter('video_simplu.avi'); % Numele final pentru salvare.
+    writerObj = VideoWriter('../video_detalii.avi'); % Numele final pentru salvare.
     writerObj.FrameRate = 20; % Numarul de frame-uri dorite.
     open(writerObj);
 end
@@ -293,7 +293,7 @@ for i = 1:6
             subplot(3,3,2), image(imagineIPMAfisare), title('IPM Image. Step 1');
             subplot(3,3,3), image(imagineFiltrata), title('Image filtering. Step 2');
             subplot(3,3,4), findpeaks(coloaneFiltrate), title('Lane signal. Step 3');
-            subplot(3,3,7), image(zonaInteresImagine), title('Region of interes. Step 4');
+            subplot(3,3,7), image(zonaInteresImagine), title('Region of interest. Step 4');
             subplot(3,3,[5, 6, 8, 9]), image(imagineTrasata), title('Final result. Step 5');
             
             if salvareVideo == 1
