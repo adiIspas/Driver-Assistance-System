@@ -8,7 +8,7 @@ The notion of a traffic assistance system means the following:
 3. Estimating distance from the car detected on the current lane;
 4. Estimating the relative speed of the car on the current lane to the car from which the video is recorded.
 
-The paper presents quantitative and qualitative results in the experimental evaluation chapter. We show that the app detects cars and lanes with a very high accuracy, around $90\%$, and can run under different lighting conditions.
+The paper presents quantitative and qualitative results in the experimental evaluation chapter. We show that the app detects cars and lanes with a very high accuracy, around 90%, and can run under different lighting conditions.
 
 From the implementation point of view, the application was developed in Matlab and run on an Intel i7 Quad Core, 2.60 GHz processor and 8 GB RAM. The OpenCV library was included in Matlab and used in various circumstances to which functions from the VLFeat library have been added.
 
