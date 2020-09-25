@@ -15,3 +15,5 @@ From the implementation point of view, the application was developed in Matlab a
 The runtime of the entire process has achieved a mean runtime per frame of 0.05 seconds on 360p videos, which means real-time running of the entire application with a processing capacity of up to 30 frames per second.
 
 The paper can be found [here](https://github.com/adiIspas/Driver-Assistance-System/tree/master/lucrare_scrisa).
+
+Demo can be found [here](https://www.youtube.com/watch?v=ldqapheStqY)
